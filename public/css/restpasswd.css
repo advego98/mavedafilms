@@ -1,0 +1,360 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+
+    font-family: impact;
+    src: url(impact.ttf);
+
+}
+
+body {
+
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    z-index: 10;
+
+}
+
+
+.logo {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 3.5rem;
+    height: 45px;
+    width: 167px;
+    padding-left: 20px;
+    font-family: impact;
+    font-weight: normal;
+    flex: 1;
+
+}
+
+
+.button-iniciarsesion {
+
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding-left: 70px; */
+    font-size: 19px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color:rgba(78, 76, 71, 0.6);
+    color: white;
+    border-color: rgba(78, 76, 71, 0.6);
+}
+
+
+#pagepasswd {
+
+    height: 100%;
+    width: 100%;
+    background-image: url('../backgrounds/imagen_restablecer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+
+#footerspace{
+
+    height: 20vh;
+}
+
+
+input#inputpass{
+
+    height: 25px;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    border-color: #4E4C47;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+
+.emptyspace {
+
+    height: 10vh;
+
+}
+
+
+.emptyspace2 {
+
+    height: 25vh;
+
+}
+
+
+.spacefooter {
+
+    height: 2vh;
+}
+
+label {
+
+    color: white;
+
+}
+
+
+
+
+
+.title {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.passwordform {
+
+
+    display: flex;
+    margin: 0 auto;
+    height: 5vh;
+    flex-direction: column;
+
+
+}
+
+
+input {
+
+    margin: 0 auto;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+
+
+}
+
+
+.spacepassw1{
+
+    height: 10vh;
+}
+
+
+footer {
+
+    background-color: #23231E;
+
+
+}
+
+.icon {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 auto;
+    height: 5vh;
+    width: 167px;
+    display: flex;
+    justify-items: center;
+    font-family: impact;
+    font-weight: normal;
+
+}
+
+
+
+
+
+.enlaces {
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+}
+
+
+
+.enlaces a {
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    color: white;
+    flex: 1;
+
+}
+
+
+
+.inputpass {
+    height: 25px;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    border-color: #4E4C47;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+
+
+
+
+
+.passwordsection {
+
+    padding-top: 35px;
+    padding-left: 40px;
+}
+
+
+.spacepassw2{
+
+
+    height: 30vh;
+
+}
+
+
+.mailhelp {
+
+    color: white;
+
+}
+
+.textinfo {
+
+    color: white;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-right: 23px;
+
+}
+
+.ayuda {
+
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+
+label.option {
+
+    font-weight: bold;
+}
+
+
+A {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.suscription {
+
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 6px;
+
+}
+
+
+button.login-button {
+
+    margin-top: 25px;
+}
+
+.login-button {
+
+    width: 90%;
+    background-color: #FEC418;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 24px 0 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+.registerform {
+
+    margin: 0 auto;
+    font-size: 15;
+    font-size: 13px;
+    padding-top: 25px;
+    color: white;
+
+}
+
+
+.derechosreservados {
+
+
+    margin: 0 auto;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    padding-top: 1.5em;
+
+}
+
+.mailandnumber{
+    
+    padding-top: 15px;
+    color: white;
+    
+}
+
+
+.spacepassw2{
+
+    height: 25vh;
+}

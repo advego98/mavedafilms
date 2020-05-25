@@ -1,0 +1,175 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+
+    font-family: impact;
+    src: url("../fonts/impact.ttf");
+    /*src: url('/fonts/impact.tff');*/
+
+}
+
+
+@font-face {
+    font-family: Century Gothic
+    src url("../fonts/CenturyGothic.ttf");
+}
+
+
+header {
+
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    z-index: 10;
+
+}
+
+
+.logo {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 3.5rem;
+    height: 45px;
+    width: 167px;
+    padding-left: 20px;
+    font-family: impact;
+    font-weight: normal;
+    flex: 1;
+
+}
+
+
+.containtpage {
+
+    height: 100%;
+    width: 100%;
+    background-color: #0F0F0D;
+
+
+}
+
+
+.emptyspace {
+
+    height: 15vh;
+
+}
+
+
+.emptyspace2 {
+
+    height: 40vh;
+
+}
+
+
+.spacefooter {
+
+    height: 2vh;
+}
+
+label {
+
+    color: white;
+
+}
+
+
+.title {
+
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    padding-bottom: 5px;
+    font-size: 27px;
+    font-family: Century Gothic;
+    font-weight: bold;
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr 0.3fr 1.8fr;
+    gap: 1px 1px;
+    grid-template-areas: ". . . . . . . . ." ". perfil1 . perfil2 . perfil3 . perfil4 ." ". nameperfil1 . nameperfil2 . nameperfil3 . nameperfil4 ." ". . . . . . . . .";
+    height: 70vh;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.perfil1 { grid-area: perfil1; }
+
+.perfil2 { grid-area: perfil2; }
+
+.perfil3 { grid-area: perfil3; }
+
+.perfil4 {
+
+
+    grid-area: perfil4;
+    margin-top: 50px;
+
+
+}
+
+.nameperfil1 {
+
+
+}
+
+.nameperfil1 {
+    grid-area: nameperfil1;
+    text-align: center;
+    color: white;
+    font-family: "Century Gothic";
+    font-size: 20px;
+}
+
+.nameperfil2 {
+
+    grid-area: nameperfil2;
+    text-align: center;
+    color: white;
+    font-family: "Century Gothic";
+    font-size: 20px;
+
+
+}
+
+.nameperfil3 {
+
+    grid-area: nameperfil3;
+    text-align: center;
+    color: white;
+    font-family: "Century Gothic";
+    font-size: 20px;
+
+}
+
+.nameperfil4 {
+
+
+    grid-area: nameperfil4;
+    color: white;
+    font-family: "Century Gothic";
+    font-size: 20px;
+}
+
+

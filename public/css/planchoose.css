@@ -1,0 +1,1404 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+
+    font-family: impact;
+    src: url(impact.ttf);
+
+}
+
+body {
+
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F0F0D;
+
+}
+
+header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    z-index: 10;
+
+}
+
+
+.logo {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 3.5rem;
+    height: 45px;
+    width: 167px;
+    padding-left: 20px;
+    font-family: impact;
+    font-weight: normal;
+    flex: 1;
+
+}
+
+
+.button-iniciarsesion {
+
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding-left: 70px; */
+    font-size: 19px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color: rgba(78, 76, 71, 0.6);
+    color: white;
+    border-color: rgba(78, 76, 71, 0.6);
+}
+
+
+.containtpage {
+
+    height: 100%;
+    width: 100%;
+
+
+}
+
+
+.stepicons {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.stepicons img {
+
+    height: 90px;
+
+}
+
+
+.emptyspace {
+
+    height: 10vh;
+}
+
+
+.buttonchoseplan {
+
+    height: 25vh;
+
+}
+
+
+.spacefooter {
+
+    height: 2vh;
+}
+
+label {
+
+    color: white;
+
+}
+
+
+
+
+.planGrid__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.title {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.login {
+
+
+    display: flex;
+    margin: 0 auto;
+    height: 5vh;
+    flex-direction: column;
+
+
+}
+
+
+input {
+
+    margin: 0 auto;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+
+
+}
+
+
+footer {
+
+    background-color: #23231E;
+
+
+}
+
+
+.buttonchoseplan{
+    
+    
+ 
+    border-radius: 10px;
+    font-size: 25px;
+    height: 30vh;
+    display: flex;
+    width: 35%;
+    margin: 0 auto;
+
+}
+
+.continue {
+
+    
+    width: 35%;
+    background-color: #FEC418;
+    /* border-radius: 10px; */
+    font-size: 25px;
+    font-weight: bold;
+    margin: 24px 0 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    height: 48px;
+    padding-top: 20p;
+    margin-top: 50px;
+
+}
+
+.icon {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 auto;
+    height: 5vh;
+    width: 197px;
+    display: flex;
+    justify-items: center;
+    font-family: impact;
+    font-weight: normal;
+
+}
+
+.selectiveOfferPreferredMopLabel {
+    background-color: #0071EB;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    font-size: 13px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.offerDisclaimer {
+    text-align: left;
+}
+
+.confirmOffer .paymentContainer .stepHeader {
+    margin-top: 0;
+}
+
+.confirmOffer .contextContainer > .contextRowFirst {
+    margin-top: 0;
+}
+
+.confirmOffer .changePlanContainer {
+    margin: 30px 0 20px;
+}
+
+.confirmOffer .planInfo,
+.multiMonthPayment .planInfo,
+.confirmOffer .planName,
+.multiMonthPayment .planName {
+    display: block;
+    margin-bottom: 0;
+}
+
+
+
+.confirmOffer .offerDisclaimer,
+.multiMonthPayment .offerDisclaimer {
+    margin-top: 30px;
+    font-size: 0.875rem;
+}
+
+div.basicLayout .confirmOffer .paymentContainer {
+    text-align: center;
+}
+
+.card_changePlanContainer {
+    color: #737373;
+    margin: 20px 3% 0;
+}
+
+.card_changePlanContainer .card_changePlanTitle {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+div[lang^="th"] .card_changePlanContainer .card_changePlanTitle {
+    font-size: 16px;
+}
+
+.card_changePlanContainer .card_planDesc {
+    width: 60%;
+    display: inline-block;
+}
+
+.card_changePlanContainer .card_changePlanLink {
+    float: right;
+    font-weight: bold;
+    color: #737373;
+}
+
+.card_changePlanContainer .changeCardLink {
+    float: right;
+    font-weight: bold;
+    color: #0071eb;
+}
+
+.card_changePlanContainer .cardLabel {
+    font-weight: bold;
+    color: #333333;
+}
+
+.ui-message-container {
+    display: table;
+    width: 100%;
+    margin: 10px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.ui-message-contents {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 10px;
+    color: #fff;
+}
+
+.ui-message-contents a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.ui-message-link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.ui-message-icon {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    width: 53px;
+}
+
+.ui-message-icon:before {
+    font-family: 'nf-icon';
+    line-height: 1.5em;
+    padding-left: 20px;
+    font-size: 1.5em;
+}
+
+.ui-message-subtle {
+    background-color: #f7f7f7;
+    border: solid 1px #ccc;
+}
+
+.ui-message-subtle > .ui-message-icon {
+    color: #000;
+}
+
+.ui-message-subtle > .ui-message-icon:before {
+    content: '\e799';
+}
+
+.ui-message-subtle .ui-message-contents {
+    color: #000;
+}
+
+.ui-message-info {
+    background: #03AEFD;
+}
+
+.ui-message-info > .ui-message-icon:before {
+    content: '\e799';
+}
+
+.ui-message-wait {
+    text-align: center;
+}
+
+.ui-message-warn {
+    background: #FFA00A;
+}
+
+.ui-message-warn > .ui-message-icon:before {
+    content: '\e796';
+}
+
+.ui-message-error {
+    background: #FFA00A;
+}
+
+.ui-message-error > .ui-message-icon:before {
+    content: '\e805';
+}
+
+
+
+.ui-message-success > .ui-message-icon:before {
+    content: '\e802';
+}
+
+.visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.planGrid__selector {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--has1Plans .planGrid__selector {
+        width: 20%;
+    }
+
+    .planGrid--has2Plans .planGrid__selector {
+        width: 40%;
+    }
+
+    .planGrid--has3Plans .planGrid__selector {
+        width: 60%;
+    }
+
+    .planGrid--has4Plans .planGrid__selector {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__selector {
+        width: 100%;
+    }
+}
+
+.planGrid__selectorTitle,
+.planGrid__selectorDescription {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.planGrid__selectorChoice {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.planGrid__selectorInput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.planGrid__selectorInput:focus {
+    outline: none;
+}
+
+.planGrid__selectorLabel {
+    -webkit-touch-callout: none;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__planSelector {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__planSelector {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
+.planGrid--has1Plans .planGrid__planChoice {
+    width: -webkit-calc(100% / 1);
+    width: -moz-calc(100% / 1);
+    width: calc(100% / 1);
+}
+
+.planGrid--has2Plans .planGrid__planChoice {
+    width: -webkit-calc(100% / 2);
+    width: -moz-calc(100% / 2);
+    width: calc(100% / 2);
+}
+
+.planGrid--has3Plans .planGrid__planChoice {
+    width: -webkit-calc(100% / 3);
+    width: -moz-calc(100% / 3);
+    width: calc(100% / 3);
+}
+
+.planGrid--has4Plans .planGrid__planChoice {
+    width: -webkit-calc(100% / 4);
+    width: -moz-calc(100% / 4);
+    width: calc(100% / 4);
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__planChoice {
+        padding: 12px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__planChoice {
+        padding: 8px 4px;
+    }
+}
+
+@media only screen and (min-width: 951px) {
+
+    .planGrid__planInput,
+    .planGrid__planLabel {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+
+    .planGrid__planInput,
+    .planGrid__planLabel {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .planGrid__planInput,
+    .planGrid__planLabel {
+        width: 100%;
+        height: 75px;
+    }
+}
+
+.planGrid__planInput {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.planGrid__planLabel {
+    padding: 1px;
+    background: #FEC418;
+    color: #0F0F0D;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 23px;
+    margin: 0 auto;
+    font-family: impact;
+}
+
+.planGrid__planInput:active + .planGrid__planLabel,
+.planGrid__planInput:focus + .planGrid__planLabel {
+    -webkit-box-shadow: 0 0 3px 0 #e50914;
+    -moz-box-shadow: 0 0 3px 0 #e50914;
+    box-shadow: 0 0 3px 0 #e50914;
+}
+
+.planGrid__planInput:checked + .planGrid__planLabel {
+    opacity: 1;
+}
+
+.planGrid__planLabel::after {
+    content: '';
+    display: block;
+    border: 0 solid transparent;
+    border-top-color: #FEC418;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__planInput:checked + .planGrid__planLabel::after {
+        border-width: 10px;
+        border-bottom-width: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__planInput:checked + .planGrid__planLabel::after {
+        border-width: 15px;
+        border-bottom-width: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--has4Plans .planGrid__planLabel {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 951px) {
+    .planGrid__frequencySelector {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .planGrid--has1Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((20% / 1) - 120px) / 2);
+        padding: 8px -moz-calc(((20% / 1) - 120px) / 2);
+        padding: 8px calc(((20% / 1) - 120px) / 2);
+    }
+
+    .planGrid--has2Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((40% / 2) - 120px) / 2);
+        padding: 8px -moz-calc(((40% / 2) - 120px) / 2);
+        padding: 8px calc(((40% / 2) - 120px) / 2);
+    }
+
+    .planGrid--has3Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((60% / 3) - 120px) / 2);
+        padding: 8px -moz-calc(((60% / 3) - 120px) / 2);
+        padding: 8px calc(((60% / 3) - 120px) / 2);
+    }
+
+    .planGrid--has4Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((65% / 4) - 120px) / 2);
+        padding: 8px -moz-calc(((65% / 4) - 120px) / 2);
+        padding: 8px calc(((65% / 4) - 120px) / 2);
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__frequencySelector {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .planGrid--has1Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((20% / 1) - 90px) / 2);
+        padding: 8px -moz-calc(((20% / 1) - 90px) / 2);
+        padding: 8px calc(((20% / 1) - 90px) / 2);
+    }
+
+    .planGrid--has2Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((40% / 2) - 90px) / 2);
+        padding: 8px -moz-calc(((40% / 2) - 90px) / 2);
+        padding: 8px calc(((40% / 2) - 90px) / 2);
+    }
+
+    .planGrid--has3Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((60% / 3) - 90px) / 2);
+        padding: 8px -moz-calc(((60% / 3) - 90px) / 2);
+        padding: 8px calc(((60% / 3) - 90px) / 2);
+    }
+
+    .planGrid--has4Plans .planGrid__frequencySelector {
+        padding: 8px -webkit-calc(((65% / 4) - 90px) / 2);
+        padding: 8px -moz-calc(((65% / 4) - 90px) / 2);
+        padding: 8px calc(((65% / 4) - 90px) / 2);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__frequencySelector {
+        padding: 4px;
+        padding-top: 8px;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+.planGrid__frequencyChoice {
+    width: 50%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #f7f7f7;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 48px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.planGrid__frequencyInput {
+    width: 14px;
+    height: 14px;
+    margin-right: -14px;
+    -webkit-transform: translateX(16px);
+    -moz-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    -o-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.planGrid__frequencyLabel {
+    color: #535353;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.planGrid__frequencyLabel::before,
+.planGrid__frequencyLabel::after {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    content: '';
+}
+
+.planGrid__frequencyLabel::before {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    margin-right: 6px;
+}
+
+.planGrid__frequencyInput:active + .planGrid__frequencyLabel::before,
+.planGrid__frequencyInput:focus + .planGrid__frequencyLabel::before {
+    -webkit-box-shadow: 0 0 3px 0 #e50914;
+    -moz-box-shadow: 0 0 3px 0 #e50914;
+    box-shadow: 0 0 3px 0 #e50914;
+}
+
+.planGrid__frequencyLabel::after {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #e50914;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    left: 19px;
+    opacity: 0;
+}
+
+.planGrid__frequencyInput:checked + .planGrid__frequencyLabel::after {
+    opacity: 1;
+}
+
+.planGrid__cell {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    fill: white;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+}
+
+.planGrid__cell.planGrid__cell--isSelected {
+    color: #;
+    fill: #;
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__cell {
+        padding: 12px 16px;
+    }
+
+    .planGrid--has1Plans .planGrid__cell {
+        width: -webkit-calc(20% / 1);
+        width: -moz-calc(20% / 1);
+        width: calc(20% / 1);
+    }
+
+    .planGrid--has2Plans .planGrid__cell {
+        width: -webkit-calc(40% / 2);
+        width: -moz-calc(40% / 2);
+        width: calc(40% / 2);
+    }
+
+    .planGrid--has3Plans .planGrid__cell {
+        width: -webkit-calc(60% / 3);
+        width: -moz-calc(60% / 3);
+        width: calc(60% / 3);
+    }
+
+    .planGrid--has4Plans .planGrid__cell {
+        width: -webkit-calc(65% / 4);
+        width: -moz-calc(65% / 4);
+        width: calc(65% / 4);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__cell {
+        min-height: 37px;
+        padding: 8px;
+        position: relative;
+    }
+
+    .planGrid--has1Plans .planGrid__cell {
+        width: -webkit-calc(100% / 1);
+        width: -moz-calc(100% / 1);
+        width: calc(100% / 1);
+    }
+
+    .planGrid--has2Plans .planGrid__cell {
+        width: -webkit-calc(100% / 2);
+        width: -moz-calc(100% / 2);
+        width: calc(100% / 2);
+    }
+
+    .planGrid--has3Plans .planGrid__cell {
+        width: -webkit-calc(100% / 3);
+        width: -moz-calc(100% / 3);
+        width: calc(100% / 3);
+    }
+
+    .planGrid--has4Plans .planGrid__cell {
+        width: -webkit-calc(100% / 4);
+        width: -moz-calc(100% / 4);
+        width: calc(100% / 4);
+    }
+}
+
+.planGrid__featureCell {
+    color: white;
+    fill: #333333;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--has1Plans .planGrid__featureCell {
+        width: 80%;
+    }
+
+    .planGrid--has2Plans .planGrid__featureCell {
+        width: 60%;
+    }
+
+    .planGrid--has3Plans .planGrid__featureCell {
+        width: 40%;
+    }
+
+    .planGrid--has4Plans .planGrid__featureCell {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__featureCell {
+        text-align: center;
+        font-size: 13px;
+        padding: 16px 8px 4px;
+    }
+
+    .planGrid__featureCell.planGrid__cell {
+        width: 100%;
+    }
+
+    .planGrid__featureTableRow:not(:first-child) .planGrid__featureCell::before {
+        background: #cccccc;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 4px;
+        position: absolute;
+        right: 4px;
+        top: 3px;
+    }
+}
+
+.planGrid__booleanCell {
+    position: relative;
+}
+
+.planGrid__booleanIcon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.planGrid__booleanGraphic {
+    width: 18px;
+    height: 18px;
+}
+
+.planGrid__booleanGraphic.svg-icon-thin-check path {
+    -webkit-transform: translate(0.5px, 1.75px);
+    -moz-transform: translate(0.5px, 1.75px);
+    -ms-transform: translate(0.5px, 1.75px);
+    -o-transform: translate(0.5px, 1.75px);
+    transform: translate(0.5px, 1.75px);
+}
+
+.planGrid__booleanGraphic.svg-icon-thin-x path {
+    -webkit-transform: translate(2px, 2px);
+    -moz-transform: translate(2px, 2px);
+    -ms-transform: translate(2px, 2px);
+    -o-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+}
+
+.planGrid__booleanLabel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    opacity: 0;
+    line-height: 1em;
+    font-size: 72px;
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--has4Plans .planGrid__stringCell {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--has4Plans .planGrid__stringCell {
+        font-size: 12px;
+        overflow-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--has4Plans .planGrid__videoQualityLabel {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--has4Plans .planGrid__videoQualityLabel {
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+.planGrid__videoQualityLabel + .planGrid__videoQualityLabel {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--has4Plans .planGrid__videoQualityLabel + .planGrid__videoQualityLabel {
+        font-weight: normal;
+    }
+}
+
+.planGrid__featureTable {
+    border-collapse: collapse;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.planGrid__featureTableBody {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.planGrid__featureTableCaption {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.planGrid__featureTableRow {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@media only screen and (min-width: 951px),
+only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid__featureTableRow {
+        border-bottom: 1px solid #FEC418;
+        min-height: 60px;
+    }
+
+    .planGrid__featureTableRow:last-child {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid__featureTableRow {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.planGrid__legal {
+    padding: 0 16px;
+    color: white;
+    font-size: 15px;
+    display: block;
+}
+
+.planGrid__legalPartner {
+    margin-top: 10px;
+}
+
+.planGrid__finePrint {
+    padding: 1em 16px 0 16px;
+    color: #737373;
+    font-size: 13px;
+    display: block;
+}
+
+@media only screen and (min-width: 951px) {
+    .planGrid--hasFixedHeader {
+        padding-top: 144px;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--hasFixedHeader {
+        padding-top: 114px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--hasFixedHeader {
+        padding-top: 91px;
+    }
+}
+
+@media only screen and (min-width: 951px) {
+    .planGrid--hasFixedHeader.planGrid--hasFrequencySelector {
+        padding-top: 208px;
+    }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 601px) {
+    .planGrid--hasFixedHeader.planGrid--hasFrequencySelector {
+        padding-top: 178px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .planGrid--hasFixedHeader.planGrid--hasFrequencySelector {
+        padding-top: 151px;
+    }
+}
+
+.planGrid__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.planGrid--hasFixedHeader .planGrid__header {
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    left: 50%;
+    max-width: 978px;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.planFormContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.planFormContainer .changeAnytime {
+    margin-bottom: 20px;
+}
+
+.hasExtendedDiacritics .planFormContainer .stepTitle {
+    line-height: 39px;
+}
+
+.planFormContainer > .radioSelect {
+    height: 48px;
+    margin-bottom: 5px;
+}
+
+.tarifas{
+    
+    color : white;
+    width: 40%;
+}
+
+
+span.planGrid_booleanLabel{
+    
+    color: #FEC418;
+    
+}
+
+
+
+
+
+.enlaces {
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+.enlaces a {
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    color: white;
+    flex: 1;
+
+}
+
+
+
+.forminput {
+    height: 25px;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    border-color: #4E4C47;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 7px;
+}
+
+
+
+
+
+
+.helpsection {
+
+    padding-top: 35px;
+    padding-left: 40px;
+}
+
+
+.mailhelp {
+
+    color: white;
+
+}
+
+.textinfo {
+
+    color: white;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-right: 23px;
+
+}
+
+.ayuda {
+
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+
+label.option {
+
+    font-weight: bold;
+}
+
+
+A {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.suscription {
+
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 6px;
+
+}
+
+
+
+
+.registerform {
+
+    margin: 0 auto;
+    font-size: 15;
+    font-size: 13px;
+    padding-top: 25px;
+    color: white;
+
+}
+
+
+.derechosreservados {
+
+
+    margin: 0 auto;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    padding-top: 1.5em;
+
+}
+
+.mailandnumber {
+
+    padding-top: 15px;
+    color: white;
+
+}

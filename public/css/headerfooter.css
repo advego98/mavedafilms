@@ -1,0 +1,155 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+
+    font-family: impact;
+    src: url("../fonts/impact.ttf");
+    /*src: url('/fonts/impact.tff');*/
+
+}
+
+body {
+
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5rem;
+    z-index: 10;
+
+}
+
+
+.logo {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 3.5rem;
+    height: 45px;
+    width: 167px;
+    padding-left: 20px;
+    font-family: impact;
+    font-weight: normal;
+
+}
+
+
+.containtpage {
+
+    height: 100%;
+    width: 100%;
+    background-image: url('../backgrounds/imagen_login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.emptyspace {
+
+    height: 15vh;
+
+}
+
+
+.emptyspace2 {
+
+    height: 40vh;
+
+}
+
+
+.spacefooter {
+
+    height: 2vh;
+}
+
+label {
+
+    color: white;
+
+}
+
+
+.footer {
+
+    background-color: #23231E;
+
+
+}
+
+
+.icon {
+
+    color: #FEC61A;
+    font-size: 35px;
+    margin: 0 auto;
+    height: 5vh;
+    width: 167px;
+    display: flex;
+    justify-items: center;
+    font-family: impact;
+    font-weight: normal;
+
+}
+
+
+
+.enlaces {
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+}
+
+
+
+.enlaces a {
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+
+    color: white;
+    flex: 1;
+
+}
+
+
+.derechosreservados {
+
+
+    margin: 0 auto;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    padding-top: 1.5em;
+
+}
+
+
+
