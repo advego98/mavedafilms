@@ -61,8 +61,9 @@
 
     <div class="form-register" id="content">
         <div class="stepicons"><img id="imagen" src="{{asset('backgrounds/stepplan1.png')}}"></div>
-        <form method="POST" name="register-form" action="{{ route('register') }}">
+        <form method="POST" name="register-form" action="{{ route('registro.store') }}">
             @csrf
+            @method('POST')
 
             <div class="registersection" id="form1">
                 <label class="title-registro">Datos de registro</label>
@@ -93,19 +94,19 @@
                                 elecciona el plan que quieres tener
                             </span>
                             <label class="planGrid__selectorChoice planGrid__planChoice" for="planGrid_planChoice_0" data-uia="plan-grid-plan-selector+label-text_1_stream_name">
-                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_0" data-uia="plan-grid-plan-selector+input-text_1_stream_name" value="basic">
+                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_0" data-uia="plan-grid-plan-selector+input-text_1_stream_name" value="1">
                                 <span class="planGrid__selectorLabel planGrid__planLabel">
                                     Básica
                                 </span>
                             </label>
                             <label class="planGrid__selectorChoice planGrid__planChoice" for="planGrid_planChoice_1" data-uia="plan-grid-plan-selector+label-text_2_stream_name">
-                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_1" data-uia="plan-grid-plan-selector+input-text_2_stream_name" value="estandar">
+                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_1" data-uia="plan-grid-plan-selector+input-text_2_stream_name" value="2">
                                 <span class="planGrid__selectorLabel planGrid__planLabel">
                                     Estándar
                                 </span>
                             </label>
                             <label class="planGrid__selectorChoice planGrid__planChoice" for="planGrid_planChoice_2" data-uia="plan-grid-plan-selector+label-text_4_stream_name">
-                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_2" data-uia="plan-grid-plan-selector+input-text_4_stream_name" value="premium" checked="">
+                                <input type="radio" name="planChoice" class="planGrid__selectorInput planGrid__planInput" id="planGrid_planChoice_2" data-uia="plan-grid-plan-selector+input-text_4_stream_name" value="3" checked="">
                                 <span class="planGrid__selectorLabel planGrid__planLabel">
                                     Premium
                                 </span>
@@ -424,10 +425,10 @@
 
                     <input type="text" class="forminputpay" name="credit_name" placeholder="Nombre de la tarjeta">
                     <input type="text" class="forminputpay" name="surnames" placeholder="Apellidos">
-                    <input type="number" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta">
-                    <input type="text" class="forminputpay" name="date_venciment" placeholder="Fecha de vencimiento(MM/AA)">
-                    <input type="password" class="forminputpay" name="security code" placeholder="Codigo de seguridad">
-                    <input type="password" class="forminputpay" name="tarifa" placeholder="tarifa">
+                    <input type="text" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta">
+                    <input type="text" class="forminputpay" name="date_venciment" placeholder="Fecha de vencimiento(MM/AA)" pattern="([0-9]{2}[/]?){2}">
+                    <input type="password" class="forminputpay" name="security_code" placeholder="Codigo de seguridad" maxlength="3">
+{{--                    <input type="password" class="forminputpay" name="tarifa" placeholder="tarifa">--}}
                     <p class="infolegal">Al hacer clic en el botón "Iniciar suscripción de pago" de más abajo, estás
                         aceptando nuestros Términos de uso, admites que ya has cumplido los 18 y
                         reconoces nuestra Declaración de privacidad. Aceptas que la suscripción
