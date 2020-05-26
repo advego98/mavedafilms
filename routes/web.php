@@ -79,8 +79,7 @@ Route::get('/editserie', function () {
 }) ->name('editserie') ;
 
 
-
-
+Route::resource('registro','MavedaRegisterController');
 
 
 

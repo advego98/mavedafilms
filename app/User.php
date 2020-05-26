@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name','last_name', 'email', 'password','plan_id'
     ];
 
     /**
@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function plans()
+    {
+        return $this
+            ->belongsToMany('App\Plans','plans','plan_id','plan_id')
+            ->withTimestamps();
+    }
 }

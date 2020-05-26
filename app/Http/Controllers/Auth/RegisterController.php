@@ -5,9 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Subscription;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class RegisterController extends Controller
 {
@@ -41,12 +44,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -56,20 +54,26 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
+
+    protected function create(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'last_name' => 'velazco',
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'plan_id'=>1
+        $user=User::create([
+            'name' => $request->name,
+            'last_name' => $request->subname,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'plan_id'=>$request->planChoice
         ]);
+        Subscription::create([
+            'plan_id'=>$request->planChoice,
+            'user_id'=>$user->id,
+            'credit_card'=>$request->credit_number,
+            'credit_card_name'=>$request->credit_name,
+            'credit_card_lastname'=>$request->surnames,
+            'due_date'=>$request->date_venciment,
+            'cvv'=>$request->security_code,
+        ]);
+        return redirect()->route('home');
     }
 }
+
