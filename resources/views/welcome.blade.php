@@ -1,19 +1,19 @@
 
 <div id="backgroundwelcome">
-    @extends ('layouts.app')
+    @extends ('layouts.login')
     @section('content')
+
+
 
 
         <div class="emptyspace"></div>
 
             <div class="login-body">
-                <h1 class="title">Inicio Sesión</h1>
+                <h1 class="title">Iniciar Sesión</h1>
 
-
-                <form method="POST" action="{{ route('login') }}" class="login" name="login-form">
-                    @csrf
-                    <input id="email" type="email" class="forminput" name="login-name" placeholder="Correo Electronico" required>
-                    <input id="password" type="password" class="forminput" name="password-name" placeholder="Contraseña" required>
+                <form method="post" name="login-form" class="login">
+                    <input type="text" class="forminput" name="login-name" placeholder="Correo Electronico">
+                    <input type="text" class="forminput" name="password-name" placeholder="Contraseña">
 
                     <div class="helpsection">
 
@@ -26,7 +26,6 @@
                     <button class="login-button">Iniciar sesión</button>
 
                     <div class="registerform">¿No tienes cuenta?<a class="suscription" href="{{route('register')}}">Suscríbete ahora</a></div>
-
 
                 </form>
 
