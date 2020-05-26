@@ -4,6 +4,8 @@
 
 
 
+        <div class="emptyspace"></div>
+
     <div class="password-body">
 
         <h1 class="title">¿Como restablecer
@@ -30,6 +32,8 @@
         </form>
 
     </div>
+
+
         <div class="spacecontra"></div>
     <div id="footerspace"></div>
 
