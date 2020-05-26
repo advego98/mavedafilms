@@ -35,21 +35,17 @@
 <body>
 
 
-         @guest
+@guest
 
 
 
-         <header>
+    <header>
 
-             <div class="logo">MAVEDAFILMS</div>
-             <button class="button-iniciarsesion">Iniciar Sesión</button>
-         </header>
+        <div class="logo">MAVEDAFILMS</div>
 
-         @endguest
+    </header>
 
-
-
-
+@endguest
 
 
 
@@ -58,42 +54,18 @@
 
 
 
-            @yield('content')
+
+
+
+
+@yield('content')
 
 
 
 
 
 
-     <footer>
 
-         <div class="spacefooter"></div>
-         <div class="icon">MAVEDAFILMS</div>
-         <div class="spacefooter"></div>
-         <div class="enlaces">
-             <a href="#">Política de privacidad</a>
-             <a href="#">Política de cookies</a>
-             <a href="#">Ayuda</a>
-             <a href="#">Dispositivos compatibles</a>
-             <a href="#">Administrar preferencias</a>
-             <a href="#">Contrato de suscripción</a>
-             <a href="#">Términos y condiciones</a>
-
-         </div>
-
-         <div class="derechosreservados">
-
-             <p>©Mavedafilms. Todos los derechos reservados</p>
-
-         </div>
-
-     </footer>
-
-
-         </div>
-
-
-  @yield('footer')
 
 
 

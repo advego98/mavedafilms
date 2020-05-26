@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
+Route::get('welcome', function () {
+    return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/register', function () {
-//
-//    return view ('stepregisters.registerform');
-//
-//
-//}) ->name('register') ;
+Route::get('/register', function () {
+
+    return view ('stepregisters.registerform');
+
+
+        }) ->name('register') ;
 
 
 Route::get('/changepassword', function () {
@@ -36,31 +36,59 @@ Route::get('/changepassword', function () {
 
 }) ->name('changepassword') ;
 
-//
-//Route::get('/planchoose', function () {
-//
-//    return view ('stepregisters.planchoose');
-//
-//
-//}) ->name('planchoose') ;
-//
-//
-//Route::get('/paymentmethod', function () {
-//
-//    return view ('stepregisters.paymentmethod');
-//
-//
-//}) ->name('paymentmethod') ;
-//
-//
-//Route::get('/profiles', function () {
-//
-//    return view ('profile.profile');
-//
-//
-//}) ->name('profile') ;
-//
-//
-//
-//
-//
+
+Route::get('/planchoose', function () {
+
+    return view ('stepregisters.planchoose');
+
+
+}) ->name('planchoose') ;
+
+
+Route::get('/paymentmethod', function () {
+
+    return view ('stepregisters.paymentmethod');
+
+
+}) ->name('paymentmethod') ;
+
+
+Route::get('/profiles', function () {
+
+    return view ('profile.profile');
+
+
+}) ->name('profile') ;
+
+
+
+Route::get('/admin', function () {
+
+    return view ('admin.adminpage');
+
+
+}) ->name('admin') ;
+
+
+Route::get('/newserie', function () {
+
+    return view ('admin.newserie');
+
+
+}) ->name('newserie') ;
+
+
+Route::get('/editserie', function () {
+
+    return view ('admin.editserie');
+
+
+}) ->name('editserie') ;
+
+
+
+
+
+
+
+

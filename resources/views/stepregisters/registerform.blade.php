@@ -22,9 +22,7 @@
                     <input type="email" class="forminputregister" name="mail" placeholder="Correo">
                     <input type="password" class="forminputregister" name="password" placeholder="Contraseña">
                     <input type="password" class="forminputregister" name="password" placeholder="Repetir contraseña">
-
-                    <input type="submit" class="register-button" placeholder="continuar" href="{{route('planchoose')}}" value="Continuar">
-
+                    <input type="submit" class="register-button" placeholder="continuar" href="{{route('planchoose')}}">>
                 </div>
             </form>
 
