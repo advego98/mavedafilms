@@ -1,6 +1,6 @@
 
 <div id="backgroundwelcome">
-    @extends ('layouts.app')
+    @extends ('layouts.login')
     @section('content')
 
 

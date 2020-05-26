@@ -13,20 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('welcome', function () {
-    return view('welcome');
+Route::get('/', function () {
+    return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/register', function () {
-
-    return view ('stepregisters.registerform');
-
-
-        }) ->name('register') ;
 
 
 Route::get('/changepassword', function () {
