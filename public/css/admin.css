@@ -72,5 +72,33 @@
 
 }
 
+.emptyadmin{
+
+    height: 7vh;
+
+}
+
+.table{
+
+    background-color:black !important;
+
+}
+
+
+
+th{
+
+    width: 25%;
+    color: white;
+
+}
+
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+}
+
 
 
