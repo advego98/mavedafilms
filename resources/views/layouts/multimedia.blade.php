@@ -30,17 +30,91 @@
 @guest
 
     <header>
+{{--        <div class="logo">MAVEDAFILMS</div>--}}
+{{--        <nav class="nav">--}}
+{{--            <li><a href="">Inicio</a></li>--}}
+{{--            <li><a href="">Series</a></li>--}}
+{{--            <li><a href="">Peliculas</a></li>--}}
+{{--            <li><a href="">Mi lista</a></li>--}}
+{{--        </nav>--}}
+{{--        <nav>--}}
+
+{{--            <input class="flexsearch--input" type="search" placeholder="search">--}}
+{{--            <input class="flexsearch--submit" type="submit" value="">--}}
+{{--            <svg width="32" height="38" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                <g filter="url(#filter0_d)">--}}
+{{--                    <g clip-path="url(#clip0)">--}}
+{{--                        <path d="M27.6719 25.9395L22.9984 20.0977C22.7875 19.834 22.5016 19.6875 22.2016 19.6875H21.4375C22.7312 17.6191 23.5 15.0176 23.5 12.1875C23.5 5.45508 19.1359 0 13.75 0C8.36406 0 4 5.45508 4 12.1875C4 18.9199 8.36406 24.375 13.75 24.375C16.0141 24.375 18.0953 23.4141 19.75 21.7969V22.752C19.75 23.127 19.8672 23.4844 20.0781 23.748L24.7516 29.5898C25.1922 30.1406 25.9047 30.1406 26.3406 29.5898L27.6672 27.9316C28.1078 27.3809 28.1078 26.4902 27.6719 25.9395ZM13.75 19.6875C10.4359 19.6875 7.75 16.3359 7.75 12.1875C7.75 8.04492 10.4312 4.6875 13.75 4.6875C17.0641 4.6875 19.75 8.03906 19.75 12.1875C19.75 16.3301 17.0687 19.6875 13.75 19.6875Z" fill="white"/>--}}
+{{--                    </g>--}}
+{{--                </g>--}}
+{{--                <defs>--}}
+{{--                    <filter id="filter0_d" x="0" y="0" width="32" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">--}}
+{{--                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>--}}
+{{--                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>--}}
+{{--                        <feOffset dy="4"/>--}}
+{{--                        <feGaussianBlur stdDeviation="2"/>--}}
+{{--                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>--}}
+{{--                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>--}}
+{{--                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>--}}
+{{--                    </filter>--}}
+{{--                    <clipPath id="clip0">--}}
+{{--                        <rect x="4" width="24" height="30" fill="white"/>--}}
+{{--                    </clipPath>--}}
+{{--                </defs>--}}
+{{--            </svg>--}}
+{{--         <div class="account"><svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                 <circle cx="19.5" cy="19.5" r="19.5" fill="white"/>--}}
+{{--                 <path d="M31 27.4615C31 30.2308 25.6037 33.5 19 33.5C12.8193 33.5 8.53655 30.2308 8.02602 28.3846C7.61759 23.2154 12.1144 21 14.6962 21H24.3963C28.4806 21 31 24.6541 31 27.4615Z" fill="#E5E5E5"/>--}}
+{{--                 <circle cx="19" cy="11" r="7" fill="#E5E5E5"/>--}}
+{{--             </svg></div>--}}
+{{--        </nav>--}}
+{{--    </header>--}}
+
         <div class="logo">MAVEDAFILMS</div>
         <nav class="main-nav">
-            <a href="#incio">Inicio</a>
-            <a href="#series">Series</a>
-            <a href="#peliculas">Peliculas</a>
-            <a href="#mylist">Mis listas</a>
+            <a href="#">Inicio</a>
+            <a href="#">Series</a>
+            <a href="#">Peliculas</a>
+            <a href="#">Mi lista</a>
         </nav>
+        <nav class="sub-nav">
+            <a href="#"><div class="fas fa-search sub-nav-logo">
+                    <svg width="32" height="38" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d)">
+                            <g clip-path="url(#clip0)">
+                                <path d="M27.6719 25.9395L22.9984 20.0977C22.7875 19.834 22.5016 19.6875 22.2016 19.6875H21.4375C22.7312 17.6191 23.5 15.0176 23.5 12.1875C23.5 5.45508 19.1359 0 13.75 0C8.36406 0 4 5.45508 4 12.1875C4 18.9199 8.36406 24.375 13.75 24.375C16.0141 24.375 18.0953 23.4141 19.75 21.7969V22.752C19.75 23.127 19.8672 23.4844 20.0781 23.748L24.7516 29.5898C25.1922 30.1406 25.9047 30.1406 26.3406 29.5898L27.6672 27.9316C28.1078 27.3809 28.1078 26.4902 27.6719 25.9395ZM13.75 19.6875C10.4359 19.6875 7.75 16.3359 7.75 12.1875C7.75 8.04492 10.4312 4.6875 13.75 4.6875C17.0641 4.6875 19.75 8.03906 19.75 12.1875C19.75 16.3301 17.0687 19.6875 13.75 19.6875Z" fill="white"/>
+                            </g>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d" x="0" y="0" width="32" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                            <clipPath id="clip0">
+                                <rect x="4" width="24" height="30" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
 
+                </div></a>
+            <a href="#"><div class="fas fa-bell sub-nav-logo"><svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.5" cy="19.5" r="19.5" fill="white"/>
+                        <path d="M31 27.4615C31 30.2308 25.6037 33.5 19 33.5C12.8193 33.5 8.53655 30.2308 8.02602 28.3846C7.61759 23.2154 12.1144 21 14.6962 21H24.3963C28.4806 21 31 24.6541 31 27.4615Z" fill="#E5E5E5"/>
+                        <circle cx="19" cy="11" r="7" fill="#E5E5E5"/>
+                    </svg>
+                </div></a>
+
+        </nav>
     </header>
 
-@endguest
+    <div class="emptyspace"></div>
+
+        @endguest
 
 @yield('content')
 
@@ -68,8 +142,6 @@
 
 </footer>
 
-
-</div>
 
 
 @yield('footer')

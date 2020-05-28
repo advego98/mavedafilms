@@ -134,6 +134,32 @@ Route::get('/deletemovie', function () {
 }) ->name('deletemovie');
 
 
+Route::get('/inicio', function () {
+
+    return view ('multimedia.multimediainit');
+
+
+}) ->name('multimediainit');
+
+
+Route::get('/verseries', function () {
+
+    return view ('admin.indexserie');
+
+
+}) ->name('indexserie');
+
+
+Route::get('/verpeliculas', function () {
+
+    return view ('admin.indexmovie');
+
+
+}) ->name('indexmovie');
+
+
+
+
 Route::resource('registro','MavedaRegisterController');
 
 Route::resource( 'serie', 'SerieController');
