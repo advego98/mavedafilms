@@ -9,9 +9,8 @@
                     <section class="collapsable-section-content account-section-content">
 
                         <form method="post">
-                            <select class="selectseries" placeholder="Selecciona una pelicula"  name="series" style="min-width: 187px;">
-                            </select>
-                            <button class="login-button">Eliminar</button>
+                            <input type="text" class="serieinput" name="genre" placeholder="Introducir genero">
+                            <button class="login-button">Añadir</button>
                         </form>
                     </section>
                 </div>

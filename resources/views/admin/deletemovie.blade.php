@@ -9,7 +9,7 @@
                     <section class="collapsable-section-content account-section-content">
 
                         <form method="post">
-                            <select class="selectseries" placeholder="Selecciona una pelicula"  name="series" style="min-width: 187px;">
+                            <select class="selectseries" placeholder="Selecciona una pelicula"  name="movies" style="min-width: 187px;">
                             </select>
                             <button class="login-button">Eliminar</button>
                         </form>
