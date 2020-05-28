@@ -68,7 +68,7 @@ Route::get('/newserie', function () {
     return view ('admin.newserie');
 
 
-}) ->name('newserie') ;
+}) ->name('newserie');
 
 
 Route::get('/editserie', function () {
@@ -76,11 +76,69 @@ Route::get('/editserie', function () {
     return view ('admin.editserie');
 
 
-}) ->name('editserie') ;
+}) ->name('editserie');
+
+
+Route::get('/deleteserie', function () {
+
+    return view ('admin.deleteserie');
+
+
+}) ->name('deleteserie');
+
+
+Route::get('/addgenre', function () {
+
+    return view ('admin.addgenre');
+
+
+}) ->name('addgenre');
+
+Route::get('/deletegenre', function () {
+
+    return view ('admin.deletegenre');
+
+
+}) ->name('deletegenre');
+
+
+Route::get('/deletegenre', function () {
+
+    return view ('admin.deletegenre');
+
+
+}) ->name('deletegenre');
+
+
+Route::get('/newmovie', function () {
+
+    return view ('admin.newmovie');
+
+
+}) ->name('newmovie');
+
+
+Route::get('/editmovie', function () {
+
+    return view ('admin.editmovie');
+
+
+}) ->name('editmovie');
+
+
+Route::get('/deletemovie', function () {
+
+    return view ('admin.deletemovie');
+
+
+}) ->name('deletemovie');
 
 
 Route::resource('registro','MavedaRegisterController');
 
+Route::resource( 'serie', 'SerieController');
+
+Route::resource( 'movies', 'MoviesController');
 
 
 
