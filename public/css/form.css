@@ -38,6 +38,11 @@ header {
 }
 
 
+.spacepaswd{
+
+    height: 5vh;
+}
+
 .logo {
 
     color: #FEC61A;
@@ -84,13 +89,13 @@ header {
 
 .emptyspace2 {
 
-    height: 40vh;
+    height: 20vh;
 
 }
 
 #emptyspace2 {
 
-    height: 40vh;
+    height: 20vh;
 
 }
 
@@ -131,6 +136,19 @@ label {
     text-align: center;
     color: white;
     font-weight: bold;
+
+}
+
+
+.titlepassword{
+
+    text-align: center;
+    color: white;
+    padding-bottom: 5px;
+    font-size: 27px;
+    font-family: Century Gothic;
+    font-weight: bold;
+
 }
 
 
@@ -368,7 +386,7 @@ button.login-button {
 .registersection{
 
     padding-top: 25px;
-    padding-left: 40px;
+    padding-left: 50px;
 
 }
 
@@ -397,6 +415,7 @@ button.login-button {
     width: 43%;
     float: left;
     border: 1px solid #FEC418;
+    color:white;
 }
 
 
@@ -429,6 +448,7 @@ button.login-button {
     margin-top: 30px;
     padding: 10px;
     border-radius: 4px;
+    color:black;
 }
 
 
@@ -462,6 +482,7 @@ button.login-button {
     padding: 10px;
     border-radius: 4px;
     font-size: 19px;
+    color: black;
 
 
 }
@@ -517,7 +538,14 @@ button.login-button {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
+
+
+    .stepicons img {
+        height: 50px;
+    }
+
+
 
     #backgroundwelcome {
         height: 100%;
@@ -544,10 +572,6 @@ button.login-button {
     }
 
 
-   .title{
-
-  
-   }
 
 
    .button-iniciarsesion{
@@ -574,7 +598,7 @@ button.login-button {
        height: 100%;
        width: 100%;
        background-color: #0F0F0D;
-       background-image:none;
+       background-image:none
    }
 
 
@@ -584,6 +608,41 @@ button.login-button {
 
    }
 
+
+   .form-register {
+       background-color: rgba(88, 88, 87, 0.5);
+       -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+       border-radius: 4px;
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       margin: 0 auto;
+       min-height: 550px;
+       padding: 20px 0 30px;
+       width: 70%;
+       border: 1px solid #FEC418;
+   }
+
+
+
+
+   .groupinput{
+       height: 25px;
+       background-color: #4E4C47;
+       padding-top: 20px;
+       border-color: #4E4C47;
+       font-weight: 400;
+       font-size: 17px;
+       color: white;
+       width: 86%;
+       text-align: left;
+       padding: 20px;
+       margin-top: 30px;
+       color: white;
+       border: 1px solid #FEC418;
+
+   }
 
 
 }

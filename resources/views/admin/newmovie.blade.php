@@ -8,14 +8,18 @@
                 <div class="responsive-account-content">
                     <section class="collapsable-section-content account-section-content">
 
-                        <form method="post" action="{{route('serie.store')}}" enctype="multipart/form-data">
+                        <form method="post" action="{{route('movies.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">
                             <input type="file" class="serieinput" name="portada" placeholder="cover">
-                            <input type="text" class="textareainput" name="description" placeholder="description">
+
+                            <textarea class="textareainput" name="description">
+
+                            </textarea>
                             <input type="text" class="serieinput" name="actores" placeholder="actores">
                             <input type="text" class="serieinput" name="genero" placeholder="genero">
+                            <input type="file" class="serieinput" name="url" placeholder="pelicula">
                             <select  class="serieinput" name="restriccion" placeholder="restriccion de edad">
                                 <option value="3">3</option>
                                 <option value="7">7</option>
@@ -25,10 +29,6 @@
                             </select>
                             <input type="text" class="serieinput" name="duracion" placeholder="duration">
                             <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
-
-
-
-
                         </form>
 
                     </section>
@@ -39,5 +39,3 @@
 
 
 @endsection
-
-

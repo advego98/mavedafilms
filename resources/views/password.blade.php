@@ -4,11 +4,11 @@
 
 
 
-        <div class="emptyspace"></div>
+        <div class="spacepaswd"></div>
 
     <div class="password-body">
 
-        <h1 class="title">¿Como restablecer
+        <h1 class="titlepassword">¿Como restablecer
             la contraseña?</h1>
 
         <form method="post" name="login-form" class="passwordform">
