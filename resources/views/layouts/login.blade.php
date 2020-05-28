@@ -52,10 +52,6 @@
 
 
 
-
-
-
-
 @yield('content')
 
 
