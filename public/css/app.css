@@ -21,86 +21,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0F0F0D;
 
+
 }
-
-/*header {*/
-/*    position: relative;*/
-/*    max-width: 1920px;*/
-/*    margin: 0 auto;*/
-/*    padding-top: 20px;*/
-/*    width: 100%;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    height: 5rem;*/
-/*    z-index: 10;*/
-/*    display: flex;*/
-
-/*}*/
-
-/*.logo{*/
-
-/*    color: #FEC61A;*/
-/*    font-size: 35px;*/
-/*    margin: 0 3.5rem;*/
-/*    height: 45px;*/
-/*    width: 167px;*/
-/*    padding-left: 20px;*/
-/*    font-family: impact;*/
-/*    font-weight: normal;*/
-
-/*}*/
-
-
-
-/*.nav {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: nowrap;*/
-/*    justify-content: center;*/
-/*    justify-content: flex-start;*/
-/*    font-family: 'Playfair Display', serif;*/
-/*}*/
-
-/*ul {*/
-/*    list-style: none;*/
-/*}*/
-
-/*ul.menu {*/
-/*    display: block;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: nowrap;*/
-/*    justify-content: center;*/
-/*    justify-content: center;*/
-/*    position: relative;*/
-/*    width: auto;*/
-/*    z-index: 9;*/
-/*    margin: 0;*/
-/*    background-color: rgba( 0, 0, 0, 0.10);*/
-/*    width: 100%;*/
-/*}*/
-
-/*ul.menu > li {*/
-/*    display: inline-block;*/
-/*    float: left;*/
-/*    position: relative;*/
-/*    text-align: left;*/
-
-/*    z-index:7;*/
-/*}*/
 
 
 header {
     padding: 20px 20px 0 20px;
-    position: fixed;
+
     top: 0;
     display: grid;
     grid-gap:5px;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas:
-            "logo menu menu sb . . . ";
+    grid-template-columns: 1fr 3fr 1fr 1fr;
     width: 100%;
     margin-bottom: 0px;
 }
@@ -115,14 +46,14 @@ header {
     padding-left: 20px;
     font-family: impact;
     font-weight: normal;
-    grid-area: logo;
+
 
 }
 
 
 .main-nav {
 
-    grid-area: menu;
+
     padding: 15px 44px 20px 20px;
 
 
@@ -131,7 +62,7 @@ header {
 .main-nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    margin: 30px;
     font-family:"Century Gothic";
     font-size: 20px;
     font-weight: bold;
@@ -139,7 +70,7 @@ header {
 
 
 .sub-nav {
-    grid-area: sb;
+
     padding: 0 40px 0 40px;
 }
 
@@ -147,6 +78,18 @@ header {
 
     text-decoration: none;
     margin: 5px;
+}
+
+
+.backgrounds{
+
+    width:100%;
+    height: 90vh ;
+    background-image:url("../backgrounds/underwater 2.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 
