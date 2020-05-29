@@ -4,31 +4,17 @@ namespace App\Http\Controllers;
 use App\Property;
 use App\Series;
 use App\User;
-use App\Roles;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use phpDocumentor\Reflection\Types\Null_;
 
 
 class SerieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $user= auth()->user()->id;
-        $usuario = User::find($user);
-        $role = $usuario->hasRole("admin");
-        if ($role){
-            $properties= Property::all();
-        } else {
-            $properties = Property::all()->where('user_id',$user);
-        }
 
-        return view('properties.index',compact('properties'));
+        $series = Series::all();
+        return view('admin.indexserie',compact('series'));
     }
 
     /**
@@ -51,11 +37,11 @@ class SerieController extends Controller
        $newserie = $request -> title;
 
 
-        $nserie = Series::orderBy('serie_id','desc')->first();
+        $nserie = Series::orderBy('id','desc')->first();
 
         $codigo= substr($request->title,0, 3 );
 
-        $id= $nserie['serie_id']+1;
+        $id= $nserie['id']+1;
         $ref = $codigo.$id;
 
 
@@ -109,9 +95,9 @@ class SerieController extends Controller
      */
     public function edit($id)
     {
-        $property=Property::find($id);
-        $users=User::all();
-        return view('properties.edit',compact('property','users'));
+        $serie=Series::find($id);
+
+        return view('admin.editserie',compact('serie'));
     }
 
     /**
@@ -123,32 +109,31 @@ class SerieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $property=Property::find($id);
+        $serie=Series::find($id);
 
 
-        if ($request->file('photo')!= null){
-            $path=$request->file('photo')->store('photos','public');
-        } else {
-            $path = Property::find($id)->photo;
+        if(!is_null($request->file('portada'))){
+
+            $cover=$request->file('portada')->store('photos','public');
+        }else{
+
+            $cover= $serie->cover;
+
         }
 
-
-        if ($request->publicar != null){
-            $publicar = 1;
-        } else {
-            $publicar =0;
-        }
-
-        $property->update([
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'price'=>$request->price,
-            'owner_id'=>$request->owner_id,
-            'photo'=>$path,
-            'published'=>$publicar
+        $serie->update([
+            'code_serie' => $serie->code_serie,
+            'title' => $request -> title,
+            'description'  => $request -> description,
+            'year'  => $request ->  anyo,
+            'cover' => $cover,
+            'rating' => 80,
+            'featuring' => 0,
+            'kid_restriction'  => $request -> restriccion,
+            'duration'   => $request -> duration
         ]);
 
-        return redirect()->route('properties.index');
+        return redirect()->route('verserie.index');
     }
 
     /**
@@ -159,9 +144,9 @@ class SerieController extends Controller
      */
     public function destroy($id)
     {
-        $properties = Property::find($id);
-        $properties->delete();
-        return redirect()->route('properties.index');
+        $serie = Series::find($id);
+        $serie->delete();
+        return redirect()->route('verserie.index');
 
     }
 }
