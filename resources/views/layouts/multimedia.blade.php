@@ -27,7 +27,7 @@
 <body>
 
 
-@guest
+
 
     <header>
 {{--        <div class="logo">MAVEDAFILMS</div>--}}
@@ -77,7 +77,8 @@
             <a href="#">Peliculas</a>
             <a href="#">Mi lista</a>
         </nav>
-        <nav class="sub-nav">
+
+        <div class="sub-nav">
             <a href="#"><div class="fas fa-search sub-nav-logo">
                     <svg width="32" height="38" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d)">
@@ -100,21 +101,25 @@
                             </clipPath>
                         </defs>
                     </svg>
-
-                </div></a>
-            <a href="#"><div class="fas fa-bell sub-nav-logo"><svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </div>
+            </a>
+        </div>
+        <div class="sub-nav">
+            <a href="#"><div class="fas fa-search sub-nav-logo">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white"/>
-                        <path d="M31 27.4615C31 30.2308 25.6037 33.5 19 33.5C12.8193 33.5 8.53655 30.2308 8.02602 28.3846C7.61759 23.2154 12.1144 21 14.6962 21H24.3963C28.4806 21 31 24.6541 31 27.4615Z" fill="#E5E5E5"/>
-                        <circle cx="19" cy="11" r="7" fill="#E5E5E5"/>
+                        <path d="M31 27.4615C31 30.2308 25.6037 33.5 19 33.5C12.8193 33.5 8.53655 30.2308 8.02602 28.3846C7.61759 23.2154 12.1144 21 14.6962 21H24.3963C28.4806 21 31 24.6541 31 27.4615Z" fill="#0F0F0D"/>
+                        <circle cx="19" cy="11" r="7" fill="#0F0F0D"/>
                     </svg>
-                </div></a>
 
-        </nav>
+                </div>
+            </a>
+        </div>
     </header>
 
-    <div class="emptyspace"></div>
 
-        @endguest
+
+
 
 @yield('content')
 

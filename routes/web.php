@@ -134,7 +134,7 @@ Route::get('/deletemovie', function () {
 }) ->name('deletemovie');
 
 
-Route::get('/inicio', function () {
+Route::get('/start', function () {
 
     return view ('multimedia.multimediainit');
 
