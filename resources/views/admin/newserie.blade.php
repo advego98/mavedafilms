@@ -8,7 +8,7 @@
                 <div class="responsive-account-content">
                     <section class="collapsable-section-content account-section-content">
 
-                        <form method="post" action="{{route('serie.store')}}" enctype="multipart/form-data">
+                        <form method="post" action="{{route('verserie.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">

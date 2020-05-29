@@ -14,21 +14,23 @@
                 <th></th>
             </tr>
 
+            @foreach($series as $serie)
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>{{$serie->title}}</td>
+                    <td>{{$serie->year}}</td>
                     <td>
-
+                        <img src="{{asset('storage/'.$serie->cover)}}" width="150px" height="220px">
                     </td>
                     <td>
-                        <form action="" method='POST'>
+                        <form action="{{route('verserie.destroy',$serie->id)}}" method='POST'>
                             @csrf
                             @method("DELETE")
-                            <a class="btn btn-primary">Edit</a>
+                            <a class="btn btn-primary" href="{{route('verserie.edit',$serie->id)}}">Edit</a>
                             <button type="submit" class="btn btn-danger">Remove</button>
                         </form>
                     </td>
                 </tr>
+            @endforeach
 
             </thead>
         </table>
