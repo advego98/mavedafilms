@@ -39,28 +39,14 @@
 
 
 
-         <header>
+    <header>
 
-             <div class="logo">MAVEDAFILMS</div>
-             @guest
-             @if  (Route::has('register'))
-                 <button class="button-iniciarsesion">Iniciar Sesión</button>
-         @else
-                 <a href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                   document.getElementById('logout-form').submit();">
+        <div class="logo">MAVEDAFILMS</div>
+        @guest
+        <button class="button-iniciarsesion">Iniciar Sesión</button>
+        @endguest
 
-                     {{ __('Logout') }}
-                 </a>
-
-                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                     @csrf
-                 </form>
-
-         </header>
-         @endif
-
-         @endguest
+    </header>
 
 
 
@@ -73,42 +59,44 @@
 
 
 
-            @yield('content')
+
+
+@yield('content')
 
 
 
 
 
 
-     <footer>
+<footer>
 
-         <div class="spacefooter"></div>
-         <div class="icon">MAVEDAFILMS</div>
-         <div class="spacefooter"></div>
-         <div class="enlaces">
-             <a href="#">Política de privacidad</a>
-             <a href="#">Política de cookies</a>
-             <a href="#">Ayuda</a>
-             <a href="#">Dispositivos compatibles</a>
-             <a href="#">Administrar preferencias</a>
-             <a href="#">Contrato de suscripción</a>
-             <a href="#">Términos y condiciones</a>
+    <div class="spacefooter"></div>
+    <div class="icon">MAVEDAFILMS</div>
+    <div class="spacefooter"></div>
+    <div class="enlaces">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+        <a href="#">Ayuda</a>
+        <a href="#">Dispositivos compatibles</a>
+        <a href="#">Administrar preferencias</a>
+        <a href="#">Contrato de suscripción</a>
+        <a href="#">Términos y condiciones</a>
 
-         </div>
+    </div>
 
-         <div class="derechosreservados">
+    <div class="derechosreservados">
 
-             <p>©Mavedafilms. Todos los derechos reservados</p>
+        <p>©Mavedafilms. Todos los derechos reservados</p>
 
-         </div>
+    </div>
 
-     </footer>
-
-
-         </div>
+</footer>
 
 
-  @yield('footer')
+</div>
+
+
+@yield('footer')
 
 
 
