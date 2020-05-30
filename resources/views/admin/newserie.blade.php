@@ -7,7 +7,6 @@
                 <h1 class="admin-header">Panel de administración</h1>
                 <div class="responsive-account-content">
                     <section class="collapsable-section-content account-section-content">
-
                         <form method="post" action="{{route('verserie.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo">
@@ -25,12 +24,7 @@
                             </select>
                             <input type="text" class="serieinput" name="duracion" placeholder="duration">
                             <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
-
-
-
-
                         </form>
-
                     </section>
                 </div>
             </div>

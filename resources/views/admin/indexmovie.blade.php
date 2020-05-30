@@ -14,22 +14,23 @@
                 <th></th>
             </tr>
 
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-
-                </td>
-                <td>
-                    <form action="" method='POST'>
-                        @csrf
-                        @method("DELETE")
-                        <a class="btn btn-primary">Edit</a>
-                        <button type="submit" class="btn btn-danger">Remove</button>
-                    </form>
-                </td>
-            </tr>
-
+            @foreach($movies as $movie)
+                <tr>
+                    <td>{{$movie->title}}</td>
+                    <td>{{$movie->year}}</td>
+                    <td>
+                        <img src="{{asset('storage/'.$movie->cover)}}" width="150px" height="220px">
+                    </td>
+                    <td>
+                        <form action="{{route('verpelicula.destroy',$movie->id)}}" method='POST'>
+                            @csrf
+                            @method("DELETE")
+                            <a class="btn btn-primary" href="{{route('verpelicula.edit',$movie->id)}}">Edit</a>
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
 
             </thead>
         </table>
