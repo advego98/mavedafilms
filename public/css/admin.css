@@ -101,4 +101,12 @@ th{
 }
 
 
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #FEC418;
+    color: white;
+    text-align: center;
+}
+
 
