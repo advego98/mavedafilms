@@ -2,7 +2,8 @@
 @section('content')
 
     <div class="emptyadmin"></div>
-
+    <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
+    <a href="{{route('newserie')}}" class="btn btn-yellow" >Añadir serie</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
@@ -10,7 +11,7 @@
             <tr>
                 <th>Titulo</th>
                 <th>Año</th>
-                <th><Portada>Portada</Portada></th>
+                <th>Portada</th>
                 <th></th>
             </tr>
 
@@ -25,8 +26,11 @@
                         <form action="{{route('verserie.destroy',$serie->id)}}" method='POST'>
                             @csrf
                             @method("DELETE")
-                            <a class="btn btn-primary" href="{{route('verserie.edit',$serie->id)}}">Edit</a>
-                            <button type="submit" class="btn btn-danger">Remove</button>
+                            <a class="btn btn-yellow" href="{{route('verserie.edit',$serie->id)}}">Editar</a>
+                            <a class="btn btn-yellow" href="{{route('verseason.show',$serie->id)}}">Administrar temporadas</a>
+                            <a class="btn btn-yellow" href="{{route('verserie.edit',$serie->id)}}">Administrar generos</a>
+                            <a class="btn btn-yellow" href="{{route('verserie.edit',$serie->id)}}">Administrar actores</a>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>
                 </tr>

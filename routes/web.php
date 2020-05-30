@@ -70,6 +70,13 @@ Route::get('/newserie', function () {
 
 }) ->name('newserie');
 
+Route::get('/newseason', function () {
+
+    return view ('admin.newseason');
+
+
+}) ->name('newseason');
+
 
 Route::get('/editserie', function () {
 
@@ -141,6 +148,8 @@ Route::get('/start', function () {
 }) ->name('home');
 
 Route::resource('verserie','SerieController');
+
+Route::resource('verseason','SeasonController');
 
 Route::resource('verpelicula','MoviesController');
 
