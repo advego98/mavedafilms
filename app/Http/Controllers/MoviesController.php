@@ -20,16 +20,8 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $user= auth()->user()->id;
-        $usuario = User::find($user);
-        $role = $usuario->hasRole("admin");
-        if ($role){
-            $properties= Property::all();
-        } else {
-            $properties = Property::all()->where('user_id',$user);
-        }
-
-        return view('properties.index',compact('properties'));
+        $movies = Movies::all();
+        return view('admin.indexmovie',compact('movies'));
     }
 
     /**
@@ -54,11 +46,11 @@ class MoviesController extends Controller
         $newmovie = $request -> title;
 
 
-        $nmovies = Movies::orderBy('movie_id','desc')->first();
+        $nmovies = Movies::orderBy('id','desc')->first();
 
         $codigo= substr($request->title,0, 3 );
 
-        $id= $nmovies['movie_id']+1;
+        $id= $nmovies['id']+1;
         $ref = $codigo.$id;
 
 
@@ -113,9 +105,8 @@ class MoviesController extends Controller
      */
     public function edit($id)
     {
-        $property=Property::find($id);
-        $users=User::all();
-        return view('properties.edit',compact('property','users'));
+        $movie=Movies::find($id);
+        return view('admin.editmovie',compact('movie'));
     }
 
     /**
@@ -127,34 +118,44 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $property=Property::find($id);
+        $movie=Movies::find($id);
 
 
-        if ($request->file('photo')!= null){
-            $path=$request->file('photo')->store('photos','public');
-        } else {
-            $path = Property::find($id)->photo;
+        if(!is_null($request->file('portada'))){
+
+            $cover=$request->file('portada')->store('photos','public');
+        }else{
+
+            $cover= $movie->cover;
+
+        }
+
+        if(!is_null($request->file('url'))){
+
+            $url=$request->file('url')->store('movies','public');
+        }else{
+
+            $url= $movie->url;
+
         }
 
 
-        if ($request->publicar != null){
-            $publicar = 1;
-        } else {
-            $publicar =0;
-        }
 
-        $nmovies = Movies::orderBy('movies_id','desc')->first();
-
-        $property->update([
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'price'=>$request->price,
-            'owner_id'=>$request->owner_id,
-            'photo'=>$path,
-            'published'=>$publicar
+        $movie->update([
+            'movie_code' => $movie->movie_code,
+            'title' => $request->title,
+            'description'  => $request -> description,
+            'year'  => $request ->  anyo,
+            'cover' => $cover,
+            'rating' => 80,
+            'featuring' => 0,
+            'url' => $url,
+            'kid_restriction'  => $request -> restriccion,
+            'duration'   => $request -> duration
         ]);
 
-        return redirect()->route('properties.index');
+        return redirect()->route('verpelicula.index');
+
     }
 
     /**
@@ -165,9 +166,10 @@ class MoviesController extends Controller
      */
     public function destroy($id)
     {
-        $properties = Property::find($id);
-        $properties->delete();
-        return redirect()->route('properties.index');
+        $movie = Movies::find($id);
+        $movie->delete();
+        return redirect()->route('verpelicula.index');
+
 
     }
 }
