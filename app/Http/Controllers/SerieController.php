@@ -60,7 +60,7 @@ class SerieController extends Controller
         ]);
 
 
-    return view('admin.adminpage');
+    return redirect()->route('verserie.index');
     }
 
 
