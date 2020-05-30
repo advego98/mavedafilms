@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::get('/changepassword', function () {
@@ -136,17 +136,19 @@ Route::get('/deletemovie', function () {
 
 Route::get('/start', function () {
 
-    return view ('multimedia.multimediainit');
+    return view ('home');
 
-
-}) ->name('multimediainit');
+}) ->name('home');
 
 Route::resource('verserie','SerieController');
 
 Route::resource('verpelicula','MoviesController');
 
+Route::resource('inicio','HomeController');
 
 Route::resource('registro','MavedaRegisterController');
+
+
 
 
 

@@ -2,27 +2,11 @@
 @section('content')
 
 
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>mavedafilms</title>
-    <link href="{{ URL::asset('css/profile.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../../public/style/fonts/fuentes.css">
 
-</head>
 
-<body>
 
-    <div class="containtpage">
 
-        <header>
-            <div class="logo">MAVEDAFILMS</div>
-
-        </header>
 
 
         <div class="emptyspace"></div>
@@ -31,7 +15,7 @@
 
         <div class="grid-container">
             <div class="perfil1">
-                <a href="{{route('start.index')}}">
+                <a href="{{route('inicio.index')}}">
                 <svg width="200" height="200" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" >
                     <path d="M475.797 289.648C475.797 387.498 396.919 466.797 299.648 466.797C202.377 466.797 123.5 387.498 123.5 289.648C123.5 191.799 202.377 112.5 299.648 112.5C396.919 112.5 475.797 191.799 475.797 289.648Z" stroke="#FEC61A" stroke-width="5"/>
                     <path d="M299.698 161.57C264.487 161.57 235.841 190.377 235.841 225.785C235.841 261.193 264.487 290 299.698 290C334.909 290 363.555 261.193 363.555 225.785C363.555 190.377 334.909 161.57 299.698 161.57Z" fill="#FEC61A"/>
@@ -40,7 +24,7 @@
                 </a>
             </div>
             <div class="perfil2">
-                <a href="{{route('start.index')}}">
+                <a href="{{route('inicio.index')}}">
                 <svg width="200" height="200" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M475.797 289.648C475.797 387.498 396.919 466.797 299.648 466.797C202.377 466.797 123.5 387.498 123.5 289.648C123.5 191.799 202.377 112.5 299.648 112.5C396.919 112.5 475.797 191.799 475.797 289.648Z" stroke="#FEC61A" stroke-width="5"/>
                     <path d="M299.698 161.57C264.487 161.57 235.841 190.377 235.841 225.785C235.841 261.193 264.487 290 299.698 290C334.909 290 363.555 261.193 363.555 225.785C363.555 190.377 334.909 161.57 299.698 161.57Z" fill="#FEC61A"/>
@@ -49,7 +33,7 @@
                 </a>
             </div>
             <div class="perfil3">
-                <a href="{{route('start.index')}}">
+                <a href="{{route('inicio.index')}}">
                 <svg width="200" height="200" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M475.797 289.648C475.797 387.498 396.919 466.797 299.648 466.797C202.377 466.797 123.5 387.498 123.5 289.648C123.5 191.799 202.377 112.5 299.648 112.5C396.919 112.5 475.797 191.799 475.797 289.648Z" stroke="#FEC61A" stroke-width="5"/>
                     <path d="M299.698 161.57C264.487 161.57 235.841 190.377 235.841 225.785C235.841 261.193 264.487 290 299.698 290C334.909 290 363.555 261.193 363.555 225.785C363.555 190.377 334.909 161.57 299.698 161.57Z" fill="#FEC61A"/>
@@ -72,11 +56,7 @@
             <div class="nameperfil4">Añadir perfil</div>
         </div>
 
-    </div>
 
 
-</body>
-
-</html>
 
 @endsection

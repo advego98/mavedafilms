@@ -81,10 +81,10 @@ class SerieController extends Controller
      */
     public function show($id)
     {
-        $property = Property::find($id);
-        $user = $property->user_id;
-        $nombre = User::find($user);
-        return view('properties.show', compact('property', 'nombre'));
+
+        $serie = Series::find($id);
+        return  view('multimedia.selectserie' , compact('serie'));
+
     }
 
     /**
