@@ -38,6 +38,6 @@ class MavedaRegisterController extends Controller
             'due_date'=>$request->date_venciment,
             'cvv'=>$request->security_code,
         ]);
-        return redirect()->route('home');
+        return view('profile.profile');
     }
 }

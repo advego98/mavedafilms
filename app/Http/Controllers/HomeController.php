@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Series;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $series = Series::all();
+        return view('home',compact('series'));
+
     }
+
+//    public function show($id)
+//    {
+//
+//        $serie = Series::find($id);
+//        return view('home',compact('serie'));
+//
+//    }
+
+
+
 }
