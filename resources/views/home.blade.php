@@ -5,25 +5,110 @@
 
         <div class="slider" id="main-slider"><!-- outermost container element -->
             <div class="slider-wrapper"><!-- innermost wrapper element -->
-                <img src="../../public/backgrounds/imagen_login.png'" alt="First" class="slide" /><!-- slides -->
-                <img src="../../public/backgrounds/starwars.jpg" alt="Second" class="slide" />
-                <img src="../../public/backgrounds/eldragon.jpg" alt="Third" class="slide" />
+                <img src="{{asset('backgrounds/unwater.jpg')}}" alt="First" class="slide" /><!-- slides -->
+                <img src="{{asset('backgrounds/eldragon.jpg')}}" alt="Second" class="slide" />
+                <img src="{{asset('backgrounds/starwars.jpg')}}" alt="Third" class="slide" />
             </div>
         </div>
 
 
     </div>
 
-    <section class="mainserie">
-        @foreach($series as $serie )
-            <article>
-                <a href="{{route('verserie.show', $serie->id)}}">
-                    <img src="{{asset('storage/'.$serie->cover)}}">
+    <div class="spacebackgrounds">
 
-                </a>
-            </article>
-        @endforeach
-    </section>
+    </div>
+
+
+    <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+            <h3>Películas</h3>
+            <div class="indicadores"></div>
+        </div>
+
+        <div class="contenedor-principal">
+            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+            <div class="contenedor-carousel">
+                <div class="carousel">
+                    @foreach($series as $serie )--}}
+                                <div class="pelicula">
+                                    <a href="{{route('verserie.show', $serie->id)}}">
+                                        <img src="{{asset('storage/'.$serie->cover)}}">
+
+                                    </a>
+                                </div>
+                            @endforeach
+                </div>
+            </div>
+
+            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+
+
+
+{{--    <h3>Series</h3>--}}
+{{--    <section class="mainserie">--}}
+{{--        @foreach($series as $serie )--}}
+{{--            <article>--}}
+{{--                <a href="{{route('verserie.show', $serie->id)}}">--}}
+{{--                    <img src="{{asset('storage/'.$serie->cover)}}">--}}
+
+{{--                </a>--}}
+{{--            </article>--}}
+{{--        @endforeach--}}
+{{--    </section>--}}
+
+{{--    <div class="peliculas-recomendadas contenedor">--}}
+{{--        <div class="contenedor-titulo-controles">--}}
+{{--            <h3>Películas Recomendadas</h3>--}}
+{{--            <div class="indicadores"></div>--}}
+{{--        </div>--}}
+
+{{--        <div class="contenedor-principal">--}}
+{{--            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>--}}
+
+{{--            <div class="contenedor-carousel">--}}
+{{--                <div class="carousel">--}}
+
+{{--                    <div class="pelicula">--}}
+{{--                        @foreach($series as $serie )--}}
+{{--                        <a href="{{route('verserie.show', $serie->id)}}">--}}
+{{--                            <img src="{{asset('storage/'.$serie->cover)}}">--}}
+{{--                        </a>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
+
+{{--    <div class="peliculas-recomendadas contenedor">--}}
+{{--        <div class="contenedor-titulo-controles">--}}
+{{--            <h3>Películas Recomendadas</h3>--}}
+{{--            <div class="indicadores"></div>--}}
+{{--        </div>--}}
+
+{{--        <div class="contenedor-principal">--}}
+{{--            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>--}}
+{{--            <div class="contenedor-carousel">--}}
+{{--                <div class="carousel">--}}
+{{--                    <div class="pelicula">--}}
+{{--                        @foreach($series as $serie )--}}
+{{--                        <a href="{{route('verserie.show', $serie->id)}}">--}}
+{{--                            <img src="{{asset('storage/'.$serie->cover)}}">--}}
+{{--                        </a>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>--}}
+
+{{--    </div>--}}
+{{--    </div>--}}
 
     <script>
 
@@ -67,7 +152,7 @@
                         }
                         self._slideTo( self.index );
 
-                    }, 2000);
+                    }, 4000);
                 },
                 stopStart: function() {
                     var self = this;
@@ -98,6 +183,6 @@
 
     </script>
 
-
+    <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 
 @endsection
