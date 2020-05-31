@@ -77,6 +77,13 @@ Route::get('/newseason', function () {
 
 }) ->name('newseason');
 
+Route::get('/newepisode', function () {
+
+    return view ('admin.newepisode');
+
+
+}) ->name('newepisode');
+
 
 Route::get('/editserie', function () {
 
@@ -157,6 +164,10 @@ Route::get('/homeserie', function () {
 Route::resource('verserie','SerieController');
 
 Route::resource('verseason','SeasonController');
+
+Route::resource('verepisode','EpisodeController');
+
+Route::resource('vergenre','GenreController');
 
 Route::resource('verpelicula','MoviesController');
 
