@@ -3,30 +3,24 @@
 
     <div class="emptyadmin"></div>
     <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
-    <a href="{{route('newmovie')}}" class="btn btn-yellow" >Añadir pelicula</a>
+    <a href="{{route('newepisode')}}" class="btn btn-yellow" >Añadir capitulo</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
             <thead>
             <tr>
                 <th>Titulo</th>
-                <th>Año</th>
-                <th><Portada>Portada</Portada></th>
                 <th></th>
             </tr>
 
-            @foreach($movies as $movie)
+            @foreach($episodes as $episode)
                 <tr>
-                    <td>{{$movie->title}}</td>
-                    <td>{{$movie->year}}</td>
+                    <td>{{$episode->title}}</td>
                     <td>
-                        <img src="{{asset('storage/'.$movie->cover)}}" width="150px" height="220px">
-                    </td>
-                    <td>
-                        <form action="{{route('verpelicula.destroy',$movie->id)}}" method='POST'>
+                        <form action="{{route('verepisode.destroy',$episode->id)}}" method='POST'>
                             @csrf
                             @method("DELETE")
-                            <a class="btn btn-yellow" href="{{route('verpelicula.edit',$movie->id)}}">Editar</a>
+                            <a class="btn btn-yellow" href="{{route('verepisode.edit',$episode->id)}}">Editar</a>
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>

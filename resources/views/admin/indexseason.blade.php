@@ -21,7 +21,7 @@
                             @csrf
                             @method("DELETE")
                             <a class="btn btn-yellow" href="{{route('verseason.edit',$season->id)}}">Editar</a>
-                            <a class="btn btn-yellow" href="{{route('verseason.show',$season->id)}}">Administrar capitulos</a>
+                            <a class="btn btn-yellow" href="{{route('verepisode.show',$season->id)}}">Administrar capitulos</a>
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>
