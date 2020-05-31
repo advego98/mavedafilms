@@ -18,8 +18,7 @@
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="/admin/addActor">Añadir actor</a>
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="/admin/deleteActor">Eliminar actor</a>
                             <h2 class="title-header">Peliculas</h2>
-                            <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="{{route('newmovie')}}" >Añadir Pelicula</a>
-                            <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="{{route('verpelicula.index')}}">Ver Peliculas</a><br/>
+                            <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="{{route('verpelicula.index')}}">Administrar Peliculas</a><br/>
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="/admin/newCategory">Añadir categoría</a>
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="min-width:256px;" href="/admin/deleteCategory">Eliminar categoría</a>
 
