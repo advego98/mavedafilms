@@ -137,7 +137,7 @@ header {
     min-height: 40.62em;
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     margin-bottom: 3.12em;
     display: flex;
@@ -206,6 +206,22 @@ header {
 }
 
 
+.buscador{
+
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    padding: 17px;
+    height: 20px;
+    margin-top:0px;
+}
+
+.buscar{
+
+   background-color: black;
+    color:white;
+    border-radius: 10px;
+
+}
 
 
 /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
@@ -275,6 +291,8 @@ header {
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
     vertical-align: top;
+    height: 400px;
+    padding:40px
 }
 
 
@@ -286,6 +304,7 @@ header {
     height: 350px;
 
 }
+
 
 
 h3 {

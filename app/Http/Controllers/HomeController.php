@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Series;
+use App\Movies;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,26 @@ class HomeController extends Controller
     public function index()
     {
         $series = Series::all();
-        return view('home',compact('series'));
+        $movies = Movies::all();
+
+        return view('home',compact('series', 'movies'));
+
+    }
+
+
+    public function busqueda(Request $request)
+    {
+
+        $busqueda = $request->search;
+
+
+        $series = Series::where("title", "LIKE", "%{$request->get('search')}%")
+            ->paginate(25);
+        $movies = Movies::where("title", "LIKE", "%{$request->get('search')}%")
+            ->paginate(25);
+
+        return view('home', compact('movies', 'busqueda', 'series'));
+
 
     }
 

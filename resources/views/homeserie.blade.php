@@ -30,41 +30,13 @@
 
             <div class="contenedor-carousel">
                 <div class="carousel">
-                    @foreach($series as $serie )--}}
-                                <div class="pelicula">
-                                    <a href="{{route('verserie.show', $serie->id)}}">
-                                        <img src="{{asset('storage/'.$serie->cover)}}">
-
-                                    </a>
-                                </div>
-                            @endforeach
-                </div>
-            </div>
-
-            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-        </div>
-    </div>
-
-
-    <div class="peliculas-recomendadas contenedor">
-        <div class="contenedor-titulo-controles">
-            <h3>Peliculas</h3>
-            <div class="indicadores"></div>
-        </div>
-
-        <div class="contenedor-principal">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-            <div class="contenedor-carousel">
-                <div class="carousel">
-                    @foreach($movies as $movie )
+                    @foreach($series as $serie )
                     <div class="pelicula">
-                        <a href="{{route('verpelicula.show', $movie->id)}}">
-                            <img src="{{asset('storage/'.$movie->cover)}}">
+                        <a href="{{route('verserie.show', $serie->id)}}">
+                            <img src="{{asset('storage/'.$serie->cover)}}">
 
                         </a>
                     </div>
-
                     @endforeach
                 </div>
             </div>
@@ -72,39 +44,6 @@
             <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
         </div>
     </div>
-
-
-    <div class="peliculas-recomendadas contenedor">
-        <div class="contenedor-titulo-controles">
-            <h3>Apta para todos los publicos</h3>
-            <div class="indicadores"></div>
-        </div>
-
-        <div class="contenedor-principal">
-            <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-            <div class="contenedor-carousel">
-                <div class="carousel">
-                    @foreach($movies as $movie )
-                        @if($movie->kid_restriction == 3)
-
-                            <div class="pelicula">
-                                <a href="{{route('verpelicula.show', $movie->id)}}">
-                                    <img src="{{asset('storage/'.$movie->cover)}}">
-
-                                </a>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-
-            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-        </div>
-    </div>
-
-
-
 
 
 
