@@ -16,12 +16,13 @@
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año" value="{{$serie->year}}">
                             <input type="file" class="serieinput" name="portada" placeholder="cover">
                             <input type="text" class="textareainput" name="description" placeholder="description" value="{{$serie->description}}">
-                            <select name="restriccion">
-                                <option value="3">3</option>
-                                <option value="7">7</option>
-                                <option value="12">12</option>
-                                <option value="16">16</option>
-                                <option value="18">18</option>
+                            <select name="restriccion" class="serieinput">
+
+                                <option value="3" @if($serie->kid_restriction==3)selected @endif>3</option>
+                                <option value="7" @if($serie->kid_restriction==7)selected @endif>7</option>
+                                <option value="12" @if($serie->kid_restriction==12)selected @endif>12</option>
+                                <option value="16" @if($serie->kid_restriction==16)selected @endif>16</option>
+                                <option value="18" @if($serie->kid_restriction==18)selected @endif>18</option>
                             </select>
                             <input type="text" class="serieinput" name="duration" placeholder="Duration" value="{{$serie-> duration}}">
                             <button class="login-button">Editar</button>
