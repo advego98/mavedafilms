@@ -2,26 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Roles;
 use App\User;
 use App\Subscription;
-use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Symfony\Component\VarDumper\Cloner\Data;
 
 class MavedaRegisterController extends Controller
 {
+
+    use RegistersUsers;
+
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     public function __construct()
     {
         $this->middleware('guest');
     }
 
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'subname'=>['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'planChoice' => ['required','integer','min:1'],
+            'credit_number' => ['required', 'integer','min:16','max:19'],
+            'credit_name' => ['required', 'string', 'max:255'],
+            'surnames' => ['required', 'string', 'max:255'],
+            'date_venciment' => ['required', 'string', 'min:5','max:5'],
+            'security_code' => ['required', 'integer', 'min:3', 'max:3']
+        ]);
+    }
+
     protected function store(Request $request)
     {
+        $role_user = Roles::where('name', 'user')->first();
         $user=User::create([
             'name' => $request->name,
             'last_name' => $request->subname,
@@ -38,6 +58,8 @@ class MavedaRegisterController extends Controller
             'due_date'=>$request->date_venciment,
             'cvv'=>$request->security_code,
         ]);
-        return view('profile.profile');
+        $user->roles()->attach($role_user);
+
+        return redirect()->route('login')->content('');
     }
 }

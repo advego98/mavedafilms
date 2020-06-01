@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\Roles;
 use App\User;
 use App\Subscription;
 use Illuminate\Http\Request;
@@ -55,25 +56,27 @@ class RegisterController extends Controller
     }
 
 
-    protected function create(Request $request)
+    protected function create(array $data)
     {
+        $role_user = Roles::where('name', 'user')->first();
         $user=User::create([
-            'name' => $request->name,
-            'last_name' => $request->subname,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'plan_id'=>$request->planChoice
+            'name' => $data['name'],
+            'last_name' => $data['subname'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'plan_id'=>$data['planChoice']
         ]);
         Subscription::create([
-            'plan_id'=>$request->planChoice,
+            'plan_id'=>$data['planChoice'],
             'user_id'=>$user->id,
-            'credit_card'=>$request->credit_number,
-            'credit_card_name'=>$request->credit_name,
-            'credit_card_lastname'=>$request->surnames,
-            'due_date'=>$request->date_venciment,
-            'cvv'=>$request->security_code,
+            'credit_card'=>$data['credit_number'],
+            'credit_card_name'=>$data['credit_name'],
+            'credit_card_lastname'=>$data['surnames'],
+            'due_date'=>$data['date_venciment'],
+            'cvv'=>$data['security_code'],
         ]);
-        return redirect()->route('home');
+        $user->roles()->attach($role_user);
+        return $user;
     }
 }
 
