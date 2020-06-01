@@ -25,6 +25,13 @@
                                 <option value="18" @if($serie->kid_restriction==18)selected @endif>18</option>
                             </select>
                             <input type="text" class="serieinput" name="duration" placeholder="Duration" value="{{$serie-> duration}}">
+                            <select class="serieinput" name="generos[]" multiple >
+                                <optgroup label="Generos">
+                                    @foreach($generos as $genero)
+                                        <option value="{{$genero->id}}" @if(in_array($genero->id,$generosSerie)) selected @endif>{{$genero->name_genre}}</option>
+                                    @endforeach
+                                </optgroup>
+                            </select>
                             <button class="login-button">Editar</button>
                         </form>
 
