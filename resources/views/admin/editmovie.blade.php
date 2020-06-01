@@ -30,6 +30,13 @@
                                     @endforeach
                                 </optgroup>
                             </select>
+                            <select class="serieinput" name="actores[]" multiple >
+                                <optgroup label="Generos">
+                                    @foreach($actores as $actor)
+                                        <option value="{{$actor->id}}" @if(in_array($actor->id,$actoresMovie)) selected @endif>{{$actor->actor}}</option>
+                                    @endforeach
+                                </optgroup>
+                            </select>
                             <input type="file" class="serieinput" name="url" placeholder="pelicula">
                             <button class="login-button">Editar</button>
                         </form>

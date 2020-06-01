@@ -32,6 +32,13 @@
                                     @endforeach
                                 </optgroup>
                             </select>
+                            <select class="serieinput" name="actores[]" multiple >
+                                <optgroup label="Generos">
+                                    @foreach($actores as $actor)
+                                        <option value="{{$actor->id}}" @if(in_array($actor->id,$actoresSerie)) selected @endif>{{$actor->actor}}</option>
+                                    @endforeach
+                                </optgroup>
+                            </select>
                             <button class="login-button">Editar</button>
                         </form>
 

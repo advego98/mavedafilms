@@ -31,6 +31,13 @@
                                     @endforeach
                                 </optgroup>
                             </select>
+                            <select class="serieinput" name="actores[]" multiple >
+                                <optgroup label="Actores">
+                                    @foreach($actores as $actor)
+                                        <option value="{{$actor->id}}">{{$actor->actor}}</option>
+                                    @endforeach
+                                </optgroup>
+                            </select>
                             <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
                         </form>
                     </section>

@@ -1,17 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\ActorMovie;
+use App\Actors;
 use App\Genre;
 use App\GenreMovie;
-use App\GenreSerie;
 use App\Movies;
 use App\Property;
-use App\Series;
 use App\User;
-use App\Roles;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use phpDocumentor\Reflection\Types\Null_;
 
 
 class MoviesController extends Controller
@@ -29,7 +26,8 @@ class MoviesController extends Controller
 
     public function create(){
         $generos=Genre::all();
-        return view('admin.newmovie',compact('generos'));
+        $actores = Actors::all();
+        return view('admin.newmovie',compact('generos','actores'));
     }
 
     /**
@@ -85,6 +83,14 @@ class MoviesController extends Controller
             ]);
         }
 
+        $actores=$request->actores;
+        foreach ($actores as $actor){
+            ActorMovie::create([
+                'actor_id'=>$actor,
+                'movie_id'=>$movie->id
+            ]);
+        }
+
         return redirect()->route('verpelicula.index');
     }
 
@@ -106,10 +112,10 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-
-        $movies = Movies::find($id);
-        return  view('multimedia.selectmovie' , compact('movies'));
-
+        $property = Property::find($id);
+        $user = $property->user_id;
+        $nombre = User::find($user);
+        return view('properties.show', compact('property', 'nombre'));
     }
 
     /**
@@ -127,7 +133,13 @@ class MoviesController extends Controller
         foreach ($vgeneros as $vgenero){
             $generosMovie[]=$vgenero->genre_id;
         }
-        return view('admin.editmovie',compact('movie','generos','generosMovie'));
+        $actores=Actors::all();
+        $vactores = ActorMovie::where('movie_id',$id)->get();
+        $actoresMovie = array();
+        foreach ($vactores as $vactor){
+            $actoresMovie[]=$vactor->actor_id;
+        }
+        return view('admin.editmovie',compact('movie','generos','generosMovie','actores','actoresMovie'));
     }
 
     /**
@@ -142,11 +154,18 @@ class MoviesController extends Controller
         $movie=Movies::find($id);
 
         $gens_movie = GenreMovie::where('id_movie',$id)->get();
-
         $generosMovie=array();
+
 
         foreach ($gens_movie as $gen_movie){
             $generosMovie[]=$gen_movie->genre_id;
+        }
+
+        $acts_movie = ActorMovie::where('movie_id',$id)->get();
+        $actorsMovie=array();
+
+        foreach ($acts_movie as $act_movie){
+            $actorsMovie[] = $act_movie->actor_id;
         }
 
         if(!is_null($request->file('portada'))){
@@ -198,6 +217,28 @@ class MoviesController extends Controller
                 foreach ($gens as $gen){
                     if ($gen->genre_id==$genero){
                         $gen->delete();
+                    }
+                }
+
+            }
+        }
+
+        $actores=$request->actores;
+        foreach ($actores as $actor){
+
+            if (!in_array($actor,$actorsMovie)){
+                ActorMovie::create([
+                    'actor_id'=>$actor,
+                    'movie_id'=>$movie->id
+                ]);
+            }
+        }
+        foreach ($actorsMovie as $actor){
+            if (!in_array($actor,$actores)){
+                $acts=ActorMovie::where('movie_id',$id)->get();
+                foreach ($acts as $act){
+                    if ($act->actor_id==$actor){
+                        $act->delete();
                     }
                 }
 
