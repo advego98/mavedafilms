@@ -155,11 +155,10 @@ Route::get('/start', function () {
 }) ->name('home');
 
 
-Route::get('/homeserie', function () {
 
-    return view ('homeserie');
 
-}) ->name('homeserie');
+
+Route::resource('verserie','SerieController');
 
 Route::resource('verserie','SerieController');
 
@@ -176,6 +175,10 @@ Route::resource('inicio','HomeController');
 Route::resource('registro','MavedaRegisterController');
 
 Route::get('search', 'HomeController@busqueda')->name('search');
+
+Route::get('homeserie', 'HomeController@seriehome')->name('homeserie');
+
+Route::get('homemovie', 'HomeController@moviehome')->name('homemovie');
 
 
 
