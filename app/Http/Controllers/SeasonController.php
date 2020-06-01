@@ -108,7 +108,7 @@ class SeasonController extends Controller
             'name'=>$request->name,
         ]);
 
-        return redirect()->route('verseason.index');
+        return redirect()->route('verseason.show', $season->serie_id);
     }
 
     /**

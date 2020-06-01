@@ -7,16 +7,18 @@
                 <h1 class="admin-header">Panel de administración</h1>
                 <div class="responsive-account-content">
                     <section class="collapsable-section-content account-section-content">
-
-                        <form method="post" action="{{route('vergenre.store')}}" enctype="multipart/form-data">
+                        <form method="post" action="{{route('verepisode.store')}}" enctype="multipart/form-data">
                             @csrf
-                            <input type="text" class="serieinput" name="genre" placeholder="Introducir genero">
-                            <button class="login-button">Añadir</button>
+                            <input type="text" class="serieinput" name="name" placeholder="Introduzca titulo">
+                            <input type="file" class="serieinput" name="portada" placeholder="cover">
+                            <input type="file" class="serieinput" name="url" placeholder="pelicula">
+                            <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
                         </form>
                     </section>
                 </div>
             </div>
         </div>
     </div>
+
 
 @endsection

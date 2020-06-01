@@ -3,30 +3,24 @@
 
     <div class="emptyadmin"></div>
     <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
-    <a href="{{route('verpelicula.create')}}" class="btn btn-yellow" >Añadir pelicula</a>
+    <a href="{{route('addgenre')}}" class="btn btn-yellow" >Añadir genero</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
             <thead>
             <tr>
                 <th>Titulo</th>
-                <th>Año</th>
-                <th><Portada>Portada</Portada></th>
                 <th></th>
             </tr>
 
-            @foreach($movies as $movie)
+            @foreach($genres as $genre)
                 <tr>
-                    <td>{{$movie->title}}</td>
-                    <td>{{$movie->year}}</td>
+                    <td>{{$genre->name_genre}}</td>
                     <td>
-                        <img src="{{asset('storage/'.$movie->cover)}}" width="150px" height="220px">
-                    </td>
-                    <td>
-                        <form action="{{route('verpelicula.destroy',$movie->id)}}" method='POST'>
+                        <form action="{{route('vergenre.destroy',$genre->id)}}" method='POST'>
                             @csrf
                             @method("DELETE")
-                            <a class="btn btn-yellow" href="{{route('verpelicula.edit',$movie->id)}}">Editar</a>
+                            <a class="btn btn-yellow" href="{{route('vergenre.edit',$genre->id)}}">Editar</a>
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>
