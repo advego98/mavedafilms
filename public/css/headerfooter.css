@@ -114,26 +114,10 @@ label {
 
 
 
-.enlaces {
-
-    display: flex;
-    flex-direction: row;
-    color: white;
-    justify-content: space-around;
-}
 
 
 
-.enlaces a {
 
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-
-    color: white;
-    flex: 1;
-
-}
 
 
 .derechosreservados {

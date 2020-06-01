@@ -49,6 +49,29 @@ class HomeController extends Controller
 
     }
 
+
+    public function seriehome()
+    {
+
+      $series = Series::all();
+
+      return view('homeserie', compact('series'));
+
+    }
+
+
+    public function moviehome()
+    {
+
+        $movies = Movies::all();
+
+        return view('homemovie', compact('movies'));
+
+    }
+
+
+
+
 //    public function show($id)
 //    {
 //

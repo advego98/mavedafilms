@@ -36,9 +36,9 @@
 
         <div class="logo">MAVEDAFILMS</div>
         <nav class="main-nav">
-            <a href="#">Inicio</a>
+            <a href="{{route('inicio.index')}}">Inicio</a>
             <a href="{{route('homeserie')}}">Series</a>
-            <a href="#">Peliculas</a>
+            <a href="{{route('homemovie')}}">Peliculas</a>
             <a href="#">Mi lista</a>
         </nav>
 

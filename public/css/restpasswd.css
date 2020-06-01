@@ -71,14 +71,11 @@ header {
 
     height: 100%;
     width: 100%;
-    background-image: url('../backgrounds/imagen_restablecer.png');
+    background-image: url('../backgrounds/contraseñabackground.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-
 }
-
 
 #footerspace{
 
@@ -88,7 +85,7 @@ header {
 
 input#inputpass{
 
-    height: 25px;
+    height: 40px;
     background-color: #4E4C47;
     padding-top: 20px;
     border-color: #4E4C47;
@@ -189,13 +186,7 @@ footer {
 
 
 
-.enlaces {
 
-    display: flex;
-    flex-direction: row;
-    color: white;
-    justify-content: space-around;
-}
 
 
 
