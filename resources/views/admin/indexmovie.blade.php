@@ -3,7 +3,7 @@
 
     <div class="emptyadmin"></div>
     <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
-    <a href="{{route('newmovie')}}" class="btn btn-yellow" >Añadir pelicula</a>
+    <a href="{{route('verpelicula.create')}}" class="btn btn-yellow" >Añadir pelicula</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
