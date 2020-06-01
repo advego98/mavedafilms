@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Actors;
+use App\ActorSerie;
 use App\Genre;
 use App\GenreSerie;
 use App\Property;
 use App\Series;
-use App\User;
 use Illuminate\Http\Request;
 
 
@@ -27,7 +28,8 @@ class SerieController extends Controller
 
     public function create(){
         $generos=Genre::all();
-        return view('admin.newserie',compact('generos'));
+        $actores = Actors::all();
+        return view('admin.newserie',compact('generos','actores'));
     }
 
     public function store(Request $request)
@@ -70,6 +72,14 @@ class SerieController extends Controller
         foreach ($generos as $genero){
             GenreSerie::create([
                 'genre_id'=>$genero,
+                'serie_id'=>$serie->id
+            ]);
+        }
+
+        $actores=$request->actores;
+        foreach ($actores as $actor){
+            ActorSerie::create([
+                'actor_id'=>$actor,
                 'serie_id'=>$serie->id
             ]);
         }
@@ -117,8 +127,13 @@ class SerieController extends Controller
         foreach ($vgeneros as $vgenero){
             $generosSerie[]=$vgenero->genre_id;
         }
-
-        return view('admin.editserie',compact('serie','generos','generosSerie'));
+        $actores=Actors::all();
+        $vactores = ActorSerie::where('serie_id',$id)->get();
+        $actoresSerie = array();
+        foreach ($vactores as $vactor){
+            $actoresSerie[]=$vactor->actor_id;
+        }
+        return view('admin.editserie',compact('serie','generos','generosSerie','actores','actoresSerie'));
     }
 
     /**
@@ -140,6 +155,12 @@ class SerieController extends Controller
             $generosSerie[]=$gen_serie->genre_id;
         }
 
+        $acts_serie = ActorSerie::where('serie_id',$id)->get();
+        $actorsSerie=array();
+
+        foreach ($acts_serie as $act_serie){
+            $actorsSerie[] = $act_serie->actor_id;
+        }
 
         if(!is_null($request->file('portada'))){
 
@@ -181,6 +202,28 @@ class SerieController extends Controller
                 foreach ($gens as $gen){
                     if ($gen->genre_id==$genero){
                         $gen->delete();
+                    }
+                }
+
+            }
+        }
+
+        $actores=$request->actores;
+        foreach ($actores as $actor){
+
+            if (!in_array($actor,$actorsSerie)){
+                ActorSerie::create([
+                    'actor_id'=>$actor,
+                    'serie_id'=>$serie->id
+                ]);
+            }
+        }
+        foreach ($actorsSerie as $actor){
+            if (!in_array($actor,$actores)){
+                $acts=ActorSerie::where('serie_id',$id)->get();
+                foreach ($acts as $act){
+                    if ($act->actor_id==$actor){
+                        $act->delete();
                     }
                 }
 
