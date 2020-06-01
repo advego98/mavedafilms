@@ -23,6 +23,13 @@
                                 <option value="18">18</option>
                             </select>
                             <input type="text" class="serieinput" name="duration" placeholder="Duration" value="{{$movie-> duration}}">
+                            <select class="serieinput" name="generos[]" multiple >
+                                <optgroup label="Generos">
+                                    @foreach($generos as $genero)
+                                        <option value="{{$genero->id}}" @if(in_array($genero->id,$generosMovie)) selected @endif>{{$genero->name_genre}}</option>
+                                    @endforeach
+                                </optgroup>
+                            </select>
                             <input type="file" class="serieinput" name="url" placeholder="pelicula">
                             <button class="login-button">Editar</button>
                         </form>

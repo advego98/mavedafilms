@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Genre;
+use App\GenreSerie;
 use App\Property;
 use App\Series;
 use App\User;
@@ -22,6 +24,12 @@ class SerieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function create(){
+        $generos=Genre::all();
+        return view('admin.newserie',compact('generos'));
+    }
+
     public function store(Request $request)
     {
         if(!is_null($request->file('portada'))){
@@ -45,7 +53,7 @@ class SerieController extends Controller
         $ref = $codigo.$id;
 
 
-        Series::create([
+        $serie=Series::create([
 
             'code_serie' => $ref,
             'title' => $newserie,
@@ -56,8 +64,15 @@ class SerieController extends Controller
             'featuring' => 0,
             'kid_restriction'  => $request -> restriccion,
             'duration'   => $request -> duracion
-
         ]);
+
+        $generos=$request->generos;
+        foreach ($generos as $genero){
+            GenreSerie::create([
+                'genre_id'=>$genero,
+                'serie_id'=>$serie->id
+            ]);
+        }
 
 
     return redirect()->route('verserie.index');
@@ -96,8 +111,14 @@ class SerieController extends Controller
     public function edit($id)
     {
         $serie=Series::find($id);
+        $generos=Genre::all();
+        $vgeneros = GenreSerie::where('serie_id',$id)->get();
+        $generosSerie=array();
+        foreach ($vgeneros as $vgenero){
+            $generosSerie[]=$vgenero->genre_id;
+        }
 
-        return view('admin.editserie',compact('serie'));
+        return view('admin.editserie',compact('serie','generos','generosSerie'));
     }
 
     /**
@@ -111,10 +132,19 @@ class SerieController extends Controller
     {
         $serie=Series::find($id);
 
+        $gens_serie = GenreSerie::where('serie_id',$id)->get();
+
+        $generosSerie=array();
+
+        foreach ($gens_serie as $gen_serie){
+            $generosSerie[]=$gen_serie->genre_id;
+        }
+
 
         if(!is_null($request->file('portada'))){
 
             $cover=$request->file('portada')->store('photos','public');
+
         }else{
 
             $cover= $serie->cover;
@@ -132,6 +162,30 @@ class SerieController extends Controller
             'kid_restriction'  => $request -> restriccion,
             'duration'   => $request -> duration
         ]);
+
+
+
+        $generos=$request->generos;
+        foreach ($generos as $genero){
+
+            if (!in_array($genero,$generosSerie)){
+                GenreSerie::create([
+                    'genre_id'=>$genero,
+                    'serie_id'=>$serie->id
+                ]);
+            }
+        }
+        foreach ($generosSerie as $genero){
+            if (!in_array($genero,$generos)){
+                $gens=GenreSerie::where('serie_id',$id)->get();
+                foreach ($gens as $gen){
+                    if ($gen->genre_id==$genero){
+                        $gen->delete();
+                    }
+                }
+
+            }
+        }
 
         return redirect()->route('verserie.index');
     }

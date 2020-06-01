@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Genre;
+use App\GenreMovie;
+use App\GenreSerie;
 use App\Movies;
 use App\Property;
 use App\Series;
@@ -22,6 +25,11 @@ class MoviesController extends Controller
     {
         $movies = Movies::all();
         return view('admin.indexmovie',compact('movies'));
+    }
+
+    public function create(){
+        $generos=Genre::all();
+        return view('admin.newmovie',compact('generos'));
     }
 
     /**
@@ -54,7 +62,7 @@ class MoviesController extends Controller
         $ref = $codigo.$id;
 
 
-        Movies::create([
+        $movie=Movies::create([
 
             'movie_code' => $ref,
             'title' => $newmovie,
@@ -69,8 +77,15 @@ class MoviesController extends Controller
 
         ]);
 
+        $generos=$request->generos;
+        foreach ($generos as $genero){
+            GenreMovie::create([
+                'genre_id'=>$genero,
+                'id_movie'=>$movie->id
+            ]);
+        }
 
-        return view('admin.adminpage');
+        return redirect()->route('verpelicula.index');
     }
 
 
@@ -106,7 +121,13 @@ class MoviesController extends Controller
     public function edit($id)
     {
         $movie=Movies::find($id);
-        return view('admin.editmovie',compact('movie'));
+        $generos=Genre::all();
+        $vgeneros = GenreMovie::where('id_movie',$id)->get();
+        $generosMovie=array();
+        foreach ($vgeneros as $vgenero){
+            $generosMovie[]=$vgenero->genre_id;
+        }
+        return view('admin.editmovie',compact('movie','generos','generosMovie'));
     }
 
     /**
@@ -120,6 +141,13 @@ class MoviesController extends Controller
     {
         $movie=Movies::find($id);
 
+        $gens_movie = GenreMovie::where('id_movie',$id)->get();
+
+        $generosMovie=array();
+
+        foreach ($gens_movie as $gen_movie){
+            $generosMovie[]=$gen_movie->genre_id;
+        }
 
         if(!is_null($request->file('portada'))){
 
@@ -153,6 +181,28 @@ class MoviesController extends Controller
             'kid_restriction'  => $request -> restriccion,
             'duration'   => $request -> duration
         ]);
+
+        $generos=$request->generos;
+        foreach ($generos as $genero){
+
+            if (!in_array($genero,$generosMovie)){
+                GenreMovie::create([
+                    'genre_id'=>$genero,
+                    'id_movie'=>$movie->id
+                ]);
+            }
+        }
+        foreach ($generosMovie as $genero){
+            if (!in_array($genero,$generos)){
+                $gens=GenreMovie::where('id_movie',$id)->get();
+                foreach ($gens as $gen){
+                    if ($gen->genre_id==$genero){
+                        $gen->delete();
+                    }
+                }
+
+            }
+        }
 
         return redirect()->route('verpelicula.index');
 
