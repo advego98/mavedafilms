@@ -108,6 +108,13 @@ Route::get('/addgenre', function () {
 
 }) ->name('addgenre');
 
+Route::get('/addactor', function () {
+
+    return view ('admin.addactor');
+
+
+}) ->name('addactor');
+
 Route::get('/deletegenre', function () {
 
     return view ('admin.deletegenre');
@@ -155,7 +162,11 @@ Route::get('/start', function () {
 }) ->name('home');
 
 
+Route::get('/homeserie', function () {
 
+    return view ('homeserie');
+
+}) ->name('homeserie');
 
 
 Route::resource('verserie','SerieController');
@@ -167,6 +178,8 @@ Route::resource('verseason','SeasonController');
 Route::resource('verepisode','EpisodeController');
 
 Route::resource('vergenre','GenreController');
+
+Route::resource('veractor','ActorController');
 
 Route::resource('verpelicula','MoviesController');
 

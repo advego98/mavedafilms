@@ -11,7 +11,7 @@
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="width:256px;" href="{{route('verserie.index')}}">Administrar series</a>
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="width:256px;" href="{{route('verpelicula.index')}}">Administrar Peliculas</a><br/>
                             <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="width:256px;" href="{{route('vergenre.index')}}">Administrar Genero</a>
-                            <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="width:256px;" href="/admin/addActor">Administrar actor</a>
+                            <a class="btn hero-cta-btn btn-large btn-yellow" role="link" style="width:256px;" href="{{route('veractor.index')}}">Administrar actor</a>
                         </section>
                 </div>
             </div>
