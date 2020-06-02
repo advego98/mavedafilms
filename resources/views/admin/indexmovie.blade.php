@@ -3,7 +3,7 @@
 
     <div class="emptyadmin"></div>
     <div>
-     @include('layouts.flash-messages');
+     @include('layouts.flash-messages')
 
     </div>
     <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
