@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class ActorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $actors = Actors::all();
