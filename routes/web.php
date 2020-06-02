@@ -60,7 +60,7 @@ Route::get('/admin', function () {
     return view ('admin.adminpage');
 
 
-}) ->name('admin') ;
+}) ->name('admin')->middleware('auth', 'role:admin') ;
 
 
 Route::get('/newserie', function () {
@@ -68,21 +68,21 @@ Route::get('/newserie', function () {
     return view ('admin.newserie');
 
 
-}) ->name('newserie');
+}) ->name('newserie')->middleware('auth', 'role:admin');
 
 Route::get('/newseason', function () {
 
     return view ('admin.newseason');
 
 
-}) ->name('newseason');
+}) ->name('newseason')->middleware('auth', 'role:admin');
 
 Route::get('/newepisode', function () {
 
     return view ('admin.newepisode');
 
 
-}) ->name('newepisode');
+}) ->name('newepisode')->middleware('auth', 'role:admin');
 
 
 Route::get('/editserie', function () {
@@ -90,7 +90,7 @@ Route::get('/editserie', function () {
     return view ('admin.editserie');
 
 
-}) ->name('editserie');
+}) ->name('editserie')->middleware('auth', 'role:admin');
 
 
 Route::get('/deleteserie', function () {
@@ -98,7 +98,7 @@ Route::get('/deleteserie', function () {
     return view ('admin.deleteserie');
 
 
-}) ->name('deleteserie');
+}) ->name('deleteserie')->middleware('auth', 'role:admin');
 
 
 Route::get('/addgenre', function () {
@@ -106,21 +106,21 @@ Route::get('/addgenre', function () {
     return view ('admin.addgenre');
 
 
-}) ->name('addgenre');
+}) ->name('addgenre')->middleware('auth', 'role:admin');
 
 Route::get('/addactor', function () {
 
     return view ('admin.addactor');
 
 
-}) ->name('addactor');
+}) ->name('addactor')->middleware('auth', 'role:admin');
 
 Route::get('/deletegenre', function () {
 
     return view ('admin.deletegenre');
 
 
-}) ->name('deletegenre');
+}) ->name('deletegenre')->middleware('auth', 'role:admin');
 
 
 Route::get('/deletegenre', function () {
@@ -128,7 +128,7 @@ Route::get('/deletegenre', function () {
     return view ('admin.deletegenre');
 
 
-}) ->name('deletegenre');
+}) ->name('deletegenre')->middleware('auth', 'role:admin');
 
 
 Route::get('/newmovie', function () {
@@ -136,7 +136,7 @@ Route::get('/newmovie', function () {
     return view ('admin.newmovie');
 
 
-}) ->name('newmovie');
+}) ->name('newmovie')->middleware('auth', 'role:admin');
 
 
 Route::get('/editmovie', function () {
@@ -144,12 +144,12 @@ Route::get('/editmovie', function () {
     return view ('admin.editmovie');
 
 
-}) ->name('editmovie');
+}) ->name('editmovie')->middleware('auth', 'role:admin');
 
 
 Route::get('/deletemovie', function () {
 
-    return view ('admin.deletemovie');
+    return view ('admin.deletemovie')->middleware('auth', 'role:admin');
 
 
 }) ->name('deletemovie');
@@ -168,8 +168,6 @@ Route::get('/homeserie', function () {
 
 }) ->name('homeserie');
 
-
-Route::resource('verserie','SerieController');
 
 Route::resource('verserie','SerieController');
 
