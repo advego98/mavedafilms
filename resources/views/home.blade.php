@@ -30,7 +30,7 @@
 
             <div class="contenedor-carousel">
                 <div class="carousel">
-                    @foreach($series as $serie )--}}
+                    @foreach($series as $serie )
                                 <div class="pelicula">
                                     <a href="{{route('verserie.show', $serie->id)}}">
                                         <img src="{{asset('storage/'.$serie->cover)}}">

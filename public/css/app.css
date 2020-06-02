@@ -109,6 +109,16 @@ A{
 }
 
 
+a:active, a:active* {
+    outline: none !important;
+    -moz-outline-style: none !important;
+}
+
+a:focus, a:first-child* {
+    outline: none !important;
+    -moz-outline-style:none !important
+}
+
 .slider {
     width: 100%;
     height: 90vh;
