@@ -39,5 +39,6 @@ class MavedaRegisterController extends Controller
             'cvv'=>$request->security_code,
         ]);
         return view('profile.profile');
+        redirect()->route('home');
     }
 }

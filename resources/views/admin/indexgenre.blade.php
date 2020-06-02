@@ -2,6 +2,10 @@
 @section('content')
 
     <div class="emptyadmin"></div>
+    <div>
+        @include('layouts.flash-messages');
+
+    </div>
     <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
     <a href="{{route('addgenre')}}" class="btn btn-yellow" >Añadir genero</a>
     <div class="col-lg-12 table" >

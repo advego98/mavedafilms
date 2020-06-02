@@ -1,6 +1,7 @@
 @extends ('layouts.admin')
 @section('content')
 
+
     <div class="mainView" role="main" style="min-height:400px;">
         <div class="admin-container">
             <div style="text-align:center;">

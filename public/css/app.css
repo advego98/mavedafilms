@@ -2,7 +2,7 @@
 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 
 }
 
@@ -21,6 +21,7 @@ body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0F0F0D;
+    overflow-x:hidden
 
 
 }
@@ -76,6 +77,13 @@ header {
     padding: 0 40px 0 40px;
 }
 
+
+.myperfil{
+
+    padding: 0 40px 0 40px;
+
+}
+
 .sub-nav a {
 
     text-decoration: none;
@@ -93,6 +101,14 @@ header {
 }
 
 
+A{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+
 .slider {
     width: 100%;
     height: 90vh;
@@ -105,6 +121,8 @@ header {
     height: 80vh;
 
 }
+
+
 
 .slide {
 
@@ -206,6 +224,12 @@ header {
     margin-right: 2px;
 }
 
+.indicadores{
+
+    display:none;
+
+}
+
 
 .buscador{
 
@@ -221,6 +245,10 @@ header {
     background-color: black;
     color:white;
     border-radius: 10px;
+    background-image: url("../backgrounds/search-solid 1.svg");
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 30px;
 
 }
 
@@ -255,6 +283,7 @@ header {
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
 .peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
     background: rgba(0,0,0, .9);
+
 }
 
 .peliculas-recomendadas .contenedor-principal .flecha-izquierda {
@@ -299,7 +328,7 @@ header {
 h1{
 
 
-    height: 10vh;
+    height: 7vh;
     font-size: 55px;
 }
 
@@ -308,13 +337,23 @@ h2{
 
     font-size: 20px;
     color:#CECECE;
+    text-align: center;
 
 }
+
+.datos{
+
+    text-align: center;
+    padding-top: 10px;
+
+
+}
+
 
 .containerselect{
 
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 3fr;
     color:white;
     padding: 30px;
     padding-right: 0px;
@@ -352,10 +391,8 @@ h2{
 .userelections{
 
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 20px;
-
-
 
 }
 
@@ -363,7 +400,7 @@ h2{
 .infomultimedia{
 
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 50vh;
     padding-top: 30px;
 
@@ -396,6 +433,14 @@ h2{
 }
 
 
+.icono{
+
+
+    margin-left: 80px;
+
+}
+
+
 .icons{
 
     display: grid;
@@ -411,6 +456,15 @@ h2{
 
     width: 350px;
     height: 350px;
+
+}
+
+
+.titlemultimedia{
+
+
+    height: 15vh;
+
 
 }
 
@@ -494,6 +548,16 @@ footer {
 
 }
 
+
+
+li{
+    text-align:center;
+    padding-top: 5px;
+    list-style:none
+
+
+}
+
 .icon {
 
     color: #FEC61A;
@@ -532,16 +596,15 @@ footer {
 
 .derechosreservados {
 
-
     margin: 0 auto;
-    height: 6vh;
+    height: 10vh;
     width: 100%;
-    display: flex;
     justify-content: center;
     font-weight: normal;
     color: white;
     font-size: 15px;
     padding-top: 1.5em;
+    text-align: center;
 
 }
 
@@ -555,6 +618,192 @@ footer {
     height: 10vh;
 
 }
+
+
+
+
+@media screen and (max-width: 750px) {
+
+    header{
+
+        display:none;
+
+    }
+
+    .derechosreservados {
+
+        margin: 0 auto;
+        height: 14vh;
+        width: 100%;
+
+        justify-content: center;
+        font-weight: normal;
+        color: white;
+        font-size: 15px;
+        padding-top: 1.5em;
+
+    }
+
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: space-around;
+        flex-grow: 1;
+    }
+
+
+
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+        width: 118%;
+        vertical-align: top;
+        height: 400px;
+        padding: 40px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 20px 0 20px;
+        top: 0;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr !important;
+        width: 20%;
+        margin-bottom: 0px;
+
+    }
+
+
+    .main-nav{
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .slide {
+
+        height: 30vh;
+        opacity: 0;
+        transition: opacity 3s linear;
+        width: 100vw;
+    }
+
+
+    .main-slider{
+
+        height: 40vh;
+
+    }
+
+
+
+    .backgrounds {
+        width: 100%;
+        height: 15vh;
+    }
+
+
+    .header {
+        padding: 20px 20px 0 20px;
+        top: 0;
+
+        grid-gap: 5px;
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+
+    .myperfil{
+        display: none;
+
+    }
+
+
+
+    .containerselect{
+
+        grid-template-columns: 1fr !important;
+        padding: 0px;
+
+    }
+
+    .portada{
+
+        grid-row-start: 1 !important;
+        /*grid-row-end: 1 !important;*/
+
+    }
+
+    .info {
+        text-align: center;
+        color: #CECECE;
+        font-size: 20px;
+    }
+    .description {
+        font-size: 18px;
+        color: #CECECE;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .titlemultimedia {
+        height: 15vh;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    fotocover {
+
+        width: 100 vw;
+        background-size: contain;
+        height: auto;
+        width: 100vw;
+
+    }
+
+
+    .icono {
+        margin-left: 120px;
+    }
+
+
+    .useractions {
+        width: 100px;
+        display: none;
+    }
+
+    .infomultimedia {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        height: 50vh;
+        padding-top: 30px;
+    }
+
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+
+        min-width: 40%;
+        transition: .3s ease all;
+        box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+
+    }
+
+    .cc{
+
+        display: block;
+        margin: 0 auto;
+
+    }
+
+
+
+
+}
+
+
+
+
 
 
 

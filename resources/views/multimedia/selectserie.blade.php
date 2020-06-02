@@ -6,7 +6,7 @@
 
 <div>
 
-    <h1>{{$serie-> title}}</h1>
+    <h1 class="titlemultimedia">{{$serie-> title}}</h1>
 
     <div class="elements">
      <p class="info">{{$serie-> rating}}</p>
@@ -24,52 +24,57 @@
 
     <div class="userelections">
         <span class="icons">
-           <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <svg class="icono" width="17" height="15"  viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.8085 0.228123C16.5532 -0.0760408 16.1392 -0.0760408 15.8838 0.228123L5.28501 12.8539L1.11618 7.88778C0.860877 7.58358 0.446866 7.58358 0.1915 7.88778C-0.0638333 8.19194 -0.0638333 8.68509 0.1915 8.98929L4.82272 14.5062C5.07796 14.8102 5.4921 14.8103 5.7474 14.5062L16.8085 1.32964C17.0638 1.02543 17.0638 0.532286 16.8085 0.228123Z" fill="#FEC61A"/>
         </svg>
             <p class="useractions">Seguir viendo</p>
         </span>
 
         <span class="icons">
-        <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icono" width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.4927 5.56581C16.5092 4.5561 15.1596 4 13.6923 4C12.5956 4 11.5912 4.3282 10.7069 4.97541C10.2607 5.3021 9.85645 5.70178 9.5 6.16828C9.14369 5.70192 8.73926 5.3021 8.29293 4.97541C7.40883 4.3282 6.40441 4 5.30766 4C3.84039 4 2.49068 4.5561 1.50713 5.56581C0.535332 6.56372 0 7.92701 0 9.40473C0 10.9257 0.598824 12.3179 1.88446 13.7863C3.03456 15.0998 4.68752 16.4332 6.6017 17.9772C7.25532 18.5044 7.9962 19.1021 8.7655 19.7388C8.96873 19.9072 9.22951 20 9.5 20C9.77035 20 10.0313 19.9072 10.2342 19.739C11.0035 19.1023 11.7448 18.5043 12.3987 17.9767C14.3126 16.433 15.9656 15.0998 17.1157 13.7862C18.4013 12.3179 19 10.9257 19 9.40459C19 7.92701 18.4647 6.56372 17.4927 5.56581Z" fill="#FEC61A"/>
         </svg>
          <p class="useractions">Favoritos</p>
 
         </span>
         <span class="icons">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="icono" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.0219 0H0.469669C0.210251 0 1.15011e-06 0.154921 1.15011e-06 0.346071V13.3074C-0.000549253 13.5671 0.196491 13.805 0.509847 13.9235C0.823387 14.0422 1.20059 14.0216 1.48661 13.8699L6.74579 11.0921L12.005 13.87C12.2914 14.0211 12.6682 14.0417 12.9815 13.9231C13.2947 13.8046 13.4918 13.5669 13.4918 13.3074V0.346071C13.4918 0.154921 13.2813 0 13.0219 0Z" fill="#FEC61A"/>
         </svg>
             <p class="useractions">Ver luego</p>
 
         </span>
     </div>
+
     <div class="infomultimedia">
 
         <div>
 
             <h2>Reparto</h2>
             <ul>
-
+                @foreach($actoresSerie as $actores)
+                    <li>{{$actores[0]->actor}}</li>
+                @endforeach
             </ul>
         </div>
         <div id="space">
          <div>
             <h2>Idiomas</h2>
-            <p>Español</p>
+            <p class="datos">Español</p>
          </div>
          <div>
             <h2>Subtitulos</h2>
-            <p>Español</p>
-            <p>Ingles</p>
-            <p>Frances</p>
+            <p class="datos">Español</p>
+            <p class="datos">Ingles</p>
+            <p class="datos">Frances</p>
         </div>
         </div>
         <div>
             <h2>Generos</h2>
             <ul>
-
+             @foreach($generosSerie as $genero)
+              <li>{{$genero[0]->name_genre}}</li>
+             @endforeach
             </ul>
         </div>
          <div>
@@ -77,7 +82,7 @@
     </div>
 </div>
 
-    <div>
+    <div class="portada">
         <img class="fotocover" src="{{asset('storage/'.$serie->cover)}}">
     </div>
 
