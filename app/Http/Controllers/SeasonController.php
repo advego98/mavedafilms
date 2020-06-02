@@ -10,6 +10,12 @@ use Illuminate\Http\Request;
 
 class SeasonController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index($id)
     {
 //        $serie=Series::find($id);
