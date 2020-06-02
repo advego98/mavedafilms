@@ -85,7 +85,7 @@ class SerieController extends Controller
         }
 
 
-    return redirect()->route('verserie.index');
+    return redirect()->route('verserie.index')->with('success','Se ha creado con exito');
     }
 
 
@@ -106,9 +106,26 @@ class SerieController extends Controller
      */
     public function show($id)
     {
-
+        $vgeneros = GenreSerie::where('serie_id','=',$id)->get();
+        $acts_serie = ActorSerie::where('serie_id',$id)->get();
         $serie = Series::find($id);
-        return  view('multimedia.selectserie' , compact('serie'));
+        foreach ($vgeneros as $vgenero){
+
+            $genero=$vgenero->genre_id;
+            $generosSerie[] = Genre::where('id','=',$genero)->get();
+        }
+
+
+        foreach ($acts_serie as $actores){
+
+            $actor=$actores->actor_id;
+            $actoresSerie[] = Actors::where('id','=',$actor)->get();
+        }
+
+        return  view('multimedia.selectserie' , compact('serie', 'generosSerie','actoresSerie'));
+
+
+
 
     }
 

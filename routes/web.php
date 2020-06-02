@@ -197,3 +197,5 @@ Route::get('homemovie', 'HomeController@moviehome')->name('homemovie');
 
 
 
+
+

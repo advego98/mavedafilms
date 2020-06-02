@@ -36,7 +36,6 @@
 <body>
 
 
-@guest
 
 
 
@@ -46,7 +45,7 @@
 
     </header>
 
-@endguest
+
 
 
 

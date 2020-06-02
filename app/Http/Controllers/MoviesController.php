@@ -41,6 +41,7 @@ class MoviesController extends Controller
 
             $cover=$request->file('portada')->store('photos','public');
 
+
         }else{
 
             $cover= "4LFUoZ0YGK1q5d9aS2ClHDE4uwgFSL5XfPvKKMoM.jpeg";
@@ -91,7 +92,7 @@ class MoviesController extends Controller
             ]);
         }
 
-        return redirect()->route('verpelicula.index');
+        return redirect()->route('verpelicula.index')->with('success','Se ha creado con exito');
     }
 
 
@@ -112,10 +113,28 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        $property = Property::find($id);
-        $user = $property->user_id;
-        $nombre = User::find($user);
-        return view('properties.show', compact('property', 'nombre'));
+
+        $vgeneros = GenreMovie::where('id_movie','=',$id)->get();
+        $acts_movies = ActorMovie::where('movie_id',$id)->get();
+        $movies = Movies::find($id);
+
+        foreach ($vgeneros as $vgenero){
+
+            $genero=$vgenero->genre_id;
+            $generosMovie[] = Genre::where('id','=',$genero)->get();
+        }
+
+        foreach ($acts_movies as $actores){
+
+            $actor=$actores->actor_id;
+            $actoresMovie[] = Actors::where('id','=',$actor)->get();
+        }
+
+
+        return  view('multimedia.selectmovie' , compact('movies', 'generosMovie','actoresMovie'));
+
+
+
     }
 
     /**

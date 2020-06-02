@@ -19,7 +19,7 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <link href="{{ URL::asset('css/form.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/headerfooter.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/paymentmethod.css') }}" rel="stylesheet">
@@ -43,7 +43,7 @@
 
         <div class="logo">MAVEDAFILMS</div>
         @guest
-        <button class="button-iniciarsesion">Iniciar Sesión</button>
+            <button class="button-iniciarsesion "><a  href="{{route('login')}}">Iniciar Sesión</a></button>
         @endguest
 
     </header>
@@ -86,7 +86,7 @@
 
     <div class="derechosreservados">
 
-        <p>©Mavedafilms. Todos los derechos reservados</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img class="cc" alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>
 
     </div>
 

@@ -22,6 +22,7 @@
     <div class="peliculas-recomendadas contenedor">
         <div class="contenedor-titulo-controles">
             <h3>Series</h3>
+            <div class="indicadores"></div>
         </div>
 
         <div class="contenedor-principal">
@@ -48,6 +49,7 @@
     <div class="peliculas-recomendadas contenedor">
         <div class="contenedor-titulo-controles">
             <h3>Peliculas</h3>
+            <div class="indicadores"></div>
         </div>
 
         <div class="contenedor-principal">
@@ -75,6 +77,7 @@
     <div class="peliculas-recomendadas contenedor">
         <div class="contenedor-titulo-controles">
             <h3>Apta para todos los publicos</h3>
+            <div class="indicadores"></div>
         </div>
 
         <div class="contenedor-principal">

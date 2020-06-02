@@ -22,7 +22,7 @@ class GenreController extends Controller
             'name_genre'=>$request->genre
         ]);
 
-        return redirect()->route('vergenre.index');
+        return redirect()->route('vergenre.index')->with('success','Se ha creado con exito');
     }
 
 

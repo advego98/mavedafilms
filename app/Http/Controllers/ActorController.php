@@ -22,7 +22,7 @@ class ActorController extends Controller
             'actor'=>$request->actor
         ]);
 
-        return redirect()->route('veractor.index');
+        return redirect()->route('veractor.index')->with('success','Se ha creado con exito');
     }
 
 
