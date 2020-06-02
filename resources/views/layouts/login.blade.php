@@ -19,7 +19,7 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/form.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/headerfooter.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/paymentmethod.css') }}" rel="stylesheet">
