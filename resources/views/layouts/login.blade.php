@@ -19,15 +19,15 @@
 
 
     <!-- Styles -->
-    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/headerfooter.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/paymentmethod.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/planchoose.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/register.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/restpasswd.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/profile.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/headerfooter.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/paymentmethod.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/planchoose.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/restpasswd.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/profile.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 </head>
