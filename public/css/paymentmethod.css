@@ -8,12 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-@font-face {
 
-    font-family: impact;
-    src: url(impact.ttf);
-
-}
 
 body {
 
@@ -327,7 +322,7 @@ button.login-button {
 .registerform {
 
     margin: 0 auto;
-    font-size: 15;
+    font-size: 15px;
     font-size: 13px;
     padding-top: 25px;
     color: white;
@@ -359,20 +354,8 @@ input.login-button {
 }
 
 
-.derechosreservados {
 
 
-    margin: 0 auto;
-    height: 6vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: normal;
-    color: white;
-    font-size: 15px;
-    padding-top: 1.5em;
-
-}
 
 .mailandnumber {
 

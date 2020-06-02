@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Seasons;
 use App\Series;
+
 use Illuminate\Http\Request;
 
 class SeasonController extends Controller
@@ -48,7 +50,7 @@ class SeasonController extends Controller
         ]);
 
 
-        return redirect()->route('verseason.show',$id);
+        return redirect()->route('verseason.show',$id)->with('success','Se ha creado con exito');
     }
 
 
@@ -110,6 +112,7 @@ class SeasonController extends Controller
 
         return redirect()->route('verseason.show', $season->serie_id);
     }
+
 
     /**
      * Remove the specified resource from storage.

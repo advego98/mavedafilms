@@ -20,21 +20,7 @@ body {
 
 }
 
-header {
-    position: relative;
-    max-width: 1920px;
-    margin: 0 auto;
-    display: flex;
-    padding-top: 20px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 5rem;
-    z-index: 10;
 
-}
 
 
 .logo {
@@ -313,20 +299,7 @@ button.login-button {
 }
 
 
-.derechosreservados {
 
-
-    margin: 0 auto;
-    height: 6vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: normal;
-    color: white;
-    font-size: 15px;
-    padding-top: 1.5em;
-
-}
 
 .mailandnumber{
     

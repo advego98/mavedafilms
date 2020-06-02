@@ -11,7 +11,9 @@
             <div class="login-body">
                 <h1 class="title">Iniciar Sesión</h1>
 
-                <form method="post" name="login-form" class="login">
+                <form method="post" action="{{route('login')}}" name="login-form" class="login">
+                @csrf
+
                     <input type="text" class="forminput" name="login-name" placeholder="Correo Electronico">
                     <input type="text" class="forminput" name="password-name" placeholder="Contraseña">
 

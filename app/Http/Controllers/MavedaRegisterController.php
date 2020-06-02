@@ -58,8 +58,6 @@ class MavedaRegisterController extends Controller
             'due_date'=>$request->date_venciment,
             'cvv'=>$request->security_code,
         ]);
-        $user->roles()->attach($role_user);
 
-        return redirect()->route('login')->content('');
     }
 }

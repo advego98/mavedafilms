@@ -641,12 +641,7 @@ only screen and (max-width: 950px) and (min-width: 601px) {
     font-family: impact;
 }
 
-.planGrid__planInput:active + .planGrid__planLabel,
-.planGrid__planInput:focus + .planGrid__planLabel {
-    -webkit-box-shadow: 0 0 3px 0 #e50914;
-    -moz-box-shadow: 0 0 3px 0 #e50914;
-    box-shadow: 0 0 3px 0 #e50914;
-}
+
 
 .planGrid__planInput:checked + .planGrid__planLabel {
     opacity: 1;
@@ -827,18 +822,13 @@ only screen and (max-width: 950px) and (min-width: 601px) {
     margin-right: 6px;
 }
 
-.planGrid__frequencyInput:active + .planGrid__frequencyLabel::before,
-.planGrid__frequencyInput:focus + .planGrid__frequencyLabel::before {
-    -webkit-box-shadow: 0 0 3px 0 #e50914;
-    -moz-box-shadow: 0 0 3px 0 #e50914;
-    box-shadow: 0 0 3px 0 #e50914;
-}
+
 
 .planGrid__frequencyLabel::after {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #e50914;
+
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
@@ -866,10 +856,7 @@ only screen and (max-width: 950px) and (min-width: 601px) {
     font-size: 20px;
 }
 
-.planGrid__cell.planGrid__cell--isSelected {
-    color: #;
-    fill: #;
-}
+
 
 @media only screen and (min-width: 951px),
 only screen and (max-width: 950px) and (min-width: 601px) {
@@ -883,7 +870,7 @@ only screen and (max-width: 950px) and (min-width: 601px) {
         width: calc(20% / 1);
     }
 
-    .planGrid--has2Plans .planGrid__cell {
+    .planGrid--has2Plans .planGrid__cell{
         width: -webkit-calc(40% / 2);
         width: -moz-calc(40% / 2);
         width: calc(40% / 2);
@@ -1373,20 +1360,7 @@ A {
 }
 
 
-.derechosreservados {
-
-
-    margin: 0 auto;
-    height: 6vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: normal;
-    color: white;
-    font-size: 15px;
-    padding-top: 1.5em;
-
-}
+.
 
 .mailandnumber {
 

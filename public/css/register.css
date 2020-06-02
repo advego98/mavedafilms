@@ -340,20 +340,7 @@ input.login-button{
     display: none;
 
 }
-.derechosreservados {
 
-
-    margin: 0 auto;
-    height: 6vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: normal;
-    color: white;
-    font-size: 15px;
-    padding-top: 1.5em;
-
-}
 
 .mailandnumber {
 

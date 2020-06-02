@@ -309,21 +309,19 @@ button.login-button {
     
 }
 
-
 .derechosreservados {
-
-
     margin: 0 auto;
-    height: 6vh;
+    height: 14vh;
     width: 100%;
-    display: flex;
     justify-content: center;
     font-weight: normal;
     color: white;
     font-size: 15px;
     padding-top: 1.5em;
-
+    text-align: center;
 }
+
+
 
 
 
@@ -539,6 +537,12 @@ button.login-button {
 
 }
 
+.stepicons img {
+    height: 62px;
+}
+
+
+
 @media screen and (max-width: 750px) {
 
 
@@ -621,10 +625,19 @@ button.login-button {
 
 
     .password-body {
-
-        width: 70%;
-
+        background-color: rgba(36, 35, 34, 0.6);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0 auto;
+        min-height: 550px;
+        padding: 20px 0 30px;
+        width: 75%;
     }
+
 
 
     .form-register {
@@ -638,7 +651,7 @@ button.login-button {
         margin: 0 auto;
         min-height: 550px;
         padding: 20px 0 30px;
-        width: 70%;
+        width: 95%;
         border: 1px solid #FEC418;
     }
 
@@ -659,11 +672,28 @@ button.login-button {
         border: 1px solid #FEC418;
 
     }
+    derechosreservados {
+        margin: 0 auto;
+        height: 19vh;
+        width: 100%;
+        justify-content: center;
+        font-weight: normal;
+        color: white;
+        font-size: 15px;
+        padding-top: 1.5em;
+        text-align: center;
+    }
 
+    #imagen {
 
-    img #imagen {
+        height: 55px;
 
-        height: 40px;
+    }
+
+    .cc{
+
+        display: block;
+        margin: 0 auto;
 
     }
 
@@ -689,6 +719,16 @@ button.login-button {
 
 
     }
+
+
+
+} @media screen and (max-width: 1050px){
+
+
+
+
+
+
 }
 
 
@@ -707,7 +747,21 @@ button.login-button {
             margin: 0 auto;
             min-height: 550px;
             padding: 20px 0 30px;
-            width: 60%;
+            width: 75%;
+        }
+
+        .input#inputpass {
+            height: 40px;
+            background-color: #4E4C47;
+            padding-top: 20px;
+            border-color: #4E4C47;
+            font-weight: 400;
+            font-size: 17px;
+            color: white;
+            width: 86%;
+            text-align: left;
+            padding: 10px;
+            margin-top: 7px;
         }
 
 
@@ -731,6 +785,32 @@ button.login-button {
             padding: 20px;
             margin-top: 30px;
             border: 1px solid #FEC418
+        }
+
+
+
+        .pay-button {
+            width: 90%;
+            background-color: #FEC418;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 24px 0 12px;
+            margin-top: 24px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: black;
+
+        }
+
+        .buttonchoseplan {
+            border-radius: 10px;
+            font-size: 25px;
+            height: 30vh;
+            display: flex;
+            width: 35%;
+            margin: 0 auto;
         }
 
     }

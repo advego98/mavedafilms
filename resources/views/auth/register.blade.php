@@ -60,8 +60,10 @@
 
 
     <div class="form-register" id="content">
-        <div class="stepicons"><img id="imagen" src="{{asset('backgrounds/stepplan1.png')}}"></div>
+
+        <div class="stepicons"><img id="imagen" src="{{asset('backgrounds/stepplan1.svg')}}"></div>
         <form method="POST" name="register-form" action="{{ route('register') }}">
+
             @csrf
             @method('POST')
 
