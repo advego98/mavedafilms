@@ -15,9 +15,9 @@ class EpisodeController extends Controller
         $this->middleware('auth');
     }
 
-    public function index($id)
+    public function crear($id)
     {
-//
+        return view('admin.newepisode',compact('id'));
     }
 
     /**
@@ -103,8 +103,9 @@ class EpisodeController extends Controller
     public function edit($id)
     {
         $episode=Episodes::find($id);
+        $id = $episode->season_id;
 
-        return view('admin.editepisode',compact('episode'));
+        return view('admin.editepisode',compact('episode','id'));
     }
 
     /**
