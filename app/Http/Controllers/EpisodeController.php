@@ -90,7 +90,15 @@ class EpisodeController extends Controller
 
         $episodes = Episodes::where('season_id',$id)->get();
 
-        return view('admin.indexepisodes',compact('episodes','id'));
+        $season = Seasons::find($id);
+
+        $temporada= $season->name;
+
+        $serie= Series::find($season->serie_id);
+
+        $titulo = $serie->title;
+
+        return view('admin.indexepisodes',compact('episodes','id','titulo', 'temporada'));
 
     }
 
