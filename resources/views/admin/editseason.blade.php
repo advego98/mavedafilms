@@ -11,7 +11,7 @@
                             @csrf
                             @method('PUT')
                             <input type="text" class="serieinput" name="name" placeholder="Nombre temporada" value="{{$season->name}}">
-                            <input type="submit" class="login-button" placeholder="Añadir Temporada">
+                            <input type="submit" class="login-button" value="Editar">
                         </form>
                     </section>
                 </div>
