@@ -9,7 +9,7 @@
     <a href="{{route('admin')}}" class="btn btn-outline-warning" >Volver atras</a>
     <a href="{{route('verepi',$id)}}" class="btn btn-yellow" >Añadir capitulo</a>
     <div class="col-lg-12 table" >
-
+        <h2 class="admin-header">{{$titulo}} - {{$temporada}}</h2>
         <table class="table">
             <thead>
             <tr>
