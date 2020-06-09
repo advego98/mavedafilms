@@ -86,7 +86,11 @@ class SeasonController extends Controller
 
         $seasons = Seasons::where('serie_id',$id)->get();
 
-        return view('admin.indexseason',compact('seasons','id'));
+        $serie = Series::find($id);
+
+        $titulo = $serie->title;
+
+        return view('admin.indexseason',compact('seasons','id','titulo'));
 
     }
 
