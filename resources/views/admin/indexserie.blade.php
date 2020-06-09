@@ -6,7 +6,7 @@
         @include('layouts.flash-messages')
 
     </div>
-    <a href="{{route('admin')}}" class="btn btn-yellow" >Volver atras</a>
+    <a href="{{route('admin')}}" class="btn btn-outline-warning" >Volver atras</a>
     <a href="{{route('verserie.create')}}" class="btn btn-yellow" >Añadir serie</a>
     <div class="col-lg-12 table" >
 

@@ -11,7 +11,7 @@
                             @csrf
                             @method('PUT')
                             <input type="text" class="serieinput" name="actor" placeholder="Nombre actor" value="{{$actor->actor}}">
-                            <input type="submit" class="login-button" placeholder="Añadir Temporada">
+                            <input type="submit" class="login-button" value="Editar">
                         </form>
                     </section>
                 </div>
