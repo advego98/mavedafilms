@@ -10,7 +10,7 @@
                         <form method="post" action="{{route('verepisode.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="name" placeholder="Introduzca titulo">
-                            <input type="file" class="serieinput" name="portada" placeholder="cover">
+                            <input type="file" class="serieinput" name="portada" placeholder="portada">
                             <input type="file" class="serieinput" name="url" placeholder="pelicula">
                             <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
                         </form>

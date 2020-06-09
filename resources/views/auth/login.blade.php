@@ -24,7 +24,7 @@
                     <label class="ayuda"></label><a href="{{route('changepassword')}}">Olvide mi contraseña</a>
                 </div>
 
-                <button type="submit" class="login-button">Iniciar sesión</button>
+                <button type="submit btn btn-yellow"" class="login-button">Iniciar sesión</button>
 
                 <div class="registerform">¿No tienes cuenta?<a class="suscription" href="{{route('register')}}">Suscríbete ahora</a></div>
 

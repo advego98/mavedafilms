@@ -13,8 +13,8 @@
 
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo" value="{{$movie->title}}">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año" value="{{$movie->year}}">
-                            <input type="file" class="serieinput" name="portada" placeholder="cover">
-                            <input type="text" class="textareainput" name="description" placeholder="description" value="{{$movie->description}}">
+                            <input type="file" class="serieinput" name="portada" placeholder="portada">
+                            <input type="text" class="textareainput" name="description" placeholder="descripcion" value="{{$movie->description}}">
                             <select name="restriccion" class="selectseries">
                                 <option value="3">3</option>
                                 <option value="7">7</option>
@@ -22,7 +22,7 @@
                                 <option value="16">16</option>
                                 <option value="18">18</option>
                             </select>
-                            <input type="text" class="serieinput" name="duration" placeholder="Duration" value="{{$movie-> duration}}">
+                            <input type="text" class="serieinput" name="duration" placeholder="Duracion" value="{{$movie-> duration}}">
                             <select class="serieinput" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                     @foreach($generos as $genero)
