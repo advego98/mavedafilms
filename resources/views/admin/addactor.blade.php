@@ -11,7 +11,7 @@
                         <form method="post" action="{{route('veractor.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="actor" placeholder="Introducir nombre">
-                            <button class="login-button">Añadir</button>
+                            <button class="login-button">Añadir actor</button>
                         </form>
                     </section>
                 </div>

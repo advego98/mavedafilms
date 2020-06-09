@@ -12,7 +12,7 @@
                             <input type="text" class="serieinput" name="name" placeholder="Introduzca titulo">
                             <input type="file" class="serieinput" name="portada" placeholder="portada">
                             <input type="file" class="serieinput" name="url" placeholder="pelicula">
-                            <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
+                            <input type="submit" class="login-button" value="Añadir capitulo">
                         </form>
                     </section>
                 </div>

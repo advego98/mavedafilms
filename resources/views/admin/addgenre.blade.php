@@ -11,7 +11,7 @@
                         <form method="post" action="{{route('vergenre.store')}}" enctype="multipart/form-data">
                             @csrf
                             <input type="text" class="serieinput" name="genre" placeholder="Introducir genero">
-                            <button class="login-button">Añadir</button>
+                            <button class="login-button">Añadir genero</button>
                         </form>
                     </section>
                 </div>

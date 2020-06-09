@@ -38,7 +38,7 @@
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <input type="submit" class="login-button" placeholder="Añadir Serie"></input>
+                            <input type="submit" class="login-button" value="Añadir pelicula"></input>
                         </form>
                     </section>
                 </div>
