@@ -7,7 +7,7 @@
 
     </div>
     <a href="{{route('admin')}}" class="btn btn-outline-warning" >Volver atras</a>
-    <a href="{{route('newseason')}}" class="btn btn-yellow" >Añadir temporada</a>
+    <a href="{{route('vertemp',$id)}}" class="btn btn-yellow" >Añadir temporada</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
