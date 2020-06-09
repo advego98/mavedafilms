@@ -25,6 +25,10 @@ class SeasonController extends Controller
 //        return view('admin.indexserie',compact('series'));
     }
 
+    public function crear($id){
+        return view('admin.newseason',compact('id'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -95,8 +99,9 @@ class SeasonController extends Controller
     public function edit($id)
     {
         $season=Seasons::find($id);
+        $id=$season->serie_id;
 
-        return view('admin.editseason',compact('season'));
+        return view('admin.editseason',compact('season','id'));
     }
 
     /**

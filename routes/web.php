@@ -173,7 +173,11 @@ Route::resource('verserie','SerieController');
 
 Route::resource('verseason','SeasonController');
 
+Route::get('vertemp/{id}','SeasonController@crear')->name('vertemp');
+
 Route::resource('verepisode','EpisodeController');
+
+Route::get('verepi/{id}','EpisodeController@crear')->name('verepi');
 
 Route::resource('vergenre','GenreController');
 
