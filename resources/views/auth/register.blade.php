@@ -56,7 +56,7 @@
         }
     </script>
 
-    <div class="emptyspace" id="empty1"></div>
+    <div class="emptyregisterspace" id="empty1"></div>
 
 
     <div class="form-register" id="content">
@@ -82,7 +82,7 @@
 
             </div>
             <div class="planFormContainer" data-uia="form-plan-selection" id="form2" style="display:none;">
-                <div class="emptyspace" id="empty2"></div>
+                <div class="emptyspacetable" id="empty2"></div>
                 <div>
                     <div class="stepHeader-container" data-uia="header">
                     </div>
@@ -427,18 +427,14 @@
 
                     <input type="text" class="forminputpay" name="credit_name" placeholder="Nombre de la tarjeta">
                     <input type="text" class="forminputpay" name="surnames" placeholder="Apellidos">
-                    <input type="text" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta">
+                    <input type="text" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta" pattern="^(?:4\d([\- ])?\d{6}\1\d{5}|(?:4\d{3}|5[1-5]\d{2}|6011)([\- ])?\d{4}\2\d{4}\2\d{4})$">
                     <input type="text" class="forminputpay" name="date_venciment" placeholder="Fecha de vencimiento(MM/AA)" pattern="([0-9]{2}[/]?){2}">
-                    <input type="password" class="forminputpay" name="security_code" placeholder="Codigo de seguridad" maxlength="3">
+                    <input type="password" class="forminputpay" name="security_code" placeholder="Codigo de seguridad" maxlength="3" pattern="/[0-9]{3}+/">
 {{--                    <input type="password" class="forminputpay" name="tarifa" placeholder="tarifa">--}}
                     <p class="infolegal">Al hacer clic en el botón "Iniciar suscripción de pago" de más abajo, estás
                         aceptando nuestros Términos de uso, admites que ya has cumplido los 18 y
-                        reconoces nuestra Declaración de privacidad. Aceptas que la suscripción
-                        empiece ahora mismo y renuncias a tu derecho de rescisión, pero podrás
-                        cancelar tu suscripción cuando quieras. Si no cancelas la suscripción,
-                        Mavedafilms dará por hecho automáticamente que sigue en vigor y te cobrará
-                        la tarifa correspondiente (actual: 12 €) a través de tu método de pago cada mes</p>
-                    <input type="submit" class="pay-button" value="INICIAR SUSCRIPCIÓN DE PAGO">
+                        reconoces nuestra Declaración de privacidad.</p>
+                    <input type="submit" class="pay-button" value="Iniciar suscripcion de pago">
 
 
                 </div>

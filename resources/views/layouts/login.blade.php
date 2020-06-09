@@ -19,15 +19,26 @@
 
 
     <!-- Styles -->
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/headerfooter.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/paymentmethod.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/planchoose.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/restpasswd.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/profile.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+    
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/form.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/headerfooter.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/paymentmethod.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/planchoose.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/register.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/restpasswd.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/profile.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/headerfooter.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/paymentmethod.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/planchoose.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/restpasswd.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 </head>
@@ -77,7 +88,9 @@
 
     <div class="derechosreservados">
 
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img class="cc" alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img class="cc" alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a><
+
+    </div>
 
 </footer>
 

@@ -12,9 +12,9 @@
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">
                             <input type="file" class="serieinput" name="portada" placeholder="cover">
-                            <input type="text" class="textareainput" name="description" placeholder="description">
+                            <textarea class="textareainput" name="description" placeholder="descripcion"></textarea>
                             <select  class="serieinput" name="restriccion" placeholder="restriccion de edad" size="6">
-                                <optgroup label="Restriccion de edad">
+                                    <optgroup label="Restriccion de edad">
                                     <option value="3">3</option>
                                     <option value="7">7</option>
                                     <option value="12">12</option>
@@ -22,7 +22,7 @@
                                     <option value="18">18</option>
                                 </optgroup>
                             </select>
-                            <input type="text" class="serieinput" name="duracion" placeholder="duration">
+                            <input type="text" class="serieinput" name="duracion" placeholder="duracion">
                             <select class="serieinput" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                 @foreach($generos as $genero)
@@ -37,7 +37,8 @@
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <input type="submit" class="login-button" placeholder="Añadir Serie">
+                            <input type="submit" placeholder="Añadir serie" class="login-button">
+                            </input>
                         </form>
                     </section>
                 </div>

@@ -191,10 +191,11 @@ footer {
  
     border-radius: 10px;
     font-size: 25px;
-    height: 30vh;
+    height: 10vh;
     display: flex;
     width: 35%;
     margin: 0 auto;
+    padding-bottom: 50px;
 
 }
 
@@ -214,6 +215,7 @@ footer {
     padding-top: 20p;
     margin-top: 50px;
     color:black;
+    border-color: #FEC418;
 
 }
 
