@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -27,6 +28,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 </head>
+<script>
+    $(document).ready(function(){
+
+        $(".buscar").keyup(function(){
+            $encuesta= $(".buscar").val();
+             alert($encuesta);
+            //Este if es para el Section que printamos cuando no tenga calores el inpuit se oculte
+            if($encuesta== ""){
+                $("#mostrar").hide();
+            }
+            else{
+                $("#mostrar").show();
+            }
+
+            //peticion ajax para el datalist
+            $.ajax({
+                url:'../../functions/buscador.php',
+                data:{encuesta:$encuesta},
+                success:function(data){
+                    $("#multimedia_list").html(data);
+
+                }
+            })
+
+        })
+    });
+
+
+
+
+</script>
 
 <body>
 
@@ -53,7 +85,9 @@
                         <svg width="" height="" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                         </svg>
-                        <input class="buscar" type="text"  placeholder="buscar" name="search">
+                        <input class="buscar" type="text"  placeholder="buscar" name="search" list="multimedia_list">
+                        <datalist id="multimedia_list">
+                        </datalist>
                     </form>
                 </div>
         </div>

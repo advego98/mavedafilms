@@ -260,6 +260,7 @@ a:focus, a:first-child* {
     background-repeat: no-repeat;
     text-align: center;
     height: 30px;
+    border-color: white;
 
 }
 
@@ -322,6 +323,8 @@ a:focus, a:first-child* {
     min-width: 20%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+    height: 50vh;
+
 }
 
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
@@ -330,10 +333,11 @@ a:focus, a:first-child* {
 }
 
 .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-    width: 100%;
+
     vertical-align: top;
     height: 400px;
-    padding:40px
+    padding: 40px;
+    height: 50vh;
 }
 
 h1{
@@ -665,14 +669,7 @@ li{
 
 
 
-    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-        width: 118%;
-        vertical-align: top;
-        height: 400px;
-        padding: 40px;
-        height: 200px;
-        padding: 10px;
-    }
+
 
     header {
         padding: 20px 20px 0 20px;
@@ -770,7 +767,7 @@ li{
         width: 100 vw;
         background-size: contain;
         height: auto;
-        width: 100vw;
+
 
     }
 
@@ -805,6 +802,15 @@ li{
         display: block;
         margin: 0 auto;
 
+    }
+
+    .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+
+        width:100%;
+        vertical-align: top;
+        height: 400px;
+        padding: 40px;
+        height: 50vh;
     }
 
 
