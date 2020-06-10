@@ -185,15 +185,7 @@
     </script>
 
 
-    <script>
-        $(document).ready(function(){
-            $('input.buscador').typeahead({
-                name: 'buscador',
-                remote:'search.php?key=%QUERY',
-                limit : 10
-            });
-        });
-    </script>
+
 
     <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 
