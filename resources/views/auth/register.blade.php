@@ -70,13 +70,14 @@
             <div class="registersection" id="form1">
                 <label class="title-registro">Datos de registro</label>
                 <div class="inputgroup">
-                    <input type="text" class="groupinput" name="name"  placeholder="Nombre" required  id="name">
-                    <input type="text" class="groupinput" name="subname" placeholder="Apellidos" required id="subname">
+                    <input required type="text" class="groupinput" name="name"  placeholder="Nombre"  id="name">
+                    <input required type="text" class="groupinput" name="subname" placeholder="Apellidos"  id="subname">
                 </div>
                 <br><br>
-                <input id="email" type="email" class="forminputregister" name="email" required placeholder="Correo">
-                <input id="password" type="password" class="forminputregister" name="password" required placeholder="Contraseña">
-                <input id="password-confirm" type="password" class="forminputregister" name="password_confirmation" required placeholder="Repetir contraseña">
+                <input required id="email" type="email" class="forminputregister" name="email"  placeholder="Correo">
+                <input required id="password" type="password" class="forminputregister" name="password" placeholder="Contraseña">
+                <input required id="password-confirm" type="password" class="forminputregister" name="password_confirmation"  placeholder="Repetir contraseña">
+
 
                 <input type="button" class="register-button" id="boton1"value="Continuar">
 
@@ -191,7 +192,7 @@
                                     </svg></span></td>
                         </tr>
                         </tbody>
-                    </table><small class="planGrid__legal"><span id="" data-uia="plan-grid-legal">La disponibilidad de contenido en HD y en Ultra HD depende de la capacidad de tu servicio de internet y del dispositivo. No todo el contenido está disponible en HD o en Ultra HD. Consulta los Términos de uso para obtener más información.</span></small>
+                    </table><small class="planGrid__legal"><span id="" data-uia="plan-grid-legal">La disponibilidad de contenido en HD y en Ultra HD depende de la capacidad de tu servicio de internet y del dispositivo.</span></small>
                 </div>
                 <div class="buttonchoseplan">
 
@@ -425,16 +426,16 @@
                     </p>
 
 
-                    <input type="text" class="forminputpay" name="credit_name" placeholder="Nombre de la tarjeta">
-                    <input type="text" class="forminputpay" name="surnames" placeholder="Apellidos">
-                    <input type="text" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta" pattern="^(?:4\d([\- ])?\d{6}\1\d{5}|(?:4\d{3}|5[1-5]\d{2}|6011)([\- ])?\d{4}\2\d{4}\2\d{4})$">
-                    <input type="text" class="forminputpay" name="date_venciment" placeholder="Fecha de vencimiento(MM/AA)" pattern="([0-9]{2}[/]?){2}">
-                    <input type="password" class="forminputpay" name="security_code" placeholder="Codigo de seguridad" maxlength="3" pattern="/[0-9]{3}+/">
+                    <input type="text" class="forminputpay" name="credit_name" placeholder="Nombre de la tarjeta" required>
+                    <input type="text" class="forminputpay" name="surnames" placeholder="Apellidos" required>
+                    <input type="text" class="forminputpay" name="credit_number" placeholder="Numero de la tarjeta" pattern="^(?:4\d([\- ])?\d{6}\1\d{5}|(?:4\d{3}|5[1-5]\d{2}|6011)([\- ])?\d{4}\2\d{4}\2\d{4})$" required>
+                    <input type="text" class="forminputpay" name="date_venciment" placeholder="Fecha de vencimiento(MM/AA)" pattern="([0-9]{2}[/]?){2}" required>
+                    <input type="password" class="forminputpay" name="security_code" placeholder="Codigo de seguridad" maxlength="3" pattern="/[0-9]{3}+/" required>
 {{--                    <input type="password" class="forminputpay" name="tarifa" placeholder="tarifa">--}}
                     <p class="infolegal">Al hacer clic en el botón "Iniciar suscripción de pago" de más abajo, estás
                         aceptando nuestros Términos de uso, admites que ya has cumplido los 18 y
                         reconoces nuestra Declaración de privacidad.</p>
-                    <input type="submit" class="pay-button" value="Iniciar suscripcion de pago">
+                    <input type="submit" class="pay-button" value="Iniciar suscripcion de pago" required>
 
 
                 </div>
