@@ -50,6 +50,33 @@ class HomeController extends Controller
     }
 
 
+    public function buscador($multimedia)
+    {
+
+
+        $series = Series::where("title", "LIKE", "%{$multimedia}%")
+            ->paginate(25);
+        $movies = Movies::where("title", "LIKE", "%{$multimedia}%")
+            ->paginate(25);
+
+
+
+        $resultados_string="";
+
+
+        foreach($movies as $row)
+        {
+
+            $resultados_string.="<option value='".$row[1]."'>";
+        }
+
+        echo $resultados_string;
+
+
+
+    }
+
+
     public function seriehome()
     {
 
@@ -70,6 +97,17 @@ class HomeController extends Controller
     }
 
 
+    public function reqContact(Publication $publication){
+
+        $contact=Contact::create([
+            'interested_id'=>Auth::user()->id,
+            'publication_id'=>$publication->id,
+        ]);
+        Mail::to(Auth::user()->email)
+            ->send(new ContactRequired($publication));
+
+        return view('contactRequest',compact('publication'))->with('success','We have sent you a message!');
+    }
 
 
 //    public function show($id)
