@@ -17,9 +17,9 @@
                             @csrf
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">
-                            <input type="file" class="serieinput" name="portada" placeholder="Cover">
-                            <textarea class="textareainput" name="description" placeholder="Descripcion"></textarea>
-                            <select  class="serieinput" name="restriccion" placeholder="Restriccion de edad" size="6">
+                            <input type="file" class="serieinput" name="portada" placeholder="cover">
+                            <textarea class="textareainput" name="description" placeholder="descripcion"></textarea>
+                            <select  class="serieinput" name="restriccion" placeholder="restriccion de edad" size="6">
                                     <optgroup label="Restriccion de edad">
                                     <option value="3">3</option>
                                     <option value="7">7</option>
@@ -28,8 +28,8 @@
                                     <option value="18">18</option>
                                 </optgroup>
                             </select>
-                            <input type="text" class="serieinput" name="duracion" placeholder="Duracion">
-                            <select class="serieinput" name="generos[]" multiple >
+                            <input type="number" class="serieinput" name="duracion por minutos" placeholder="duracion por minutos">
+                            <select class="genres" id="genres" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                 @foreach($generos as $genero)
                                     <option value="{{$genero->id}}">{{$genero->name_genre}}</option>

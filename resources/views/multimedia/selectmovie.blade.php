@@ -8,8 +8,9 @@
 
             <h1 class="titlemultimedia">{{$movies->title}}</h1>
             <div class="elements">
-                <p class="info">{{$movies-> rating}}</p>
-                <p class="info">{{$movies-> year}}</p>
+                <p class="info">{{$movies-> duration}} min</p>
+
+                <p class="info">Año {{$movies-> year}}</p>
                 <p class="info">Temporada</p>
                 <svg width="80" height="19" viewBox="0 0 80 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="80" height="19" fill="#FEC61A"/>

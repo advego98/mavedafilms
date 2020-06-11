@@ -9,8 +9,8 @@
     <h1 class="titlemultimedia">{{$serie-> title}}</h1>
 
     <div class="elements">
-     <p class="info">{{$serie-> rating}}</p>
-     <p class="info">{{$serie-> year}}</p>
+     <p class="info">{{$serie-> duration}} min</p>
+     <p class="info">Año  {{$serie-> year}}</p>
      <p class="info">Temporada</p>
      <svg width="80" height="19" viewBox="0 0 80 19" fill="none" xmlns="http://www.w3.org/2000/svg">
          <rect width="80" height="19" fill="#FEC61A"/>
