@@ -32,7 +32,7 @@
             <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
             <div class="contenedor-carousel">
-                <div class="carousel">
+                <div class="carousel" id="pelis">
                     @foreach($movies as $movie )
                         <div class="pelicula">
                             <a href="{{route('verpelicula.show', $movie->id)}}">
@@ -51,7 +51,7 @@
 
 
 
-            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+
         </div>
     </div>
 
