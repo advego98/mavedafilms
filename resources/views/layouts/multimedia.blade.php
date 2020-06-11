@@ -39,10 +39,12 @@
             if(name== ""){
                 $(".backgrounds").show();
                 $(".spacebackgrounds").show();
+                $("#recomendados").show();
             }
             else{
                 $(".backgrounds").hide();
                 $(".spacebackgrounds").hide();
+                $("#recomendados").hide();
             }
 
             $.ajaxSetup({
@@ -58,12 +60,42 @@
                 data:{name:name},
                 dataType:'json',
                 success:function(data){
+                    console.log(data);
+                    var datax=$.parseJSON(data);
+                    console.log(datax);
+                    mostrar_movies ='';
+                    mostrar_series="";
+                    $.each(datax, function(i, item) {
 
-                    // var myArray = JSON.parse(data);
+                        // alert(i);
+                        $.each(item, function(j, item2) {
+                            if (i=="movies"){
 
-                    // alert($.parseJSON(data));
-                    alert(data);
+                                ruta="/verpelicula/"+j;
+                                almacenamiento="/storage/"+item2;
+                                almacenamient='storage/'+item2;
+                                mostrar_movies+='<div class="pelicula"><a href="'+ruta+'"><img src="'+almacenamiento+'"></a></div>';
 
+                            } else if (i=="series"){
+                                ruta="/verserie/"+j;
+                                almacenamiento="/storage/"+item2;
+                                almacenamient='storage/'+item2;
+                                mostrar_series+='<div class="pelicula"><a href="'+ruta+'"><img src="'+almacenamiento+'"></a></div>';
+                            }
+
+                        });
+                    });
+
+                    if ( $("#pelis").length > 0 ) {
+                        $("#pelis").empty();
+                        $("#pelis").append(mostrar_movies);
+                    }
+
+                    if ( $("#series").length > 0 ) {
+                        $("#series").empty();
+                        $("#series").append(mostrar_series);
+                    }
+                   // console.log(mostrar_movies);
                 }
             })
 
@@ -96,14 +128,14 @@
         <div class="sub-nav">
 
 
-                    <form class="buscador" action="{{route('search')}}">
+                    <div class="buscador">
                         <svg width="" height="" viewBox="0 0 32 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                         </svg>
                         <input class="buscar" type="text"  placeholder="buscar" name="search" list="multimedia_list">
                         <datalist id="multimedia_list">
                         </datalist>
-                    </form>
+                    </div>
                 </div>
         </div>
         <div class="sub-nav">
