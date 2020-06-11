@@ -57,7 +57,7 @@ class GenreController extends Controller
             'name_genre'=>$request->name
         ]);
 
-        return redirect()->route('vergenre.index');
+        return redirect()->route('vergenre.index')->with('success','Se ha editado con exito');
     }
 
 
@@ -66,7 +66,7 @@ class GenreController extends Controller
     {
         $genre = Genre::find($id);
         $genre->delete();
-        return redirect()->route('vergenre.index');
+        return redirect()->route('vergenre.index')->with('success','Se ha eliminado con exito');
 
     }
 }

@@ -28,7 +28,7 @@
                                 <option value="16">16</option>
                                 <option value="18">18</option>
                             </select>
-                            <input type="text" class="serieinput" name="duration" placeholder="Duracion" value="{{$movie-> duration}}">
+                            <input type="number" class="serieinput" name="duration" placeholder="Duracion por minuto" value="{{$movie-> duration}}">
                             <select class="serieinput" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                     @foreach($generos as $genero)

@@ -139,7 +139,7 @@ a:focus, a:first-child* {
 
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     opacity: 0;
     transition: opacity 3s linear;
 }
@@ -150,7 +150,7 @@ a:focus, a:first-child* {
 
 .spacebackgrounds{
 
-    height:20vh;
+   display:none;
 }
 
 .mainserie{
@@ -403,6 +403,23 @@ h2{
 }
 
 
+.genres{
+
+
+    height: 40vh;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    border-color: #4E4C47;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+
 .userelections{
 
     display: grid;
@@ -437,14 +454,13 @@ h2{
 
 }
 
-.fotocover{
-
-    width: 100%;
-    background-size: contain;
-    height: auto;
-    height: 100vh;
-
-
+.fotocover {
+    /* width: 100%; */
+    /* background-size: contain; */
+    /* height: auto; */
+    height: 68vh;
+    padding-left: 200px;
+    padding-top: 50px;
 }
 
 
@@ -711,6 +727,12 @@ li{
         height: 15vh;
     }
 
+    .spacebackgrounds{
+
+        height:20vh;
+        display: block;
+    }
+
 
     .header {
         padding: 20px 20px 0 20px;
@@ -762,13 +784,15 @@ li{
         padding-top: 20px;
     }
 
-    fotocover {
-
-        width: 100 vw;
-        background-size: contain;
+    .fotocover {
+        width: 100%;
+        /* background-size: contain; */
+        /* height: auto; */
+        /* height: 68vh; */
+        /* padding-left: 200px; */
+        /* padding-top: 50px; */
         height: auto;
-
-
+        padding: 0;
     }
 
 

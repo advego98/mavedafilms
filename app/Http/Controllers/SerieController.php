@@ -252,7 +252,7 @@ class SerieController extends Controller
             }
         }
 
-        return redirect()->route('verserie.index');
+        return redirect()->route('verserie.index')->with('success','Se ha editado con exito');
     }
 
     /**
@@ -265,7 +265,7 @@ class SerieController extends Controller
     {
         $serie = Series::find($id);
         $serie->delete();
-        return redirect()->route('verserie.index');
+        return redirect()->route('verserie.index')->with('success','Se ha eliminado con exito');
 
     }
 }
