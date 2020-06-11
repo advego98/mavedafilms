@@ -195,6 +195,9 @@ Route::get('homeserie', 'HomeController@seriehome')->name('homeserie');
 
 Route::get('homemovie', 'HomeController@moviehome')->name('homemovie');
 
+Route::post('buscadoresult','HomeController@buscador')->name('buscadoresult');
+
+Route::get('buscadoresult','HomeController@buscador')->name('buscadoresult');
 
 
 

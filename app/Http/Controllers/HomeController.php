@@ -50,27 +50,70 @@ class HomeController extends Controller
     }
 
 
-    public function buscador($multimedia)
+    public function buscador(Request $request)
     {
 
+//        var_dump($request['name']);
+//        die;
+        $multimedia=$request['name'];
 
-        $series = Series::where("title", "LIKE", "%{$multimedia}%")
+        $series = Series::where("title", "LIKE", "{$multimedia}%")
             ->paginate(25);
-        $movies = Movies::where("title", "LIKE", "%{$multimedia}%")
+        $movies = Movies::where("title", "LIKE", "{$multimedia}%")
             ->paginate(25);
 
 
 
-        $resultados_string="";
+        $resultadomovie_string="";
+        $resultadoserie_string="";
 
 
-        foreach($movies as $row)
-        {
-
-            $resultados_string.="<option value='".$row[1]."'>";
+        $json='{"movies":{';
+        foreach ($movies as $movie){
+            $json.='"'.$movie->id.'":"'.$movie->cover.'",';
         }
 
-        echo $resultados_string;
+        $json.='},"series":{';
+        foreach ($series as $serie){
+            $json.='"'.$serie->id.'":"'.$serie->cover.'",';
+        }
+        $json.='}}';
+
+
+//        foreach($movies as $movie)
+//        {
+//
+//            $ruta1="{{route('vermovie.show',”. $movie->id.”)}}";
+//            $ruta2="{{asset('storage/'". $movie->cover.")}}";
+//            $resultadomovie_string.="
+//                <div class=’pelicula’>
+//                    <a href=’”.$ruta1.”’>
+//                        <img src=’”.$ruta2.”’>
+//                    </a>
+//                </div> ";
+//        }
+//
+//
+//        foreach($series as $serie)
+//        {
+//
+//            $ruta1="{{route('verserie.show',”. $serie->id.”)}}";
+//            $ruta2="{{asset('storage/'". $serie->cover.")}}";
+//            $resultadoserie_string.="
+//                <div class=’pelicula’>
+//                    <a href=’”.$ruta1.”’>
+//                        <img src=’”.$ruta2.”’>
+//                    </a>
+//                </div> ";
+//        }
+
+//        $array_resultado=array(
+//
+//            "serie" => $resultadoserie_string,
+//            "movie" => $resultadomovie_string
+//        );
+
+        echo json_encode($json);
 
 
 

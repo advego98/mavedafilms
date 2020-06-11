@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -32,22 +33,36 @@
     $(document).ready(function(){
 
         $(".buscar").keyup(function(){
-            $encuesta= $(".buscar").val();
-             alert($encuesta);
+           var name = $(".buscar").val();
+            // alert(name);
             //Este if es para el Section que printamos cuando no tenga calores el inpuit se oculte
-            if($encuesta== ""){
-                $("#mostrar").hide();
+            if(name== ""){
+                $(".backgrounds").show();
+                $(".spacebackgrounds").show();
             }
             else{
-                $("#mostrar").show();
+                $(".backgrounds").hide();
+                $(".spacebackgrounds").hide();
             }
 
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+                }
+            });
             //peticion ajax para el datalist
             $.ajax({
-                url:'../../functions/buscador.php',
-                data:{encuesta:$encuesta},
+                method:'POST',
+                url:"{{route('buscadoresult')}}",
+                data:{name:name},
+                dataType:'json',
                 success:function(data){
-                    $("#multimedia_list").html(data);
+
+                    // var myArray = JSON.parse(data);
+
+                    // alert($.parseJSON(data));
+                    alert(data);
 
                 }
             })
