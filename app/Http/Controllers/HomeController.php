@@ -53,8 +53,6 @@ class HomeController extends Controller
     public function buscador(Request $request)
     {
 
-//        var_dump($request['name']);
-//        die;
         $multimedia=$request['name'];
 
         $series = Series::where("title", "LIKE", "{$multimedia}%")
@@ -64,54 +62,28 @@ class HomeController extends Controller
 
 
 
-        $resultadomovie_string="";
-        $resultadoserie_string="";
-
 
         $json='{"movies":{';
         foreach ($movies as $movie){
             $json.='"'.$movie->id.'":"'.$movie->cover.'",';
+        }
+        $last_char=substr($json,-1);
+
+        if ($last_char==','){
+            $json=substr($json,0,-1);
         }
 
         $json.='},"series":{';
         foreach ($series as $serie){
             $json.='"'.$serie->id.'":"'.$serie->cover.'",';
         }
+        $last_char=substr($json,-1);
+        if ($last_char==','){
+            $json=substr($json,0,-1);
+        }
+
         $json.='}}';
 
-
-//        foreach($movies as $movie)
-//        {
-//
-//            $ruta1="{{route('vermovie.show',”. $movie->id.”)}}";
-//            $ruta2="{{asset('storage/'". $movie->cover.")}}";
-//            $resultadomovie_string.="
-//                <div class=’pelicula’>
-//                    <a href=’”.$ruta1.”’>
-//                        <img src=’”.$ruta2.”’>
-//                    </a>
-//                </div> ";
-//        }
-//
-//
-//        foreach($series as $serie)
-//        {
-//
-//            $ruta1="{{route('verserie.show',”. $serie->id.”)}}";
-//            $ruta2="{{asset('storage/'". $serie->cover.")}}";
-//            $resultadoserie_string.="
-//                <div class=’pelicula’>
-//                    <a href=’”.$ruta1.”’>
-//                        <img src=’”.$ruta2.”’>
-//                    </a>
-//                </div> ";
-//        }
-
-//        $array_resultado=array(
-//
-//            "serie" => $resultadoserie_string,
-//            "movie" => $resultadomovie_string
-//        );
 
         echo json_encode($json);
 
