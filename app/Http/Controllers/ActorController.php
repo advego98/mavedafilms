@@ -57,7 +57,7 @@ class ActorController extends Controller
             'actor'=>$request->actor
         ]);
 
-        return redirect()->route('veractor.index');
+        return redirect()->route('veractor.index')->with('success','Se ha editado con exito');
     }
 
 
@@ -66,7 +66,7 @@ class ActorController extends Controller
     {
         $actor = Actors::find($id);
         $actor->delete();
-        return redirect()->route('veractor.index');
+        return redirect()->route('veractor.index')->with('success','Se ha eliminado con exito');
 
     }
 }

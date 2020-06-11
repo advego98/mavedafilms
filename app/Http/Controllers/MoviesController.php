@@ -270,7 +270,7 @@ class MoviesController extends Controller
             }
         }
 
-        return redirect()->route('verpelicula.index');
+        return redirect()->route('verpelicula.index')->with('success','Se ha editado con exito');
 
     }
 
@@ -284,7 +284,8 @@ class MoviesController extends Controller
     {
         $movie = Movies::find($id);
         $movie->delete();
-        return redirect()->route('verpelicula.index');
+        return redirect()->route('verpelicula.index')->with('success','Se ha eliminado con exito');
+
 
 
     }

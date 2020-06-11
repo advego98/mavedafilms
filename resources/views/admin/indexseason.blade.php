@@ -6,8 +6,8 @@
         @include('layouts.flash-messages')
 
     </div>
-    <a href="{{route('admin')}}" class="btn btn-outline-warning" >Volver atras</a>
-    <a href="{{route('vertemp',$id)}}" class="btn btn-yellow" >Añadir temporada</a>
+    <a href="{{route('admin')}}" class="btn btn-outline-warning atras" >Volver atras</a>
+    <a href="{{route('vertemp',$id)}}" class="btn btn-yellow añadir" >Añadir temporada</a>
     <div class="col-lg-12 table" >
         <h2 class="admin-header">{{$titulo}}</h2>
         <table class="table">

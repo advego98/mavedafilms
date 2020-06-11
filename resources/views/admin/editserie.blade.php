@@ -31,7 +31,7 @@
                                 <option value="16" @if($serie->kid_restriction==16)selected @endif>16</option>
                                 <option value="18" @if($serie->kid_restriction==18)selected @endif>18</option>
                             </select>
-                            <input type="text" class="serieinput" name="duration" placeholder="Duration" value="{{$serie-> duration}}">
+                            <input type="number" class="serieinput" name="duration" placeholder="Duracion por minuto" value="{{$serie-> duration}}">
                             <select class="serieinput" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                     @foreach($generos as $genero)
@@ -40,7 +40,7 @@
                                 </optgroup>
                             </select>
                             <select class="serieinput" name="actores[]" multiple >
-                                <optgroup label="Generos">
+                                <optgroup label="Actores">
                                     @foreach($actores as $actor)
                                         <option value="{{$actor->id}}" @if(in_array($actor->id,$actoresSerie)) selected @endif>{{$actor->actor}}</option>
                                     @endforeach

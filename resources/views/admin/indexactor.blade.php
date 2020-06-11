@@ -6,8 +6,8 @@
         @include('layouts.flash-messages')
 
     </div>
-    <a href="{{route('admin')}}" class="btn btn-outline-warning" >Volver atras</a>
-    <a href="{{route('addactor')}}" class="btn btn-yellow" >Añadir actor</a>
+    <a href="{{route('admin')}}" class="btn btn-outline-warning atras" >Volver atras</a>
+    <a href="{{route('addactor')}}" class="btn btn-yellow añadir">Añadir actor</a>
     <div class="col-lg-12 table" >
 
         <table class="table">
