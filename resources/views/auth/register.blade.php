@@ -94,7 +94,7 @@
                 $('#content').addClass('planFormContainer');
                 $('#empty1').toggle();
             }
-    
+
         });
         $("#boton2").click(function(){
 
