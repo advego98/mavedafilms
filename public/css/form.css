@@ -434,6 +434,37 @@ button.login-button {
     border: 1px solid #FEC418
 }
 
+.empty{
+    border: 1px solid #cc0033;
+    outline: none;
+
+    height: 25px;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: left;
+    padding: 20px;
+    margin-top: 15px;
+    width: 43%;
+    float: left;
+    color:white;
+}
+
+.empty_forminputregister{
+    border: 1px solid #cc0033;
+    outline: none;
+    height: 25px;
+    background-color: #4E4C47;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    width: 86%;
+    text-align: left;
+    padding: 20px;
+    margin-top: 30px;
+}
 
 .register-button{
 
