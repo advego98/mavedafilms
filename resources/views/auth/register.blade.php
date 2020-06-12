@@ -1,60 +1,142 @@
 @extends ('layouts.app')
 @section('content')
 
-    <script>
-        $(document).ready(function () {
+<script>
+    $(document).ready(function () {
 
-            $("#boton1").click(function(){
+        $("#boton1").click(function(){
 
+            nombre = $("#name").val();
+            apellido = $("#subname").val();
+            correo = $("#email").val();
+            passwd = $("#password").val();
+            passwd_r =$ ("#password-confirm").val();
+
+            if (nombre=="" || nombre==null) {
+
+                if (!$('#name').hasClass("empty")){
+                    $('#name').addClass('empty');
+                    $('#name').removeClass('groupinput');
+                }
+
+            } else {
+                if ($('#name').hasClass("empty")){
+                    $('#name').removeClass('empty');
+                    $('#name').addClass('groupinput');
+                }
+            }
+
+            if (apellido=="" || apellido==null) {
+
+                if (!$('#subname').hasClass("empty")){
+                    $('#subname').addClass('empty');
+                    $('#subname').removeClass('groupinput');
+                }
+            }else {
+                if ($('#subname').hasClass("empty")){
+                    $('#subname').removeClass('empty');
+                    $('#subname').addClass('groupinput');
+                }
+            }
+
+            if (correo=="" || correo==null) {
+
+                if (!$('#email').hasClass("empty_forminputregister")){
+
+                    $('#email').addClass('empty_forminputregister');
+                    $('#email').removeClass('forminputregister');
+                }
+            } else {
+                if ($('#email').hasClass("empty_forminputregister")){
+                    $('#email').removeClass('empty_forminputregister');
+                    $('#email').addClass('forminputregister');
+                }
+            }
+
+            if (passwd=="" || passwd==null) {
+
+                if (!$('#password').hasClass("empty_forminputregister")) {
+
+                    $('#password').addClass('empty_forminputregister');
+                    $('#password').removeClass('forminputregister');
+                }
+            } else {
+                if ($('#password').hasClass("empty_forminputregister")){
+                    $('#password').removeClass('empty_forminputregister');
+                    $('#password').addClass('forminputregister');
+                }
+            }
+
+            if (passwd_r=="" || passwd_r==null || passwd_r!=passwd) {
+
+                if (!$('#password-confirm').hasClass("empty_forminputregister")) {
+
+                    $('#password-confirm').addClass('empty_forminputregister');
+                    $('#password-confirm').removeClass('forminputregister');
+                }
+
+            } else {
+                if ($('#password-confirm').hasClass("empty_forminputregister")){
+                    $('#password-confirm').removeClass('empty_forminputregister');
+                    $('#password-confirm').addClass('forminputregister');
+                }
+            }
+
+            if ($('#password-confirm').hasClass("forminputregister")&&$('#password').hasClass("forminputregister")&&$('#email').hasClass("forminputregister")&&$('#subname').hasClass("groupinput")&&$('#name').hasClass("groupinput")) {
                 $('#form1').toggle();
                 $('#form2').toggle();
 
                 cambiarimagen();
 
 
+
                 $('#content').removeClass('form-register');
                 $('#content').addClass('planFormContainer');
                 $('#empty1').toggle();
-
-                console.log($('#name').val());
-            });
-            $("#boton2").click(function(){
-
-                $('#form2').toggle();
-                $('#form3').toggle();
-
-                cambiarimagen();
-
-
-                $('#content').removeClass('planFormContainer');
-                $('#content').addClass('form-register');
-                $('#empty1').toggle();
-            });
-
-        })
-        function cambiarimagen() {
-            link = $('#imagen').attr('src');
-            console.log(link);
-            num=link.substr(-5,1);
-            console.log(num);
-            switch (num) {
-                case "1":
-                    code=link.replace(num,2);
-                    console.log(code);
-                    break;
-                case "2":
-                    code=link.replace(num,3);
-                    console.log(code);
-                    break;
-                case "3":
-                    code=link.replace(num,1);
-                    console.log(code);
-                    break;
             }
-            $('#imagen').attr('src',code);
 
+        });
+        $("#boton2").click(function(){
+
+            $('#form2').toggle();
+            $('#form3').toggle();
+
+            cambiarimagen();
+
+
+            $('#content').removeClass('planFormContainer');
+            $('#content').addClass('form-register');
+            $('#empty1').toggle();
+        });
+
+    })
+    function cambiarimagen() {
+        link = $('#imagen').attr('src');
+        console.log(link);
+        num=link.substr(-5,1);
+        console.log(num);
+
+
+        switch (num) {
+            case "1":
+                code=link.replace(num+".svg",2+".svg");
+                console.log(code);
+                break;
+            case "2":
+                code=link.replace(num+".svg",3+".svg");
+                console.log(code);
+                break;
+            case "3":
+                code=link.replace(num+".svg",1+".svg");
+                console.log(code);
+                break;
         }
-    </script>
+        $('#imagen').attr('src',code);
+
+    }
+</script>
+
+
 
     <div class="emptyregisterspace" id="empty1"></div>
 
