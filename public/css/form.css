@@ -358,7 +358,7 @@ button.login-button {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
-    min-height: 550px;
+    min-height: 400px;
     padding: 20px 0 30px;
     width: 20%;
 
@@ -644,7 +644,7 @@ button.login-button {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         margin: 0 auto;
-        min-height: 550px;
+        min-height: 400px;
         padding: 20px 0 30px;
         width: 75%;
     }
