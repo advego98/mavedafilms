@@ -20,11 +20,16 @@
 
                     <input type="checkbox" name="checkbox">
                     <label>Recuerdame</label>
-
-                    <label class="ayuda"></label><a href="{{route('changepassword')}}">Olvide mi contraseña</a>
+                    @if (Route::has('password.request'))
+                        <a class="ayuda" href="{{ route('password.request') }}">
+                            {{ __('olvide mi contraseña') }}
+                        </a>
+                        <br>
+                    @endif
+{{--                    <label class="ayuda"></label><a href="{{route('changepassword')}}">Olvide mi contraseña</a>--}}
                 </div>
 
-                <button type="submit btn btn-yellow"" class="login-button">Iniciar sesión</button>
+                <button type="submit btn btn-yellow"class="login-button">Iniciar sesión</button>
 
                 <div class="registerform">¿No tienes cuenta?<a class="suscription" href="{{route('register')}}">Suscríbete ahora</a></div>
 

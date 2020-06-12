@@ -72,6 +72,20 @@
 
 }
 
+
+.añadir{
+
+    float:right;
+    margin-right: 50px;
+}
+
+.atras{
+
+    margin-left: 50px;
+
+}
+
+
 .titulo{
     color: #FFFFFF;
 }
