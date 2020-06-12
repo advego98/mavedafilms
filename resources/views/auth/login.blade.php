@@ -22,7 +22,7 @@
                     <label>Recuerdame</label>
                     @if (Route::has('password.request'))
                         <a class="ayuda" href="{{ route('password.request') }}">
-                            {{ __('olvide mi contraseña') }}
+                            {{ __('Olvide mi contraseña') }}
                         </a>
                         <br>
                     @endif
