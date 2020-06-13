@@ -19,8 +19,8 @@
                             @method('PUT')
 
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo" value="{{$episode->title}}">
-                            <input type="file" class="serieinput" name="portada" placeholder="cover">
-                            <input type="file" class="serieinput" name="url" placeholder="cover">
+                            <input type="file" class="serieinput" name="portada" placeholder="Portada">
+                            <input type="url" class="serieinput" name="url" placeholder="Link capitulo" value="{{$episode->url}}">
                             <button class="login-button">Editar</button>
                         </form>
 

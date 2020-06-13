@@ -135,14 +135,10 @@ class EpisodeController extends Controller
 
         }
 
-        if(!is_null($request->file('url'))){
 
-            $url=$request->file('url')->store('movies','public');
-        }else{
+        $url=$request->url;
 
-            $url= $episode->url;
 
-        }
         $season=Seasons::find($episode->season_id);
 
         $episode->update([
