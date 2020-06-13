@@ -34,6 +34,7 @@
                             <a class="btn btn-yellow" href="{{route('verseason.show',$serie->id)}}">Administrar temporadas</a>
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
+
                     </td>
                 </tr>
             @endforeach

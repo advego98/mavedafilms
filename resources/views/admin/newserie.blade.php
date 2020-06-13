@@ -28,7 +28,7 @@
                                     <option value="18">18</option>
                                 </optgroup>
                             </select>
-                            <input type="number" class="serieinput" name="duracion por minutos" placeholder="duracion por minutos">
+                            <input type="number" class="serieinput" name="duracion" placeholder="duracion por minutos">
                             <select class="genres" id="genres" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                 @foreach($generos as $genero)
