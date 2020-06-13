@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 use App\Actors;
 use App\ActorSerie;
+use App\Episodes;
 use App\Genre;
 use App\GenreSerie;
 use App\Property;
+use App\Seasons;
 use App\Series;
 use Illuminate\Http\Request;
 
@@ -117,6 +119,11 @@ class SerieController extends Controller
         $vgeneros = GenreSerie::where('serie_id','=',$id)->get();
         $acts_serie = ActorSerie::where('serie_id',$id)->get();
         $serie = Series::find($id);
+
+        $season=Seasons::where("serie_id",$id)->first();
+
+        $episode=Episodes::where("season_id",$season->id)->first();
+        $episode_link=$episode->url;
         foreach ($vgeneros as $vgenero){
 
             $genero=$vgenero->genre_id;
@@ -130,7 +137,7 @@ class SerieController extends Controller
             $actoresSerie[] = Actors::where('id','=',$actor)->get();
         }
 
-        return  view('multimedia.selectserie' , compact('serie', 'generosSerie','actoresSerie'));
+        return  view('multimedia.selectserie' , compact('serie', 'generosSerie','actoresSerie','episode_link'));
 
 
 
