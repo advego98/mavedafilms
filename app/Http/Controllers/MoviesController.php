@@ -119,7 +119,8 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-
+        session_start();
+        $_SESSION['id_list_m']=$id;
         $vgeneros = GenreMovie::where('id_movie','=',$id)->get();
         $acts_movies = ActorMovie::where('movie_id',$id)->get();
         $movies = Movies::find($id);

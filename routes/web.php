@@ -168,6 +168,16 @@ Route::get('/homeserie', function () {
 
 }) ->name('homeserie');
 
+Route::get('/milista', function () {
+
+    return view ('milista');
+
+}) ->name('milista');
+
+
+
+
+
 
 Route::resource('verserie','SerieController');
 
@@ -190,6 +200,8 @@ Route::resource('inicio','HomeController');
 Route::resource('registro','MavedaRegisterController');
 
 Route::resource('lista','SeriefavController');
+
+Route::resource('listam','MoviefavController');
 
 Route::get('search', 'HomeController@busqueda')->name('search');
 

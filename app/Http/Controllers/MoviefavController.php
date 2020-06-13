@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Serie_fav;
 use App\Movie_fav;
 use App\Movies;
-use App\Series;
+use Illuminate\Http\Request;
 
-class SeriefavController extends Controller
+class MoviefavController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,68 +15,39 @@ class SeriefavController extends Controller
      */
     public function index()
     {
-        $user = auth()->user()->id;
-        $activeserie = Serie_fav::all()->where('user_id', $user);
-        $activemovie = Movie_fav::all()->where('user_id', $user);
-        $series=[];
-        $movies=[];
-
-        foreach ($activeserie as $serie){
-
-            $series[]=$serie['serie_id'];
-        }
-        $series_favs=[];
-        foreach ($series as $s){
-
-
-           $li[] = Series::where('id', '=', $s )->get();
-
-        }
-
-        foreach ($li as $lista){
-
-            $licontent[]= $lista[0];
-
-        }
-
-
-        foreach ($activemovie as $movie){
-
-            $movies[]=$movie['movie_id'];
-        }
-        $movies_favs=[];
-
-        foreach ($movies as $m){
-
+//        $user = auth()->user()->id;
+//        $activemovie = Movie_fav::all()->where('user_id', $user);
+//        $movies=[];
 //
+//        foreach ($activemovie as $movies){
+//
+//            $movies[]=$movies['movie_id'];
+//        }
+//        $movies_favs=[];
+//        foreach ($movies as $s){
+//
+//
+//            $li[] = Movies::where('id', '=', $s )->get();
+//
+//        }
+//
+//        foreach ($li as $lista){
+//
+//            $licontent[]= $lista[0];
+//
+//        }
+//
+////        var_dump($li[1][0]['id']);
+////        var_dump($licontent);
+////        var_dump($li);
+////        die;
+//        return view('milista', compact('licontent'));
 
-            $lm[] = Movies::where('id', '=', $m )->get();
-
-        }
-
-        foreach ($lm as $listamovie){
-
-
-            $limovie[]= $listamovie[0];
-
-
-
-        }
-
-
-
-//        var_dump($li[1][0]['id']);
-//        var_dump($licontent);
-//        var_dump($li);
-//        die;
-       return view('milista', compact('licontent', 'limovie'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
+
     public function create()
     {
         //
@@ -92,24 +61,27 @@ class SeriefavController extends Controller
      */
     public function store(Request $request)
     {
+
         $user = auth()->user()->id;
 
         session_start();
-        $id=$_SESSION['id_list_s'];
+        $id=$_SESSION['id_list_m'];
 //         var_dump($id);
 //         die;
-        Serie_fav::create([
+        Movie_fav::create([
 
 
             'user_id'=> $user,
-                'serie_id' => $id
+            'movie_id' => $id
 
 
         ]);
 
-        return redirect()->route('verserie.show', $id);
+        return redirect()->route('verpelicula.show', $id);
 
     }
+
+
 
     /**
      * Display the specified resource.
