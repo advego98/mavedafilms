@@ -201,6 +201,9 @@ Route::post('buscadoresult','HomeController@buscador')->name('buscadoresult');
 
 Route::get('buscadoresult','HomeController@buscador')->name('buscadoresult');
 
+Route::get('rep_pelicula/{id}','MoviesController@vermovie')->name('rep_pelicula');
+Route::get('rep_episode/{id}','EpisodeController@vercapi')->name('rep_episode');
+
 
 
 
