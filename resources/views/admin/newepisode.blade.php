@@ -17,7 +17,7 @@
                             @csrf
                             <input type="text" class="serieinput" name="name" placeholder="Introduzca titulo">
                             <input type="file" class="serieinput" name="portada" placeholder="portada">
-                            <input type="file" class="serieinput" name="url" placeholder="pelicula">
+                            <input type="url" class="serieinput" name="url" placeholder="Link capitulo">
                             <input type="submit" class="login-button" value="Añadir capitulo">
                         </form>
                     </section>

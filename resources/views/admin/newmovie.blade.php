@@ -19,7 +19,7 @@
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">
                             <input type="file" class="serieinput" name="portada" placeholder="portada">
                             <textarea class="textareainput" name="description" placeholder="descripcion"></textarea>
-                            <input type="file" class="serieinput" name="url" placeholder="pelicula">
+                            <input type="url" class="serieinput" name="url" placeholder="Link pelicula">
                             <select  class="serieinput" name="restriccion" placeholder="restriccion de edad" size="6">
                                 <optgroup label="Restriccion de edad">
                                     <option value="3">3</option>
