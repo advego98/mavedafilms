@@ -1,65 +1,54 @@
 <div id="pagepasswd">
-@extends ('layouts.app')
-@section('content')
+    @extends ('layouts.app')
+    @section('content')
 
-    <
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.update') }}">
-                        @csrf
+        <div class="emptyspace"></div>
+        <div class="spacepaswd"></div>
 
-                        <input type="hidden" name="token" value="{{ $token }}">
+        <div class="password-body">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+            <h1 class="titlepassword">Restablecer contraseña</h1>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
+            <form method="POST" action="{{ route('password.update') }}">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                <div class="passwordsection">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                @csrf
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                <input type="hidden" name="token" value="{{ $token }}">
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                        <input id="email" type="email" class="forminputregister @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email">
+
+                        @error('email')
+
+                        <div class="alert_error" role="alert">
+                                        <strong>El correo no coincide con el de ningun usuario</strong>
+                                    </div>
+                        @enderror
+
+                        <input id="password" type="password" class="forminputregister @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Contraseña">
+
+                        @error('password')
+                        <div class="alert_error" role="alert">
+                                        <strong>La confirmación de contraseña no coincide.</strong>
+                                    </div>
+                        @enderror
+
+
+                        <input id="password-confirm" type="password" class="forminputregister" name="password_confirmation" required autocomplete="new-password" placeholder="Repite contraseña">
+
+
+
+                        <button type="submit" class="login-button">
+                            {{ __('Reset Password') }}
+                        </button>
                 </div>
-            </div>
+            </form>
         </div>
-    </div>
+        <div id="footerspace"></div>
 </div>
 @endsection
