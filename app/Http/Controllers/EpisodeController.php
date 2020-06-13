@@ -102,6 +102,17 @@ class EpisodeController extends Controller
 
     }
 
+    public function vercapi($id){
+        $serie= Series::find($id);
+
+        $temporada=Seasons::where("serie_id",$serie->id)->first();
+
+        $capitulo=Episodes::where("season_id",$temporada->id)->first();
+
+        return  view('multimedia.vercapi' , compact('capitulo'));
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -143,6 +143,13 @@ class MoviesController extends Controller
 
     }
 
+    public function vermovie($id){
+        $movie= Movies::find($id);
+
+        return  view('multimedia.vermovie' , compact('movie'));
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
