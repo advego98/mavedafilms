@@ -19,7 +19,7 @@
 
                             <input type="text" class="serieinput" name="title" placeholder="Introduzca titulo" value="{{$movie->title}}">
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año" value="{{$movie->year}}">
-                            <input type="file" class="serieinput" name="portada" placeholder="portada">
+                            <input type="file" class="serieinput" name="portada" placeholder="Portada">
                             <input type="text" class="textareainput" name="description" placeholder="descripcion" value="{{$movie->description}}">
                             <select name="restriccion" class="selectseries">
                                 <option value="3">3</option>
@@ -43,7 +43,7 @@
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <input type="file" class="serieinput" name="url" placeholder="pelicula">
+                            <input type="url" class="serieinput" name="url" placeholder="Link pelicula" value="{{$movie->url}}">
                             <button class="login-button">Editar</button>
                         </form>
                     </section>

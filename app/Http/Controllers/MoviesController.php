@@ -54,7 +54,7 @@ class MoviesController extends Controller
 
         }
 
-        $url=$request->file('url')->store('movies','public');
+        $url=$request->url;
 //
         $newmovie = $request -> title;
 
@@ -202,14 +202,10 @@ class MoviesController extends Controller
 
         }
 
-        if(!is_null($request->file('url'))){
 
-            $url=$request->file('url')->store('movies','public');
-        }else{
 
-            $url= $movie->url;
+        $url=$request->url;
 
-        }
 
 
 
