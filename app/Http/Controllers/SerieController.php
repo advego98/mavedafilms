@@ -110,7 +110,10 @@ class SerieController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
+        session_start();
+        $_SESSION['id_list_s']=$id;
         $vgeneros = GenreSerie::where('serie_id','=',$id)->get();
         $acts_serie = ActorSerie::where('serie_id',$id)->get();
         $serie = Series::find($id);
@@ -251,6 +254,7 @@ class SerieController extends Controller
 
             }
         }
+
 
         return redirect()->route('verserie.index')->with('success','Se ha editado con exito');
     }

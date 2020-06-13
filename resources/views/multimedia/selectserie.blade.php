@@ -46,6 +46,12 @@
         </span>
     </div>
 
+    <form method="post" action="{{route('lista.store')}}" enctype="multipart/form-data">
+        @csrf
+        <input type="text" class="serieinput" name="name" placeholder="Nombre temporada">
+        <input type="submit" class="login-button" value="Añadir temporada">
+    </form>
+
     <div class="infomultimedia">
 
         <div>
