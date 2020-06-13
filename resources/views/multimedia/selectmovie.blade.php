@@ -12,7 +12,7 @@
 
                 <p class="info">Año {{$movies-> year}}</p>
                 <p class="info">Temporada</p>
-                <a href="{{$movies-> url}}">
+                <a href="{{route('rep_pelicula', $movies->id)}}">
                     <svg width="120" height="69" viewBox="0 0 80 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="80" height="19" fill="#FEC61A"/>
                         <path d="M5 2L16.5 10L5 17V2Z" fill="black"/>
