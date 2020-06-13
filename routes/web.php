@@ -189,6 +189,8 @@ Route::resource('inicio','HomeController');
 
 Route::resource('registro','MavedaRegisterController');
 
+Route::resource('lista','SeriefavController');
+
 Route::get('search', 'HomeController@busqueda')->name('search');
 
 Route::get('homeserie', 'HomeController@seriehome')->name('homeserie');

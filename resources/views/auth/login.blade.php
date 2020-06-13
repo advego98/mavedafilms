@@ -9,7 +9,7 @@
         <div class="emptyspace"></div>
 
         <div class="login-body">
-            <h1 class="title">Inicio Sesión</h1>
+            <h1 class="titlelogin">Inicio Sesión</h1>
 
             <form method="post" name="login-form" class="login" action="{{ route('login') }}">
                 @csrf
