@@ -27,13 +27,15 @@ class SeriefavController extends Controller
 
             $series[]=$serie['serie_id'];
         }
-        $series_favs=[];
+        $li=[];
         foreach ($series as $s){
 
 
            $li[] = Series::where('id', '=', $s )->get();
 
         }
+
+        $licontent=[];
 
         foreach ($li as $lista){
 
@@ -46,7 +48,7 @@ class SeriefavController extends Controller
 
             $movies[]=$movie['movie_id'];
         }
-        $movies_favs=[];
+        $lm=[];
 
         foreach ($movies as $m){
 
@@ -55,6 +57,8 @@ class SeriefavController extends Controller
             $lm[] = Movies::where('id', '=', $m )->get();
 
         }
+
+        $limovie=[];
 
         foreach ($lm as $listamovie){
 
@@ -152,7 +156,22 @@ class SeriefavController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
-        //
+//        var_dump($id);
+//        die;
+
+        $user = auth()->user()->id;
+        $li = Serie_fav::where('id', '=', $user )->get();
+        $serie = Serie_fav::where([
+            ['user_id', '=', $user ],
+            ['serie_id', '=', $id ],
+]);
+
+
+        $serie->delete();
+
+        return redirect()->route('lista.index');
     }
+
 }

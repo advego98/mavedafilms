@@ -168,11 +168,7 @@ Route::get('/homeserie', function () {
 
 }) ->name('homeserie');
 
-Route::get('/milista', function () {
 
-    return view ('milista');
-
-}) ->name('milista');
 
 
 

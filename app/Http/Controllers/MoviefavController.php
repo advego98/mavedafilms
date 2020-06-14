@@ -125,6 +125,16 @@ class MoviefavController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = auth()->user()->id;
+
+        $movie = Movie_fav::where([
+            ['user_id', '=', $user ],
+            ['movie_id', '=', $id ],
+        ]);
+
+
+        $movie->delete();
+
+        return redirect()->route('lista.index');
     }
 }
