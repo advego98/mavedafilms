@@ -29,21 +29,21 @@
                                 </optgroup>
                             </select>
                             <input type="number" class="serieinput" name="duracion" placeholder="duracion por minutos">
-                            <select class="genres" id="genres" name="generos[]" multiple >
+                            <select class="genres" id="genres" name="generos[]" size="10" multiple >
                                 <optgroup label="Generos">
                                 @foreach($generos as $genero)
                                     <option value="{{$genero->id}}">{{$genero->name_genre}}</option>
                                 @endforeach
                                 </optgroup>
                             </select>
-                            <select class="serieinput" name="actores[]" multiple >
+                            <select class="serieinput" name="actores[]" size="10"multiple >
                                 <optgroup label="Actores">
                                     @foreach($actores as $actor)
                                         <option value="{{$actor->id}}">{{$actor->actor}}</option>
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <input type="submit" value="Añadir serie" class="login-button">
+                            <input type="submit" value="Añadir serie"  class="login-button">
                         </form>
                     </section>
                 </div>

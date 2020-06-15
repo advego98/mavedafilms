@@ -29,21 +29,21 @@
                                 <option value="18">18</option>
                             </select>
                             <input type="number" class="serieinput" name="duration" placeholder="Duracion por minuto" value="{{$movie-> duration}}">
-                            <select class="serieinput" name="generos[]" multiple >
+                            <select class="serieinput" name="generos[]"  size="10" multiple >
                                 <optgroup label="Generos">
                                     @foreach($generos as $genero)
                                         <option value="{{$genero->id}}" @if(in_array($genero->id,$generosMovie)) selected @endif>{{$genero->name_genre}}</option>
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <select class="serieinput" name="actores[]" multiple >
+                            <select class="serieinput" name="actores[]"  size="10" multiple >
                                 <optgroup label="Generos">
                                     @foreach($actores as $actor)
                                         <option value="{{$actor->id}}" @if(in_array($actor->id,$actoresMovie)) selected @endif>{{$actor->actor}}</option>
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <input type="url" class="serieinput" name="url" placeholder="Link pelicula" value="{{$movie->url}}">
+                            <input type="text" class="serieinput" name="url" placeholder="Link pelicula" value="{{$movie->url}}">
                             <button class="login-button">Editar</button>
                         </form>
                     </section>
