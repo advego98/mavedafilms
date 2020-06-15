@@ -66,16 +66,28 @@ class MoviefavController extends Controller
 
         session_start();
         $id=$_SESSION['id_list_m'];
-//         var_dump($id);
-//         die;
-        Movie_fav::create([
+
+        $exist = Movie_fav::where("user_id",$user)->where("movie_id",$id)->doesntExist();
+        if ($exist){
+            Movie_fav::create([
 
 
-            'user_id'=> $user,
-            'movie_id' => $id
+                'user_id'=> $user,
+                'movie_id' => $id
 
 
-        ]);
+            ]);
+        } else{
+
+            $movie = Movie_fav::where([
+                ['user_id', '=', $user ],
+                ['movie_id', '=', $id ],
+            ]);
+
+
+            $movie->delete();
+        }
+
 
         return redirect()->route('verpelicula.show', $id);
 

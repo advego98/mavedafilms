@@ -100,16 +100,32 @@ class SeriefavController extends Controller
 
         session_start();
         $id=$_SESSION['id_list_s'];
-//         var_dump($id);
-//         die;
-        Serie_fav::create([
+
+        $exist = Serie_fav::where("user_id",$user)->where("serie_id",$id)->doesntExist();
+
+        if ($exist){
+
+            Serie_fav::create([
 
 
-            'user_id'=> $user,
+                'user_id'=> $user,
                 'serie_id' => $id
 
 
-        ]);
+            ]);
+        } else {
+
+            $user = auth()->user()->id;
+
+            $serie = Serie_fav::where([
+                ['user_id', '=', $user ],
+                ['serie_id', '=', $id ],
+            ]);
+
+            $serie->delete();
+
+        }
+
 
         return redirect()->route('verserie.show', $id);
 
@@ -162,7 +178,7 @@ class SeriefavController extends Controller
 //        die;
 
         $user = auth()->user()->id;
-        $li = Serie_fav::where('id', '=', $user )->get();
+
         $serie = Serie_fav::where([
             ['user_id', '=', $user ],
             ['serie_id', '=', $id ],
