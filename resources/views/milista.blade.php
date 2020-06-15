@@ -60,7 +60,7 @@
                     @endif
                     @foreach($limovie as $listam)
                         <div>
-                            <a class="pelicula" href="{{route('verserie.show', $listam->id)}}">
+                            <a class="pelicula" href="{{route('verpelicula.show', $listam->id)}}">
                                 <img src="{{asset('storage/'.$listam->cover)}}">
                             </a>
                         </div>

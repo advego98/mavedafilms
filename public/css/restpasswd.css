@@ -322,3 +322,13 @@ button.login-button {
 
     height: 25vh;
 }
+
+
+@media screen and (max-width: 900px) {
+
+
+
+    .emptyspace2 {
+        height: 10vh;
+    }
+}
