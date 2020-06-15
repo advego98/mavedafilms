@@ -5,6 +5,7 @@ use App\ActorMovie;
 use App\Actors;
 use App\Genre;
 use App\GenreMovie;
+use App\Movie_fav;
 use App\Movies;
 use App\Property;
 use App\User;
@@ -137,8 +138,19 @@ class MoviesController extends Controller
             $actoresMovie[] = Actors::where('id','=',$actor)->get();
         }
 
+        $user = auth()->user()->id;
 
-        return  view('multimedia.selectmovie' , compact('movies', 'generosMovie','actoresMovie'));
+        $movies_fav=Movie_fav::where("user_id",$user)->get();
+        $color="#FEC61A";
+        foreach ($movies_fav as $movie){
+//            var_dump($movie->movie_id);
+            if ($movie->movie_id==$id){
+                $color="#FF0000";
+            }
+
+    }
+//        die();
+        return  view('multimedia.selectmovie' , compact('movies', 'generosMovie','actoresMovie','color'));
 
 
 
