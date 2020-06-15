@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Serie_fav;
+use App\Movie_fav;
+use App\Movies;
 use App\Series;
 
 class SeriefavController extends Controller
@@ -17,13 +19,15 @@ class SeriefavController extends Controller
     {
         $user = auth()->user()->id;
         $activeserie = Serie_fav::all()->where('user_id', $user);
+        $activemovie = Movie_fav::all()->where('user_id', $user);
         $series=[];
+        $movies=[];
 
         foreach ($activeserie as $serie){
 
             $series[]=$serie['serie_id'];
         }
-        $series_favs=[];
+        $li=[];
         foreach ($series as $s){
 
 
@@ -31,17 +35,47 @@ class SeriefavController extends Controller
 
         }
 
+        $licontent=[];
+
         foreach ($li as $lista){
 
             $licontent[]= $lista[0];
 
         }
 
+
+        foreach ($activemovie as $movie){
+
+            $movies[]=$movie['movie_id'];
+        }
+        $lm=[];
+
+        foreach ($movies as $m){
+
+//
+
+            $lm[] = Movies::where('id', '=', $m )->get();
+
+        }
+
+        $limovie=[];
+
+        foreach ($lm as $listamovie){
+
+
+            $limovie[]= $listamovie[0];
+
+
+
+        }
+
+
+
 //        var_dump($li[1][0]['id']);
 //        var_dump($licontent);
 //        var_dump($li);
 //        die;
-       return view('milista', compact('licontent'));
+       return view('milista', compact('licontent', 'limovie'));
     }
 
     /**
@@ -122,7 +156,22 @@ class SeriefavController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+
     {
-        //
+//        var_dump($id);
+//        die;
+
+        $user = auth()->user()->id;
+        $li = Serie_fav::where('id', '=', $user )->get();
+        $serie = Serie_fav::where([
+            ['user_id', '=', $user ],
+            ['serie_id', '=', $id ],
+]);
+
+
+        $serie->delete();
+
+        return redirect()->route('lista.index');
     }
+
 }

@@ -718,9 +718,9 @@ button.login-button {
         border: 1px solid #FEC418;
 
     }
-    derechosreservados {
+    .derechosreservados {
         margin: 0 auto;
-        height: 19vh;
+        height: 21vh;
         width: 100%;
         justify-content: center;
         font-weight: normal;

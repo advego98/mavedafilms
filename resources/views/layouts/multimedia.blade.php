@@ -121,7 +121,7 @@
             <a href="{{route('inicio.index')}}">Inicio</a>
             <a href="{{route('homeserie')}}">Series</a>
             <a href="{{route('homemovie')}}">Peliculas</a>
-            <a href="#">Mi lista</a>
+            <a href="{{route('lista.index')}}">Mi lista</a>
         </nav>
 
 
