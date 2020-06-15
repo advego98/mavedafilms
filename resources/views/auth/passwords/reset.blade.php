@@ -44,7 +44,7 @@
 
 
                         <button type="submit" class="login-button">
-                            {{ __('Reset Password') }}
+                            {{ __('Reiniciar Contraseña') }}
                         </button>
                 </div>
             </form>
