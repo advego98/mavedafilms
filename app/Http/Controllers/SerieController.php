@@ -8,6 +8,7 @@ use App\Genre;
 use App\GenreSerie;
 use App\Property;
 use App\Seasons;
+use App\Serie_fav;
 use App\Series;
 use Illuminate\Http\Request;
 
@@ -133,7 +134,20 @@ class SerieController extends Controller
             $actoresSerie[] = Actors::where('id','=',$actor)->get();
         }
 
-        return  view('multimedia.selectserie' , compact('serie', 'generosSerie','actoresSerie'));
+        $user = auth()->user()->id;
+
+        $series_fav=Serie_fav::where("user_id",$user)->get();
+        $color="#FEC61A";
+        foreach ($series_fav as $serie_f){
+//            var_dump($movie->movie_id);
+            if ($serie_f->serie_id==$id){
+                $color="#FF0000";
+            }
+
+        }
+//        die();
+
+        return  view('multimedia.selectserie' , compact('serie', 'generosSerie','actoresSerie','color'));
 
 
 
