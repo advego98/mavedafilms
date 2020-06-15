@@ -19,7 +19,7 @@
                             <input type="text" class="serieinput" name="anyo" placeholder="Introduzca año">
                             <input type="file" class="serieinput" name="portada" placeholder="portada">
                             <textarea class="textareainput" name="description" placeholder="descripcion"></textarea>
-                            <input type="url" class="serieinput" name="url" placeholder="Link pelicula">
+                            <input type="text" class="serieinput" name="url" placeholder="Link pelicula">
                             <select  class="serieinput" name="restriccion" placeholder="restriccion de edad" size="6">
                                 <optgroup label="Restriccion de edad">
                                     <option value="3">3</option>
@@ -29,7 +29,7 @@
                                     <option value="18">18</option>
                                 </optgroup>
                             </select>
-                            <input type="number" class="serieinput" name="duracion" placeholder="duracion por minutos">
+                            <input type="number" class="serieinput" name="duracion" size="10" placeholder="duracion por minutos">
                             <select class="serieinput" name="generos[]" multiple >
                                 <optgroup label="Generos">
                                     @foreach($generos as $genero)
@@ -37,7 +37,7 @@
                                     @endforeach
                                 </optgroup>
                             </select>
-                            <select class="serieinput" name="actores[]" multiple >
+                            <select class="serieinput" name="actores[]" size="10" multiple >
                                 <optgroup label="Actores">
                                     @foreach($actores as $actor)
                                         <option value="{{$actor->id}}">{{$actor->actor}}</option>

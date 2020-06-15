@@ -90,15 +90,19 @@ header {
     margin: 5px;
 }
 
-
-.backgrounds{
-
-    width:100%;
-    height: 90vh ;
-
-
-
+.backgrounds {
+    width: 100%;
+    height: 70vh;
 }
+
+/*.backgrounds{*/
+
+/*    width:100%;*/
+/*    height: 90vh ;*/
+
+
+
+/*}*/
 
 
 A{
@@ -133,16 +137,22 @@ a:focus, a:first-child* {
 
 }
 
-
-
 .slide {
-
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 65%;
     opacity: 0;
     transition: opacity 3s linear;
 }
+
+/*.slide {*/
+
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 80%;*/
+/*    opacity: 0;*/
+/*    transition: opacity 3s linear;*/
+/*}*/
 
 .slider-wrapper > .slide:first-child {
     opacity: 1;
@@ -674,8 +684,12 @@ li{
 
 
 svg.icono:active {
-    background-color: blue;
+
+    margin: 0 auto;
 }
+
+
+
 
 
 .list{
